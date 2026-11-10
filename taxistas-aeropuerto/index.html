@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Taxistas Aeropuerto · Formato Inngenios</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: technical blueprint sheet — fine grid, numbered sections, process flow with nodes */
+:root{
+  --paper:#FFFFFF;
+  --ink:#050505;
+  --muted:#4A4A52;
+  --soft:#F6F6F9;
+  --line:rgba(5,5,5,.10);
+  --grid:rgba(5,5,5,.045);
+  --blue:#079AFD;
+  --orange:#FF6600;
+  --purple:#675CC6;
+  --green:#2FBF62;
+  --blue-t:rgba(7,154,253,.08);
+  --orange-t:rgba(255,102,0,.08);
+  --purple-t:rgba(103,92,198,.09);
+  --f-display:'Poppins', 'Avenir Next', 'Segoe UI', sans-serif;
+  --f-body:'Poppins', 'Avenir Next', 'Segoe UI', sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:16px;line-height:1.6;
+  background-image:linear-gradient(to right,var(--grid) 1px,transparent 1px),linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.c-blue{color:var(--blue)} .c-orange{color:var(--orange)} .c-purple{color:var(--purple)}
+
+/* top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1.5px solid var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-weight:900;font-size:20px;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;line-height:0}
+.brand img{height:32px;width:auto;display:block}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:3px}
+.nav a{transition:background .25s,color .25s}
+.nav a:hover,.nav a:focus-visible{color:var(--ink);background:var(--soft);outline:none}
+.nav a.active{color:#fff;background:var(--orange)}
+.nav a.active:hover{color:#fff;background:var(--orange)}
+
+/* hero */
+.hero{padding-block:64px 40px;border-bottom:3px solid var(--ink)}
+.hero .eyebrow{color:var(--blue);margin-bottom:14px}
+.hero h1{font-size:clamp(32px,5.4vw,58px);font-weight:900;line-height:1.06;letter-spacing:-.02em;max-width:20ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .sub{margin-top:18px;font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:62ch}
+.specs{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink);background:var(--paper)}
+.specs > div{padding:16px 18px;border-right:1.5px solid var(--ink);min-width:0}
+.specs > div:last-child{border-right:none}
+.specs .k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.specs .v{font-size:20px;font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}
+
+/* sections */
+section{padding-block:72px 24px}
+.sec-head{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:end;border-bottom:1.5px solid var(--ink);padding-bottom:18px;margin-bottom:36px}
+.sec-num{font-size:64px;font-weight:900;line-height:.9;color:var(--ink);font-variant-numeric:tabular-nums}
+.sec-head h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;letter-spacing:-.015em;line-height:1.1}
+.sec-head .eyebrow{margin-bottom:8px}
+
+/* entendimiento */
+.context{display:grid;grid-template-columns:1.25fr 1fr;gap:32px}
+.context p{color:var(--muted);max-width:62ch}
+.context p + p{margin-top:14px}
+.quote{border-left:4px solid var(--blue);background:var(--blue-t);padding:20px 22px}
+.quote .eyebrow{color:var(--blue);margin-bottom:8px}
+.quote p{color:var(--ink);font-size:17px;font-weight:500;line-height:1.5}
+.shift{margin-top:40px;display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0;border:1.5px solid var(--ink)}
+.shift .box{padding:22px 24px;min-width:0}
+.shift .from{background:var(--soft)}
+.shift .to{background:var(--orange-t)}
+.shift .arrow{display:flex;align-items:center;justify-content:center;padding:0 18px;border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink);font-weight:900;font-size:26px;color:var(--orange)}
+.shift .t{font-size:20px;font-weight:700;margin-top:4px}
+.shift ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+
+.cards4{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{border:1.5px solid var(--ink);border-top-width:5px;padding:18px;background:var(--paper);min-width:0}
+.card.b{border-top-color:var(--blue)} .card.o{border-top-color:var(--orange)} .card.p{border-top-color:var(--purple)} .card.k{border-top-color:var(--ink)}
+.card .eyebrow{margin-bottom:8px}
+.card h3{font-size:18px;font-weight:700;line-height:1.25;margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--muted);line-height:1.5}
+
+.subhead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:56px;margin-bottom:18px;flex-wrap:wrap}
+.subhead h3{font-size:22px;font-weight:700}
+.subhead .note{font-size:13px;color:var(--muted)}
+
+.ejes{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink)}
+.eje{padding:20px;border-right:1.5px solid var(--ink);min-width:0}
+.eje:last-child{border-right:none}
+.eje .n{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--purple)}
+.eje h4{margin:6px 0 0;font-size:17px;font-weight:700;line-height:1.3}
+
+.areas{display:flex;flex-wrap:wrap;gap:8px}
+.area{font-size:14px;font-weight:500;padding:8px 14px;border:1.5px solid var(--ink);background:var(--paper)}
+.area:nth-child(3n+1){border-color:var(--blue)}
+.area:nth-child(3n+2){border-color:var(--orange)}
+.area:nth-child(3n){border-color:var(--purple)}
+
+/* metodología */
+.lead{font-size:18px;color:var(--muted);max-width:68ch}
+.moments{margin-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1.5px solid var(--ink)}
+.moment{appearance:none;font:inherit;text-align:left;background:var(--paper);border:0;border-right:1.5px solid var(--ink);padding:22px 22px 20px;cursor:pointer;position:relative;color:var(--ink);transition:background .2s}
+.moment:last-child{border-right:0}
+.moment:hover{background:var(--soft)}
+.moment:focus-visible{outline:3px solid var(--ink);outline-offset:-6px}
+.moment .code{font-size:12px;font-weight:600;letter-spacing:.18em}
+.moment .t{font-size:26px;font-weight:900;margin-top:4px;letter-spacing:-.01em}
+.moment .d{font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.45}
+.moment .bar{position:absolute;left:0;right:0;bottom:0;height:5px;background:transparent;transition:background .2s}
+.moment[data-m="escuchar"] .code{color:var(--blue)}
+.moment[data-m="articular"] .code{color:var(--orange)}
+.moment[data-m="cocrear"] .code{color:var(--purple)}
+.moment[aria-pressed="true"][data-m="escuchar"]{background:var(--blue-t)} .moment[aria-pressed="true"][data-m="escuchar"] .bar{background:var(--blue)}
+.moment[aria-pressed="true"][data-m="articular"]{background:var(--orange-t)} .moment[aria-pressed="true"][data-m="articular"] .bar{background:var(--orange)}
+.moment[aria-pressed="true"][data-m="cocrear"]{background:var(--purple-t)} .moment[aria-pressed="true"][data-m="cocrear"] .bar{background:var(--purple)}
+.hint{margin-top:10px;font-size:13px;color:var(--muted)}
+
+.flow{margin-top:40px}
+.jornada{margin-bottom:34px}
+.j-head{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.j-tag{width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#fff;border-radius:3px;flex-shrink:0}
+.j-tag.b{background:var(--blue)} .j-tag.o{background:var(--orange)}
+.j-title{border-left:3px solid var(--ink);padding-left:16px;min-width:0}
+.j-title .eyebrow{font-size:11px}
+.j-title h3{font-size:clamp(20px,2.6vw,26px);font-weight:900;letter-spacing:-.01em;line-height:1.15}
+.j-title .dur{font-size:14px;color:var(--purple);font-weight:500}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.steps::before{content:"";position:absolute;top:21px;left:22px;right:22px;border-top:2px dashed var(--ink);opacity:.8}
+.step{position:relative;transition:opacity .25s, transform .25s}
+.dot{width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ink);background:var(--paper);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;margin-bottom:14px;position:relative;z-index:1;font-variant-numeric:tabular-nums;transition:background .25s,color .25s}
+.step[data-m="escuchar"] .dot{border-color:var(--blue);color:var(--blue)}
+.step[data-m="articular"] .dot{border-color:var(--orange);color:var(--orange)}
+.step[data-m="cocrear"] .dot{border-color:var(--purple);color:var(--purple)}
+.s-card{border:1.5px solid var(--ink);border-top-width:5px;padding:16px;background:var(--soft);min-height:170px}
+.step[data-m="escuchar"] .s-card{border-top-color:var(--blue)}
+.step[data-m="articular"] .s-card{border-top-color:var(--orange)}
+.step[data-m="cocrear"] .s-card{border-top-color:var(--purple)}
+.s-card .mtag{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.step[data-m="escuchar"] .mtag{color:var(--blue)}
+.step[data-m="articular"] .mtag{color:var(--orange)}
+.step[data-m="cocrear"] .mtag{color:var(--purple)}
+.s-card h4{margin:6px 0 6px;font-size:17px;font-weight:700;line-height:1.25}
+.s-card p{font-size:14px;color:var(--muted);line-height:1.45}
+.s-card .out{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink)}
+.s-card .out b{font-weight:600}
+
+
+.c-green{color:var(--green)}
+.j-tag.g{background:var(--green)}
+.moment[data-m="consolidar"] .code{color:var(--green)}
+.moment[aria-pressed="true"][data-m="consolidar"]{background:rgba(47,191,98,.09)} .moment[aria-pressed="true"][data-m="consolidar"] .bar{background:var(--green)}
+.step[data-m="consolidar"] .dot{border-color:var(--green);color:var(--green)}
+.step[data-m="consolidar"] .s-card{border-top-color:var(--green)}
+.step[data-m="consolidar"] .mtag{color:var(--green)}
+.flow.focus .step.on[data-m="consolidar"] .dot{background:var(--green)}
+.steps.two-steps{grid-template-columns:repeat(2,1fr);max-width:50%}
+@media (max-width:900px){.steps.two-steps{max-width:none}}
+@media (max-width:620px){.steps.two-steps{grid-template-columns:1fr}}
+.flow.focus .step{opacity:.28}
+.flow.focus .step.on{opacity:1;transform:translateY(-4px)}
+.flow.focus .step.on .dot{color:#fff}
+.flow.focus .step.on[data-m="escuchar"] .dot{background:var(--blue)}
+.flow.focus .step.on[data-m="articular"] .dot{background:var(--orange)}
+.flow.focus .step.on[data-m="cocrear"] .dot{background:var(--purple)}
+
+.checkpoint{display:flex;align-items:center;gap:14px;margin:6px 0 34px}
+.checkpoint .l{flex:1;height:1.5px;background:var(--ink);opacity:.25}
+.checkpoint span{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:center}
+
+.knowhow{margin-top:8px;border:1.5px dashed var(--purple);padding:16px 20px;font-size:14.5px;color:var(--muted);background:var(--paper)}
+.knowhow b{color:var(--purple);font-weight:600}
+
+/* entregable */
+.deliv{display:grid;grid-template-columns:260px 1fr;border:2px solid var(--ink)}
+.deliv .side{background:var(--ink);color:#fff;padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+.deliv .side .eyebrow{color:var(--green);margin-bottom:8px}
+.deliv .side h3{font-size:26px;font-weight:900;line-height:1.15}
+.deliv .items{display:grid;grid-template-columns:repeat(3,1fr)}
+.deliv .it{padding:24px 22px;border-left:1.5px solid var(--line);min-width:0}
+.deliv .it .n{font-weight:900;font-size:13px;color:var(--blue)}
+.deliv .it h4{margin:6px 0;font-size:18px;font-weight:700;line-height:1.25}
+.deliv .it p{font-size:14px;color:var(--muted)}
+.deliv-foot{margin-top:14px;font-size:14px;color:var(--muted)}
+.deliv-main{display:grid;grid-template-columns:260px 1fr;border:2px solid var(--orange);background:var(--orange-t);margin-bottom:22px}
+.dm-tag{background:var(--orange);color:#fff;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:24px;display:flex;align-items:center}
+.dm-body{padding:24px 26px;min-width:0}
+.dm-body h3{font-size:clamp(20px,2.6vw,26px);font-weight:900;line-height:1.2;margin-bottom:8px}
+.dm-body p{color:var(--muted);font-size:15px;max-width:72ch}
+.deliv-sub{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+@media (max-width:900px){.deliv-main{grid-template-columns:1fr}.dm-tag{padding:12px 18px}}
+
+/* logística */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{text-align:left;font-weight:600;color:var(--orange);padding:10px 12px;border-bottom:2px solid var(--orange)}
+td{padding:11px 12px;border-bottom:1px solid var(--orange);vertical-align:top}
+tr:nth-child(even) td{background:#F4F4F6}
+.req{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.req li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:14.5px;color:var(--muted)}
+.req li .who{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.req li i{font-style:normal;font-weight:900;color:var(--blue);font-variant-numeric:tabular-nums}
+.who.u{color:var(--blue)} .who.i{color:var(--orange)}
+.platform{margin-top:18px;border:1.5px solid var(--purple);border-left-width:5px;background:var(--purple-t);padding:16px 18px}
+.platform .eyebrow{font-size:11px;margin-bottom:6px}
+.platform p{font-size:14.5px;color:var(--muted)}
+.platform strong{color:var(--ink);font-weight:600}
+.req li strong{color:var(--ink);font-weight:600}
+
+.timeline{margin-top:8px;display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.day{padding:14px 12px;border-right:1.5px solid var(--ink);min-width:0;text-align:center}
+.day:last-child{border-right:none}
+.day .dw{font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.day .dn{font-size:26px;font-weight:900;font-variant-numeric:tabular-nums}
+.day.win{background:var(--orange-t)}
+.day .dj{display:inline-block;margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;background:var(--orange);padding:2px 8px}
+.tl-note{margin-top:10px;font-size:13px;color:var(--muted)}
+
+/* facilitador */
+.fac{display:grid;grid-template-columns:300px 1fr;border:1.5px solid var(--ink)}
+.fac-id{background:var(--ink);color:#fff;padding:28px 24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.photo{width:132px;height:132px;border-radius:50%;object-fit:cover;border:4px solid var(--orange);display:block}
+.mono{width:84px;height:84px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:30px;letter-spacing:.02em}
+.fac-id h3{font-size:26px;font-weight:900;line-height:1.1}
+.roles{display:flex;flex-direction:column;gap:6px}
+.roles span{font-size:13px;font-weight:600;letter-spacing:.06em;color:#fff;border-left:3px solid var(--orange);padding-left:10px}
+.roles span:nth-child(2){border-left-color:var(--blue)}
+.roles span:nth-child(3){border-left-color:var(--purple)}
+.roles span:nth-child(4){border-left-color:var(--green)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.2)}
+.stats b{display:block;font-size:22px;font-weight:900;color:var(--orange);font-variant-numeric:tabular-nums}
+.stats span{font-size:12px;color:rgba(255,255,255,.75)}
+.fac-body{padding:26px 28px;min-width:0;background:var(--paper)}
+.fac-lead{color:var(--muted);font-size:15.5px;max-width:72ch}
+.fac-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:28px;margin-top:22px}
+.fac-col{min-width:0}
+.fac-col .eyebrow{font-size:11px;margin-bottom:8px}
+.fac-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.fac-col li{font-size:14px;line-height:1.4;padding-left:14px;position:relative}
+.fac-col li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;background:var(--ink)}
+.fac-col:first-child li::before{background:var(--blue)}
+.fac-col .tr li::before{background:var(--purple)}
+.fac-col:last-child li::before{background:var(--orange)}
+@media (max-width:900px){.fac{grid-template-columns:1fr}.fac-grid{grid-template-columns:1fr}}
+
+/* universidades */
+.unis{margin-top:28px;border:1.5px solid var(--ink);background:var(--paper)}
+.unis-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;padding:22px 24px;border-bottom:1.5px solid var(--ink)}
+.unis-head h3{font-size:22px;font-weight:900;line-height:1.2;margin-top:4px}
+.unis-head p{font-size:14.5px;color:var(--muted)}
+.unis-grid{display:grid;grid-template-columns:2fr 1fr}
+.uni-col{padding:20px 24px;min-width:0}
+.uni-col + .uni-col{border-left:1.5px solid var(--ink)}
+.uni-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.uni-col:last-child .uni-k{color:var(--purple)}
+.uni-col ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px 18px}
+.uni-col:last-child ul{grid-template-columns:1fr}
+.uni-col li{font-size:15px;font-weight:600;line-height:1.35;padding-left:14px;position:relative}
+.uni-col li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;background:var(--orange)}
+.uni-col:last-child li::before{background:var(--purple)}
+@media (max-width:900px){.unis-head,.unis-grid{grid-template-columns:1fr}.uni-col + .uni-col{border-left:0;border-top:1.5px solid var(--ink)}}
+
+/* reconocimientos */
+.recog{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--ink)}
+.rc-col{padding:22px 24px;min-width:0;display:grid;gap:10px;align-content:start}
+.rc-col + .rc-col{border-left:1.5px solid var(--ink)}
+.rc-col h3{font-size:20px;font-weight:900;line-height:1.2;margin-bottom:6px}
+.award{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:var(--orange-t);padding:12px 14px}
+.aw-mark{flex-shrink:0;width:14px;height:14px;margin-top:5px;background:var(--orange);transform:rotate(45deg)}
+.award b,.lab b{display:block;font-size:16px;font-weight:700}
+.award span,.lab span{font-size:13.5px;color:var(--muted)}
+.lab{border:1px solid var(--line);border-left:5px solid var(--blue);background:var(--blue-t);padding:12px 14px}
+@media (max-width:900px){.recog{grid-template-columns:1fr}.rc-col + .rc-col{border-left:0;border-top:1.5px solid var(--ink)}}
+
+/* enlaces */
+.social{display:flex;flex-wrap:wrap;gap:8px}
+.sbtn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.45);padding:8px 14px;transition:background .2s,border-color .2s}
+.sbtn:hover{background:var(--blue);border-color:var(--blue)}
+.sbtn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.lbtn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);background:var(--paper);padding:9px 16px;transition:background .2s,color .2s}
+.lbtn:hover{background:var(--ink);color:#fff}
+.lbtn.gf{border-color:var(--blue);color:var(--blue)}
+.lbtn.gf:hover{background:var(--blue);color:#fff}
+.lbtn:focus-visible,.chip-link:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.chip-link{color:var(--blue);text-decoration:none;border-color:var(--blue)}
+.chip-link:hover{background:var(--blue-t)}
+
+/* programa */
+.ptl{margin-top:30px;display:flex;border:1.5px solid var(--ink);min-height:54px}
+.ptl-seg{display:flex;align-items:center;padding:0 16px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.06em;min-width:0}
+.ptl-seg span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ptl-seg.b{background:var(--blue)} .ptl-seg.o{background:var(--orange)} .ptl-seg.p{background:var(--purple)}
+.ptl-dates{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px;font-variant-numeric:tabular-nums}
+.phases{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ph{border:1.5px solid var(--ink);border-top-width:5px;padding:20px;background:var(--paper);min-width:0}
+.ph.b{border-top-color:var(--blue)} .ph.o{border-top-color:var(--orange)} .ph.p{border-top-color:var(--purple)}
+.ph-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.ph.b .ph-k{color:var(--blue)} .ph.o .ph-k{color:var(--orange)} .ph.p .ph-k{color:var(--purple)}
+.ph h3{font-size:21px;font-weight:900;margin:4px 0 2px}
+.ph-when{font-size:13px;color:var(--muted);margin-bottom:12px}
+.ph ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ph li{font-size:14px;line-height:1.4;padding-left:14px;position:relative}
+.ph li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;background:var(--ink)}
+.ph.b li::before{background:var(--blue)} .ph.p li::before{background:var(--purple)}
+.agenda{display:grid;gap:8px}
+.ag{border:1px solid var(--line);background:var(--soft);padding:10px 12px}
+.ag b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+.ag span{font-size:14px;line-height:1.35}
+.ag.in{background:var(--orange-t);border-color:var(--orange)}
+.meets{margin-top:18px;display:grid;grid-template-columns:220px repeat(3,1fr);border:1.5px solid var(--ink)}
+.meets-k{background:var(--ink);color:#fff;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px;display:flex;align-items:center}
+.meet{display:flex;gap:12px;padding:16px;border-left:1.5px solid var(--line);min-width:0}
+.meet i{font-style:normal;flex-shrink:0;width:30px;height:30px;border-radius:50%;border:2px solid var(--purple);color:var(--purple);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.meet b{display:block;font-size:15px}
+.meet span{font-size:13px;color:var(--muted);line-height:1.35}
+.approve{margin-top:18px;border:2px solid var(--orange);background:var(--orange-t);padding:16px 20px;font-size:15px}
+.approve b{font-weight:700}
+@media (max-width:900px){.phases{grid-template-columns:1fr}.meets{grid-template-columns:1fr}.meet{border-left:0;border-top:1.5px solid var(--line)}.ptl-seg{font-size:11px;padding:0 8px}}
+@media (max-width:620px){.ptl{flex-direction:column}.ptl-seg{flex:none!important;min-height:36px}.ptl-dates{display:none}}
+
+/* conoce inngenios */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:stretch}
+.about-main{background:var(--orange);color:#fff;padding:32px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.about-main .eyebrow{color:#fff;opacity:.85}
+.about-purpose{font-size:22px;font-weight:700;line-height:1.3}
+.about-tag{font-style:italic;font-weight:500;font-size:17px}
+.cta{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border:2px solid var(--ink);transition:background .2s,color .2s}
+.cta:hover{background:#fff;color:var(--ink)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.lines{display:grid;gap:12px}
+.line-it{border:1.5px solid var(--ink);border-left-width:5px;padding:16px 18px;background:var(--paper);min-width:0}
+.line-it.b{border-left-color:var(--blue)} .line-it.o{border-left-color:var(--orange)} .line-it.p{border-left-color:var(--purple)}
+.line-it.b .eyebrow{color:var(--blue)} .line-it.o .eyebrow{color:var(--orange)} .line-it.p .eyebrow{color:var(--purple)}
+.line-it h4{margin:4px 0;font-size:17px;font-weight:700}
+.line-it p{font-size:14px;color:var(--muted)}
+.eco{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.eco-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.chip{font-size:13px;font-weight:500;padding:6px 12px;border:1.5px solid var(--line);background:var(--soft)}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* cierre */
+.close{margin-top:72px;background:var(--ink);color:#fff}
+.close .wrap{padding-block:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
+.close h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;line-height:1.1}
+.close h2 span{color:var(--orange)}
+.close p{color:rgba(255,255,255,.75);margin-top:12px;max-width:52ch}
+.contact{border:1.5px solid rgba(255,255,255,.3);padding:20px}
+.contact .row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+.contact .row:last-child{border-bottom:0}
+.contact .k{font-size:11px;font-weight:600;letter-spacing:.16em;color:#9fd8ff;text-transform:uppercase}
+.contact .v{font-weight:500;user-select:all}
+.copy{font:inherit;font-size:12px;font-weight:600;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);padding:4px 10px;cursor:pointer}
+.copy:focus-visible{outline:2px solid var(--orange)}
+.foot{font-size:12px;color:rgba(255,255,255,.5);padding-block:0 28px}
+
+/* responsive */
+@media (max-width:900px){
+  .moments{grid-template-columns:repeat(2,1fr)}
+  .moment:nth-child(2){border-right:0}
+  .moment:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .specs{grid-template-columns:repeat(2,1fr)}
+  .specs > div:nth-child(2){border-right:none}
+  .specs > div:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .context,.two,.close .wrap{grid-template-columns:1fr}
+  .cards4,.ejes{grid-template-columns:repeat(2,1fr)}
+  .ejes .eje:nth-child(2){border-right:none}
+  .ejes .eje:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps::before{display:none}
+  .deliv{grid-template-columns:1fr}
+  .deliv .items{grid-template-columns:1fr}
+  .deliv .it{border-left:0;border-top:1.5px solid var(--line)}
+  .topbar .wrap{flex-wrap:wrap;gap:6px;padding-block:10px}
+  .nav{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-inline:-4px}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{white-space:nowrap;flex-shrink:0;font-size:12.5px;padding:6px 9px}
+}
+@media (max-width:620px){
+  .sec-head{grid-template-columns:1fr;gap:6px}
+  .sec-num{font-size:44px}
+  .moments{grid-template-columns:1fr}
+  .moment{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .moment:last-child{border-bottom:0}
+  .shift{grid-template-columns:1fr}
+  .shift .arrow{border:0;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:6px;font-size:0}
+  .shift .arrow::after{content:"\2193";font-size:24px}
+  .cards4,.ejes,.steps{grid-template-columns:1fr}
+  .ejes .eje{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .ejes .eje:last-child{border-bottom:0}
+  .day .dn{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.pres{margin-top:34px;display:grid;grid-template-columns:1.25fr 1fr;gap:0;border-top:2px solid var(--ink);padding-top:20px}.pres>div{min-width:0}.pres-by{border-left:1.5px solid rgba(5,5,5,.18);padding-left:28px}.pres-to{padding-right:28px}.pres .k{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.pres-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.pres-logo{height:64px;width:auto;max-width:100%;display:block}.pres-inn{height:34px;width:auto;display:block}.pres-name{font-weight:700;font-size:15px;line-height:1.3}.pres-name span{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px}.pres-to .pres-logo+.pres-name{border-left:1.5px solid rgba(5,5,5,.18);padding-left:18px}@media (max-width:700px){.pres{grid-template-columns:1fr;gap:18px}.pres-by{border-left:0;padding-left:0;border-top:1px solid rgba(5,5,5,.15);padding-top:16px}.pres-to{padding-right:0}.pres-logo{height:54px}.pres-to .pres-logo+.pres-name{border-left:0;padding-left:0}}
+.eje.hl{background:var(--orange-t)}
+.eje.hl .n{color:var(--orange)}
+.focus3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:8px}
+.focus3 .f3{border:1.5px solid var(--ink);border-top:5px solid var(--blue);background:var(--paper);padding:16px 18px;min-width:0}
+.focus3 .f3.o{border-top-color:var(--orange)}.focus3 .f3.p{border-top-color:var(--purple)}
+.focus3 h4{margin:6px 0 6px;font-size:16px;line-height:1.3;font-weight:700}
+.focus3 p{font-size:14px;color:var(--muted)}
+.ag-k{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-top:4px}
+@media (max-width:900px){.focus3{grid-template-columns:1fr}}
+.timeline.tl5{grid-template-columns:repeat(5,1fr)}
+.day.off{opacity:.5;background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(5,5,5,.06) 6px 12px)}
+.dj.prep{background:var(--blue)}
+.dj.no{background:var(--muted)}
+.tl5 .day{padding:12px 4px}
+.tl5 .dj{font-size:10px;letter-spacing:.02em;padding:2px 5px;max-width:100%;overflow-wrap:anywhere}
+/* inversión */
+.inv{display:grid;grid-template-columns:1.1fr 1fr;border:2px solid var(--ink)}
+.inv-main{background:var(--ink);color:#fff;padding:30px 30px;display:flex;flex-direction:column;gap:12px}
+.inv-main .eyebrow{color:#9fd8ff;font-size:11px}
+.inv-amount{font-size:46px;font-weight:900;letter-spacing:-.02em;line-height:1.05;font-variant-numeric:tabular-nums}
+.inv-amount .cur{font-size:18px;font-weight:600;color:#9fd8ff;vertical-align:middle;letter-spacing:.08em}
+.inv-amount .iva{font-size:24px;color:#9fd8ff}
+.inv-note{color:rgba(255,255,255,.8);font-size:14.5px}
+.inv-tax{margin-top:8px;border-top:1px solid rgba(255,255,255,.25)}
+.inv-tax div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;font-variant-numeric:tabular-nums}
+.inv-tax span{color:rgba(255,255,255,.75)}
+.inv-tax .tot b{color:#fff;font-size:17px}
+.inv-tax .tot span{color:#fff;font-weight:600}
+.inv-inc{padding:26px 28px;background:var(--paper)}
+.inv-inc ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:9px}
+.inv-inc li{font-size:14px;line-height:1.4;padding-left:16px;position:relative}
+.inv-inc li::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;background:var(--orange)}
+.inv-inc b{font-weight:600}
+.inv-foot{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.inv-foot > div{border:1.5px solid var(--ink);border-top:5px solid var(--purple);padding:14px 16px;background:var(--paper)}
+.inv-foot > div:nth-child(1){border-top-color:var(--blue)}
+.inv-foot > div:nth-child(2){border-top-color:var(--orange)}
+.inv-foot .k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.inv-foot p{font-size:13.5px}
+
+.hours{margin-top:22px;border:1.5px solid var(--ink);background:var(--paper)}
+.hours-head{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;padding:20px 22px;border-bottom:1.5px solid var(--ink)}
+.hours-head>div,.hours-head>p{min-width:0}
+.hours-head h3{margin-top:6px;font-size:20px;line-height:1.25}
+.hours-head p{color:var(--muted);font-size:14.5px}
+.hours-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.hcol{padding:16px 20px;border-right:1.5px solid var(--line);border-top:4px solid var(--blue);min-width:0}
+.hcol.o{border-top-color:var(--orange)}.hcol.p{border-top-color:var(--purple);border-right:0}
+.hk{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hn{font-size:30px;font-weight:900;margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.hcol ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.hcol li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;border-bottom:1px dashed var(--line);padding-bottom:5px}
+.hcol li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.hours-note{padding:10px 22px 14px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:900px){.hours-head,.hours-grid,.inv,.inv-foot{grid-template-columns:1fr}.hcol{border-right:0;border-bottom:1px solid var(--line)}}
+.meets.m4{grid-template-columns:220px repeat(4,1fr)}
+@media (max-width:900px){.meets.m4{grid-template-columns:1fr}}
+@media (max-width:620px){.timeline.t4{grid-template-columns:repeat(2,1fr)!important}.timeline.t4 .day:nth-child(2){border-right:none}.timeline.t4 .day:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}}
+
+/* ===== Capa visual del primer borrador: superficies suaves, esquinas redondeadas, tema claro y oscuro ===== */
+:root{
+  --bg:#FBFAF8; --surface:#FFFFFF; --surface-2:#F3F2F7; --fg:#15131C; --muted:#5D5A6B; --line:#E4E2EC;
+  --grid:rgba(103,92,198,.06); --orange-soft:#FFF1E8; --blue-soft:#E8F5FF; --purple-soft:#EFEDFB; --green-soft:#E8F8EE;
+  --dark:#0E0D14; --dark-fg:#F4F3F8; --dark-muted:#A9A6BA; --value:#7CC7FF;
+  --paper:var(--surface); --ink:var(--fg); --soft:var(--surface-2);
+  --blue-t:var(--blue-soft); --orange-t:var(--orange-soft); --purple-t:var(--purple-soft);
+  --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F0E15; --surface:#17161F; --surface-2:#1E1C28; --fg:#EEEDF4; --muted:#A3A0B5; --line:#2C2A3A;
+  --grid:rgba(160,150,255,.05); --orange-soft:#2A1A10; --blue-soft:#0E2233; --purple-soft:#1E1B33; --green-soft:#10261A;
+  --dark:#07060B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F0E15; --surface:#17161F; --surface-2:#1E1C28; --fg:#EEEDF4; --muted:#A3A0B5; --line:#2C2A3A;
+  --grid:rgba(160,150,255,.05); --orange-soft:#2A1A10; --blue-soft:#0E2233; --purple-soft:#1E1B33; --green-soft:#10261A;
+  --dark:#07060B; color-scheme:dark}
+
+body{background-color:var(--bg);color:var(--fg);font-size:15.5px}
+body::before{background:var(--surface)}
+img.logo-bla{display:none!important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) img.logo-pos{display:none!important}:root:not([data-theme="light"]) img.logo-bla{display:block!important}}
+:root[data-theme="dark"] img.logo-pos{display:none!important}
+:root[data-theme="dark"] img.logo-bla{display:block!important}
+
+/* barra superior */
+.topbar{background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand img{height:24px}
+.nav a{border-radius:8px}
+.nav a.active,.nav a.active:hover{color:var(--orange);background:var(--orange-soft)}
+
+/* hero */
+.hero{border-bottom:0;padding-block:64px 48px}
+.eyebrow{letter-spacing:.14em}
+.hero .eyebrow{color:var(--orange)}
+.hero h1{font-weight:700}
+.hero h1 em{background:linear-gradient(90deg,var(--orange),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-weight:300}
+.specs{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+.specs>div,.specs>div:nth-child(-n+2){border-color:var(--line)!important;border-width:0 1px 0 0}
+.specs .v{font-size:16px;font-weight:600}
+.pres{border-top:0;gap:16px;padding-top:0}
+.pres>div{background:var(--surface-2);border-radius:16px;padding:16px 18px!important;border:0!important}
+.pres .pres-name span{color:var(--muted)}
+
+/* secciones */
+section{border-top:1px solid var(--line);padding-block:64px}
+.sec-head{grid-template-columns:96px 1fr;align-items:start;border-bottom:0;padding-bottom:0;margin-bottom:36px}
+.sec-num{font-family:var(--f-mono);font-size:clamp(26px,3.4vw,36px);font-weight:600;color:var(--orange);padding-top:2px;line-height:1.1}
+.sec-head h2,.ph h3,.j-title h3,.moment .t,.dm-body h3,.deliv .side h3,.fac-id h3,.unis-head h3,.rc-col h3,.close h2,.inv-amount,.hn,.stats b,.day .dn,.shift .t,.card h3,.subhead h3,.hours-head h3{font-weight:700}
+.lead{font-weight:300}
+
+/* bordes neutros y esquinas redondeadas */
+.shift,.shift .arrow,.card,.ejes,.eje,.moments,.moment,.s-card,.dot,.deliv,.deliv .it,.ph,.hours,.hours-head,.meets,.meet,.fac,.unis,.unis-head,.uni-col+.uni-col,.recog,.rc-col+.rc-col,.timeline,.day,.inv,.inv-foot>div,.focus3 .f3{border-color:var(--line)!important}
+.shift,.card,.ejes,.moments,.s-card,.deliv,.ph,.hours,.meets,.fac,.unis,.recog,.timeline,.inv,.inv-foot>div,.focus3 .f3,.deliv-main,.about-main,.line-it,.platform,.ag,.award,.lab,.contact{border-radius:16px;overflow:hidden}
+.shift,.card,.ejes,.moments,.deliv,.hours,.meets,.fac,.unis,.recog,.timeline,.inv,.deliv-main{border-width:1px!important}
+.shift .arrow{border-width:0 1px!important}
+.eje,.moment{border-width:0 1px 0 0!important}
+.eje:last-child,.moment:last-child{border-right:0!important}
+
+/* tarjetas con franja superior de color */
+.card,.ph,.s-card,.inv-foot>div,.focus3 .f3{border-width:1px!important;position:relative;background:var(--surface)}
+.card::before,.ph::before,.s-card::before,.inv-foot>div::before,.focus3 .f3::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--acc,var(--fg))}
+.card.b,.ph.b,.focus3 .f3{--acc:var(--blue)} .card.o,.ph.o,.focus3 .f3.o{--acc:var(--orange)} .card.p,.ph.p,.focus3 .f3.p{--acc:var(--purple)} .card.k{--acc:var(--fg)}
+.step[data-m="escuchar"] .s-card{--acc:var(--blue)} .step[data-m="articular"] .s-card{--acc:var(--orange)}
+.step[data-m="cocrear"] .s-card{--acc:var(--purple)} .step[data-m="consolidar"] .s-card{--acc:var(--green)}
+.inv-foot>div:nth-child(1){--acc:var(--blue)} .inv-foot>div:nth-child(2){--acc:var(--orange)} .inv-foot>div:nth-child(3){--acc:var(--purple)}
+.s-card{padding-top:20px}
+.dot{background:var(--surface);border-width:2px}
+.steps::before{border-top-color:var(--line);opacity:1}
+.checkpoint .l{background:var(--line);opacity:1}
+
+/* chips, etiquetas y agenda */
+.area{border:1px solid var(--line)!important;background:var(--surface);border-radius:999px;padding:7px 14px}
+.chip{border-radius:999px;border-color:var(--line)}
+.lbtn{border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg)}
+.lbtn:hover{background:var(--fg);color:var(--bg)}
+.lbtn.gf{border-color:var(--blue)}
+.ag{background:var(--surface-2);border-color:transparent;border-radius:10px}
+.ag.in{background:var(--orange-soft)}
+.ptl{border:0;border-radius:12px;overflow:hidden;gap:3px}
+.quote{border-radius:0 16px 16px 0}
+.knowhow{border:0;background:var(--purple-soft);border-radius:12px}
+.platform{border-width:0 0 0 4px}
+.line-it{border:1px solid var(--line);border-left:4px solid var(--fg)}
+.hcol{border-right-color:var(--line)}
+.hours-note{border-top-color:var(--line)}
+
+/* paneles oscuros */
+.deliv .side,.fac-id,.inv-main,.close,.meets-k{background:var(--dark);color:var(--dark-fg)}
+.close{margin-top:40px}
+.approve{border:0;background:var(--dark);color:var(--dark-fg);border-radius:16px;padding:18px 22px}
+.approve b{color:#FFB27F}
+.deliv-main{border-color:var(--orange)!important;background:var(--orange-soft)}
+.dm-tag{border-radius:0}
+.cta{background:var(--dark);border-color:var(--dark);border-radius:999px}
+.cta:hover{background:var(--surface);color:var(--fg)}
+.mono{border-radius:20px!important;background:linear-gradient(135deg,var(--blue),var(--green))!important;width:120px;height:120px;font-size:38px}
+.photo{border-radius:20px}
+.inv-amount .cur,.inv-amount .iva{color:var(--value)}
+.inv-main .eyebrow{color:var(--dark-muted)}
+
+/* tablas */
+table{background:var(--surface);border:1px solid var(--line);border-radius:16px;border-collapse:separate;border-spacing:0;overflow:hidden}
+th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--surface-2);border-bottom:1px solid var(--line)}
+td{border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+tr:nth-child(even) td{background:transparent}
+
+/* responsive */
+@media (max-width:900px){
+  .specs>div:nth-child(-n+2){border-bottom-width:1px!important}
+  .specs>div:nth-child(2){border-right-width:0!important}
+  .eje,.moment{border-width:0 0 1px 0!important}
+  .meet{border-left:0!important;border-top:1px solid var(--line)!important}
+  .deliv .it{border-left:0!important;border-top:1px solid var(--line)!important}
+  .uni-col+.uni-col,.rc-col+.rc-col{border-left:0!important;border-top:1px solid var(--line)!important}
+  .timeline.t4 .day{border-color:var(--line)!important}
+  .sec-head{grid-template-columns:1fr;gap:6px}
+}
+.clients{margin-top:22px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+.clients .unis-head{border-bottom:0}
+.cl-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.cl-grid{grid-template-columns:1fr 1fr}}@media (max-width:560px){.cl-grid{grid-template-columns:1fr}}
+.cl{padding:18px 22px;border-top:1px solid var(--line);border-right:1px solid var(--line);min-width:0}
+.cl-k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--purple);margin-bottom:8px}
+.cl ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.cl li{font-size:14px;font-weight:600;line-height:1.35;padding-left:14px;position:relative}
+.cl li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;border-radius:2px;background:var(--orange)}
+.gt-wrap{margin-top:26px;overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.gt{min-width:760px;display:grid;grid-template-columns:220px repeat(12,1fr);font-size:13px}
+.gt>div{padding:9px 8px;border-bottom:1px solid var(--line);min-width:0}
+.gt>div:nth-last-child(-n+2){border-bottom:0}
+.gt .h{font-family:var(--f-mono);font-size:11px;color:var(--muted);text-align:center;background:var(--surface-2)}
+.gt .h.l{text-align:left}
+.gt .gt-lab{font-weight:600;font-size:14px;line-height:1.3}
+.gt .gt-lab small{display:block;color:var(--muted);font-weight:400;font-size:12px;margin-top:2px}
+.gt .cell{grid-column:2/14;display:grid;grid-template-columns:repeat(12,1fr);padding:9px 6px 9px 0;align-items:center}
+.gt .bar{grid-column:var(--s)/var(--e);height:22px;border-radius:6px;background:var(--c);margin:0 3px}
+.gt .ms{grid-row:1;grid-column:var(--s);justify-self:center;font-family:var(--f-mono);font-size:10.5px;font-weight:700;color:var(--bg);background:var(--fg);border-radius:5px;padding:2px 5px}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand"><img class="logo-bla" src="logo-blanco.png" alt="Inngenios" height="24"><img class="logo-pos" src="logo.png" alt="Inngenios" width="161" height="32"></div>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#entendimiento">Entendimiento</a>
+      <a href="#programa">Programa</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#entregable">Entregables</a>
+      <a href="#logistica">Requerimientos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#inngenios">Inngenios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Propuesta técnica · Investigación de usuario · Aeropuerto Internacional Rafael Núñez</div>
+      <h1>Investigación de usuario para <em>entender y mejorar el servicio de los taxistas del Aeropuerto de Cartagena</em></h1>
+      <p class="sub">Un programa de consultoría de 12 semanas, con cinco semanas de trabajo de campo, para comprender cómo trabajan, se organizan y se relacionan con los pasajeros los taxistas del aeropuerto, y co-diseñar con ellos un portafolio priorizado de mejoras en organización, servicio y capacitación.</p>
+      <div class="specs">
+        <div><div class="k">Programa</div><div class="v">12 semanas · 3 fases</div></div>
+        <div><div class="k">Fechas tentativas</div><div class="v">18 ene – 9 abr 2027</div></div>
+        <div><div class="k">Actores</div><div class="v">Taxistas + 5 grupos</div></div>
+        <div><div class="k">Modalidad</div><div class="v">Presencial en campo</div></div>
+      </div>
+      <div class="pres">
+        <div class="pres-to"><div class="k">Presentado a</div><div class="pres-row"><div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px;flex:none">MR</div><div class="pres-name">Mario A. Ramírez</div></div></div>
+        <div class="pres-by"><div class="k">Presentado por</div><div class="pres-row"><img class="pres-inn logo-bla" src="logo-blanco.png" alt="Inngenios"><img class="pres-inn logo-pos" src="logo.png" alt="Inngenios"><div class="pres-name">Torres Creativas S.A.S.<span>Cartagena de Indias · Noviembre de 2026</span></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 ENTENDIMIENTO -->
+  <section id="entendimiento">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">01</div>
+        <div><div class="eyebrow c-blue">Lo que entendimos</div><h2>Entendimiento de la solicitud</h2></div>
+      </div>
+
+      <div class="context">
+        <div>
+          <p>El taxista del aeropuerto suele ser el primer contacto humano del visitante con Cartagena. Su trato, la tarifa que cobra y la forma en que conduce moldean la percepción de la ciudad como destino desde los primeros minutos del viaje.</p>
+          <p>Las decisiones sobre este servicio, sin embargo, se toman con frecuencia sin conocer a fondo cómo opera el día a día del conductor: cómo se forman las filas, quién asigna los pasajeros, cuánto se espera y qué presiones explican las conductas que generan quejas.</p>
+          <p>Antes de proponer capacitaciones o esquemas de organización, el estudio busca responder con evidencia qué pasa, por qué pasa y qué se puede mejorar, para que las soluciones nazcan <strong>con la legitimidad del gremio</strong> y no fracasen por baja adopción.</p>
+        </div>
+        <div class="quote">
+          <div class="eyebrow">Objetivo general</div>
+          <p>Comprender el contexto, los comportamientos y las necesidades de los taxistas del Aeropuerto de Cartagena para identificar, enumerar y priorizar oportunidades de mejora en organización, servicio y capacitación.</p>
+        </div>
+      </div>
+
+      <div class="shift" aria-label="Transición esperada">
+        <div class="box from">
+          <div class="eyebrow" style="color:var(--muted)">Punto de partida</div>
+          <div class="t">Decisiones sobre supuestos</div>
+          <ul><li>Quejas aisladas sin explicación de fondo</li><li>Capacitaciones diseñadas desde afuera</li></ul>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="box to">
+          <div class="eyebrow c-orange">Hacia dónde va</div>
+          <div class="t">Mejoras basadas en evidencia y co-diseñadas</div>
+          <ul><li>Comportamientos, dolores y motivaciones documentados</li><li>Oportunidades priorizadas por impacto y factibilidad</li><li>Plan de organización y capacitación construido con los conductores</li></ul>
+        </div>
+      </div>
+
+      <div class="cards4">
+        <div class="card b"><div class="eyebrow c-blue">Usuario principal</div><h3>Taxistas del aeropuerto</h3><p>Junto con los actores que influyen en su comportamiento, para entender el sistema completo.</p></div>
+        <div class="card o"><div class="eyebrow c-orange">Formato</div><h3>12 semanas en 3 fases</h3><p>Preparación, implementación en campo y procesamiento, cada fase con un entregable revisado por el cliente.</p></div>
+        <div class="card p"><div class="eyebrow c-purple">Criterio de éxito</div><h3>Oportunidades priorizadas</h3><p>Cada hallazgo respaldado por más de un método y cada propuesta validada con los conductores.</p></div>
+        <div class="card k"><div class="eyebrow">Expectativa</div><h3>Soluciones adoptables</h3><p>Propuestas de organización y capacitación que el gremio reconoce como propias.</p></div>
+      </div>
+
+      <div class="subhead"><h3>Preguntas que guían el estudio</h3><span class="note">Se ajustan con el cliente en la Fase 1</span></div>
+      <div class="ejes">
+        <div class="eje"><div class="n">ORGANIZACIÓN</div><h4>¿Cómo se organizan hoy los turnos, las filas y la asignación de pasajeros?</h4></div>
+        <div class="eje hl"><div class="n">CONDUCTAS</div><h4>¿Qué conductas generan quejas (tarifa, trato, idioma, vehículo) y qué las provoca?</h4></div>
+        <div class="eje hl"><div class="n">MOTIVACIÓN</div><h4>¿Qué motiva o desmotiva a los conductores a formarse y mejorar su servicio?</h4></div>
+        <div class="eje"><div class="n">RELACIONES</div><h4>¿Qué tensiones existen entre taxistas, plataformas, autoridades, operador y pasajeros?</h4></div>
+      </div>
+
+      <div class="subhead"><h3>Actores del sistema</h3><span class="note">Identificados hasta ahora · el mapeo inicial de actores puede ampliar la lista</span></div>
+      <div class="areas">
+        <span class="area">Taxistas que operan en el aeropuerto</span>
+        <span class="area">Empresas, cooperativas y asociaciones de taxis</span>
+        <span class="area">Operador aeroportuario</span>
+        <span class="area">Autoridades de tránsito y turismo</span>
+        <span class="area">Pasajeros nacionales y extranjeros</span>
+        <span class="area">Despachadores, plataformas, hoteles y guías</span>
+      </div>
+      <div class="knowhow" style="margin-top:16px"><b>Nota sobre la muestra.</b> Los actores listados son los identificados hasta ahora. Con ellos se aplicarán los métodos de investigación de usuario propuestos: observación estructurada, entrevistas a profundidad individuales y grupales, inmersión y acompañamiento de jornadas, encuestas a pasajeros y talleres de co-diseño. El número puntual y óptimo de entrevistas y encuestas se estimará en la fase de diseño y planeación, a partir del mapeo inicial de actores del ecosistema.</div>
+    </div>
+  </section>
+
+  <!-- 02 PROGRAMA -->
+  <section id="programa">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">02</div>
+        <div><div class="eyebrow c-blue">Alcance del acompañamiento</div><h2>Un programa de investigación en tres fases</h2></div>
+      </div>
+      <p class="lead">El trabajo de campo es el momento más visible, pero el valor del estudio depende de una buena preparación y de un procesamiento riguroso. Por eso el programa incluye un antes, un durante y un después, cada uno cerrado con un entregable que el cliente revisa antes de avanzar.</p>
+
+      <div class="ptl" role="img" aria-label="Línea de tiempo del programa: tres semanas de preparación, cinco de campo y cuatro de procesamiento">
+        <div class="ptl-seg b" style="flex:3"><span>Semanas 1–3 · Preparación</span></div>
+        <div class="ptl-seg o" style="flex:5"><span>Semanas 4–8 · Campo</span></div>
+        <div class="ptl-seg p" style="flex:4"><span>Semanas 9–12 · Procesamiento</span></div>
+      </div>
+      <div class="ptl-dates"><span>18 ene 2027</span><span>8 feb – 12 mar</span><span>9 abr 2027</span></div>
+
+      <div class="gt-wrap" role="img" aria-label="Cronograma de 12 semanas por fase con entregables E1 a E6"><div class="gt"><div class="h l">Fase</div><div class="h">S1</div><div class="h">S2</div><div class="h">S3</div><div class="h">S4</div><div class="h">S5</div><div class="h">S6</div><div class="h">S7</div><div class="h">S8</div><div class="h">S9</div><div class="h">S10</div><div class="h">S11</div><div class="h">S12</div><div class="gt-lab">Preparación<small>Foco, informantes, instrumentos, piloto</small></div><div class="cell"><div class="bar" style="--s:1;--e:4;--c:var(--blue)"></div></div><div class="gt-lab">Implementación en campo<small>Observación, entrevistas, inmersión, encuestas</small></div><div class="cell"><div class="bar" style="--s:4;--e:9;--c:var(--orange)"></div></div><div class="gt-lab">Co-diseño<small>Talleres con conductores y actores</small></div><div class="cell"><div class="bar" style="--s:7;--e:9;--c:var(--green)"></div></div><div class="gt-lab">Procesamiento<small>Análisis, síntesis, priorización, hoja de ruta</small></div><div class="cell"><div class="bar" style="--s:9;--e:13;--c:var(--purple)"></div></div><div class="gt-lab">Entregables<small>Revisión del cliente</small></div><div class="cell"><div class="ms" style="--s:3">E1</div><div class="ms" style="--s:6">E2</div><div class="ms" style="--s:9">E3</div><div class="ms" style="--s:11">E4</div><div class="ms" style="--s:12">E5·E6</div></div></div></div>
+
+      <div class="phases">
+        <div class="ph b">
+          <div class="ph-k">Fase 1 · Antes</div>
+          <h3>Preparación</h3>
+          <div class="ph-when">Semanas 1 a 3 · cierra con el Plan de investigación (E1)</div>
+          <ul>
+            <li>Foco, preguntas clave, hipótesis y criterios de éxito acordados con el cliente</li>
+            <li>Revisión de normativa, tarifas oficiales, estadísticas de pasajeros, quejas y estudios previos</li>
+            <li>Conversaciones con informantes clave y mapeo inicial de actores del ecosistema</li>
+            <li>Estimación del número óptimo de entrevistas y encuestas</li>
+            <li>Instrumentos de campo, protocolo ético y piloto</li>
+            <li>Calendario de campo por franjas de alta y baja demanda</li>
+          </ul>
+        </div>
+        <div class="ph o">
+          <div class="ph-k">Fase 2 · Durante</div>
+          <h3>Implementación en campo</h3>
+          <div class="ph-when">Semanas 4 a 8 · avance en la semana 6 (E2)</div>
+          <div class="agenda">
+            <div class="ag"><b>Observar</b><span>Registro en las zonas de llegada y espera en distintas franjas y días</span></div>
+            <div class="ag"><b>Indagar</b><span>Entrevistas individuales en los tiempos de espera y grupos por tipo de conductor</span></div>
+            <div class="ag"><b>Vivir el servicio</b><span>Jornadas acompañadas y viajes como pasajero; encuestas a viajeros</span></div>
+            <div class="ag in"><b>Co-diseñar</b><span>Talleres con conductores y actores clave para validar hallazgos y prototipar soluciones</span></div>
+          </div>
+        </div>
+        <div class="ph p">
+          <div class="ph-k">Fase 3 · Después</div>
+          <h3>Procesamiento</h3>
+          <div class="ph-when">Semanas 9 a 12 · E3, E4, E5 y E6</div>
+          <ul>
+            <li>Inventario de comportamientos, dolores y motivaciones</li>
+            <li>Personas, mapas de recorrido y mapa del sistema</li>
+            <li>Priorización de oportunidades por impacto y factibilidad</li>
+            <li>Informe final, hoja de ruta y plan de capacitación</li>
+            <li>Presentación al cliente y devolución a los taxistas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hours">
+        <div class="hours-head">
+          <div><div class="eyebrow c-orange">Dedicación estimada del equipo</div><h3>Cerca de 1.090 horas de trabajo profesional, el 60% de ellas en campo</h3></div>
+          <p>La calidad de los hallazgos depende del tiempo que el equipo pasa junto a los conductores. Por eso la mayor parte de la dedicación se concentra en las cinco semanas de campo, sin descuidar el diseño previo ni la síntesis.</p>
+        </div>
+        <div class="hours-grid">
+          <div class="hcol b">
+            <div class="hk">Antes · preparación</div><div class="hn">~144 h</div>
+            <ul>
+              <li><span>Foco y revisión documental</span><b>40 h</b></li>
+              <li><span>Informantes clave y mapa de actores</span><b>32 h</b></li>
+              <li><span>Instrumentos, protocolo ético y piloto</span><b>56 h</b></li>
+              <li><span>Plan de investigación y reuniones</span><b>16 h</b></li>
+            </ul>
+          </div>
+          <div class="hcol o">
+            <div class="hk">Durante · campo</div><div class="hn">~664 h</div>
+            <ul>
+              <li><span>Observación por franjas</span><b>160 h</b></li>
+              <li><span>Entrevistas individuales y grupales</span><b>240 h</b></li>
+              <li><span>Inmersión y voz del pasajero</span><b>176 h</b></li>
+              <li><span>Talleres de co-diseño</span><b>56 h</b></li>
+              <li><span>Informe de avance de campo</span><b>32 h</b></li>
+            </ul>
+          </div>
+          <div class="hcol p">
+            <div class="hk">Después · procesamiento</div><div class="hn">~280 h</div>
+            <ul>
+              <li><span>Análisis y agrupación de hallazgos</span><b>96 h</b></li>
+              <li><span>Personas, mapas y matriz de oportunidades</span><b>104 h</b></li>
+              <li><span>Informe final y hoja de ruta</span><b>64 h</b></li>
+              <li><span>Presentación y devolución</span><b>16 h</b></li>
+            </ul>
+          </div>
+        </div>
+        <p class="hours-note">Estimación de referencia para el equipo de cinco roles descrito en la sección Equipo.</p>
+      </div>
+
+      <div class="meets m4">
+        <div class="meets-k">Reuniones con el cliente</div>
+        <div class="meet"><i>1</i><div><b>Kickoff</b><span>Semana 1 · foco, preguntas y permisos de acceso</span></div></div>
+        <div class="meet"><i>2</i><div><b>Plan y muestra</b><span>Semana 3 · validación del plan de investigación</span></div></div>
+        <div class="meet"><i>3</i><div><b>Avance de campo</b><span>Semana 6 · primeros hallazgos y ajustes</span></div></div>
+        <div class="meet"><i>4</i><div><b>Resultados</b><span>Semana 12 · informe final y hoja de ruta</span></div></div>
+      </div>
+
+      <div class="approve"><b>Aprobación de la propuesta: a más tardar el viernes 18 de diciembre de 2026</b>, mediante orden de compra o correo de aceptación. Así se gestionan a tiempo los permisos de acceso al aeropuerto para iniciar el lunes 18 de enero de 2027 y realizar el campo entre el 8 de febrero y el 12 de marzo, fuera de la temporada alta de fin de año y de Semana Santa.</div>
+    </div>
+  </section>
+
+  <!-- 03 METODOLOGÍA -->
+  <section id="metodologia">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">03</div>
+        <div><div class="eyebrow c-orange">Cómo lo vamos a abordar</div><h2>Investigación de usuario en cuatro momentos</h2></div>
+      </div>
+      <p class="lead">Nuestra metodología se fundamenta en el marco de investigación de usuario de MIT D-Lab y en los enfoques de diseño centrado en las personas. Entendemos el servicio de taxi del aeropuerto como un sistema en el que conductores, gremios, operador, autoridades y pasajeros se influyen mutuamente; por eso el estudio escucha a todos, triangula lo que dicen con lo que se observa y construye las soluciones junto con quienes las van a adoptar.</p>
+      <p class="lead" style="margin-top:12px">El volumen de información crece en la preparación, se multiplica en el campo con varios métodos simultáneos y se condensa al final en insights y herramientas para el diseño. Cada hallazgo se apoya en datos de más de un método.</p>
+
+      <div class="moments" role="group" aria-label="Momentos de la metodología">
+        <button class="moment" data-m="escuchar" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 01</div><div class="t">Preparar</div>
+          <div class="d">Enfocar el estudio, conocer el terreno y alistar instrumentos con criterios éticos.</div><span class="bar"></span>
+        </button>
+        <button class="moment" data-m="articular" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 02</div><div class="t">Observar e indagar</div>
+          <div class="d">Ver, escuchar y vivir el servicio desde el lado del conductor y del pasajero.</div><span class="bar"></span>
+        </button>
+        <button class="moment" data-m="cocrear" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 03</div><div class="t">Co-diseñar</div>
+          <div class="d">Validar hallazgos y prototipar soluciones con los conductores y actores clave.</div><span class="bar"></span>
+        </button>
+        <button class="moment" data-m="consolidar" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 04</div><div class="t">Sintetizar</div>
+          <div class="d">Convertir los datos en patrones, prioridades y una hoja de ruta accionable.</div><span class="bar"></span>
+        </button>
+      </div>
+      <p class="hint">Selecciona un momento para ver qué pasos lo componen.</p>
+
+      <div class="flow" id="flow">
+        <div class="jornada">
+          <div class="j-head">
+            <div class="j-tag b">F1</div>
+            <div class="j-title"><div class="eyebrow c-blue">Fase 1 · Preparación</div><h3>Foco del estudio e instrumentos</h3><div class="dur">Semanas 1 a 3</div></div>
+          </div>
+          <div class="steps">
+            <div class="step" data-m="escuchar"><div class="dot">01</div><div class="s-card"><div class="mtag">Preparar</div><h4>Foco de la investigación</h4><p>Preguntas clave, hipótesis y criterios de éxito acordados con el cliente.</p><div class="out"><b>Insumo:</b> foco y preguntas validadas</div></div></div>
+            <div class="step" data-m="escuchar"><div class="dot">02</div><div class="s-card"><div class="mtag">Preparar</div><h4>Investigación secundaria</h4><p>Normativa de taxis, tarifas oficiales, estadísticas de pasajeros, quejas registradas y estudios previos.</p><div class="out"><b>Insumo:</b> línea base documental</div></div></div>
+            <div class="step" data-m="escuchar"><div class="dot">03</div><div class="s-card"><div class="mtag">Preparar</div><h4>Informantes clave y mapa de actores</h4><p>Conversaciones con líderes gremiales, operador y autoridades para entender el terreno.</p><div class="out"><b>Insumo:</b> mapa de actores y muestra</div></div></div>
+            <div class="step" data-m="escuchar"><div class="dot">04</div><div class="s-card"><div class="mtag">Preparar</div><h4>Instrumentos, ética y piloto</h4><p>Instrumentos de campo, consentimiento informado y prueba piloto en el aeropuerto.</p><div class="out"><b>Insumo:</b> plan de investigación (E1)</div></div></div>
+          </div>
+        </div>
+
+        <div class="checkpoint"><div class="l"></div><span>E1 · Plan de investigación aprobado por el cliente</span><div class="l"></div></div>
+
+        <div class="jornada">
+          <div class="j-head">
+            <div class="j-tag o">F2</div>
+            <div class="j-title"><div class="eyebrow c-orange">Fase 2 · Implementación en campo</div><h3>Observación, indagación, inmersión y co-diseño</h3><div class="dur">Semanas 4 a 8</div></div>
+          </div>
+          <div class="steps">
+            <div class="step" data-m="articular"><div class="dot">05</div><div class="s-card"><div class="mtag">Observar e indagar</div><h4>Observación estructurada</h4><p>Registro en las zonas de llegada y espera: tiempos, interacciones, cobros y conflictos.</p><div class="out"><b>Insumo:</b> registros por franja</div></div></div>
+            <div class="step" data-m="articular"><div class="dot">06</div><div class="s-card"><div class="mtag">Observar e indagar</div><h4>Entrevistas individuales y grupales</h4><p>Conversaciones en los tiempos de espera y grupos por antigüedad, vinculación y turno.</p><div class="out"><b>Insumo:</b> voces de los conductores</div></div></div>
+            <div class="step" data-m="articular"><div class="dot">07</div><div class="s-card"><div class="mtag">Observar e indagar</div><h4>Inmersión y voz del pasajero</h4><p>Jornadas acompañadas, viajes como pasajero y encuestas a viajeros nacionales y extranjeros.</p><div class="out"><b>Insumo:</b> recorrido vivido desde ambos lados</div></div></div>
+            <div class="step" data-m="cocrear"><div class="dot">08</div><div class="s-card"><div class="mtag">Co-diseñar</div><h4>Talleres de co-diseño</h4><p>Conductores y actores clave validan los hallazgos y prototipan soluciones.</p><div class="out"><b>Insumo:</b> prototipos validados</div></div></div>
+          </div>
+        </div>
+
+        <div class="checkpoint"><div class="l"></div><span>E2 · Avance de campo en la semana 6 · cierre del campo</span><div class="l"></div></div>
+
+        <div class="jornada">
+          <div class="j-head">
+            <div class="j-tag g">F3</div>
+            <div class="j-title"><div class="eyebrow c-green">Fase 3 · Procesamiento</div><h3>De los datos a las decisiones</h3><div class="dur">Semanas 9 a 12</div></div>
+          </div>
+          <div class="steps">
+            <div class="step" data-m="consolidar"><div class="dot">09</div><div class="s-card"><div class="mtag">Sintetizar</div><h4>Análisis y agrupación de hallazgos</h4><p>Los datos de todos los métodos se cruzan y se agrupan en patrones.</p><div class="out"><b>Insumo:</b> inventario de comportamientos (E3)</div></div></div>
+            <div class="step" data-m="consolidar"><div class="dot">10</div><div class="s-card"><div class="mtag">Sintetizar</div><h4>Personas y mapas de recorrido</h4><p>Arquetipos de taxistas y pasajeros, y el recorrido del servicio con sus puntos de dolor.</p><div class="out"><b>Insumo:</b> herramientas de síntesis (E4)</div></div></div>
+            <div class="step" data-m="consolidar"><div class="dot">11</div><div class="s-card"><div class="mtag">Sintetizar</div><h4>Priorización de oportunidades</h4><p>Las oportunidades se ordenan por impacto y factibilidad.</p><div class="out"><b>Insumo:</b> matriz de oportunidades</div></div></div>
+            <div class="step" data-m="consolidar"><div class="dot">12</div><div class="s-card"><div class="mtag">Sintetizar</div><h4>Hoja de ruta y devolución</h4><p>Informe final para el cliente y sesión de devolución con los taxistas.</p><div class="out"><b>Insumo:</b> informe final (E5) y socialización (E6)</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="knowhow"><b>Alcance metodológico de esta propuesta.</b> Esta propuesta presenta el enfoque, los cuatro momentos y los pasos que recorrerá el estudio. Las guías de entrevista, las fichas de observación, las encuestas y los kits de co-diseño se construyen y validan en la Fase 1, y se entregan como parte del Plan de investigación una vez aprobada la propuesta.</div>
+    </div>
+  </section>
+
+  <!-- 04 ENTREGABLE -->
+  <section id="entregable">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">04</div>
+        <div><div class="eyebrow c-purple">Resultado del estudio</div><h2>Entregables</h2></div>
+      </div>
+      <div class="deliv-main">
+        <div class="dm-tag">Entregable principal · E5</div>
+        <div class="dm-body">
+          <h3>Informe final y hoja de ruta para mejorar el servicio de taxis del aeropuerto</h3>
+          <p>Recoge las oportunidades de mejora priorizadas por impacto y factibilidad, las propuestas de organización de filas, turnos y asignación, un plan de capacitación por módulos pensado para los conductores y los requerimientos de diseño para una eventual fase de implementación.</p>
+        </div>
+      </div>
+      <div class="deliv-sub">Se complementa con:</div>
+      <div class="deliv">
+        <div class="side"><div class="eyebrow">Salidas del proceso</div><h3>Evidencia y herramientas de diseño</h3></div>
+        <div class="items">
+          <div class="it"><div class="n">E3 · semana 9</div><h4>Inventario de comportamientos</h4><p>Lista clasificada de comportamientos, dolores y motivaciones, con su frecuencia y evidencia.</p></div>
+          <div class="it"><div class="n">E4 · semana 11</div><h4>Herramientas de síntesis</h4><p>Personas, mapas de recorrido, mapa del sistema y matriz de oportunidades.</p></div>
+          <div class="it"><div class="n">E6 · semana 12</div><h4>Socialización</h4><p>Presentación de resultados al cliente y sesión de devolución a los taxistas.</p></div>
+        </div>
+      </div>
+      <p class="deliv-foot">Durante el proceso se entregan además el Plan de investigación (E1, semana 3) y el Informe de avance de campo (E2, semana 6).</p>
+    </div>
+  </section>
+
+  <!-- 05 REQUERIMIENTOS -->
+  <section id="logistica">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">05</div>
+        <div><div class="eyebrow c-blue">Lo que se necesita</div><h2>Requerimientos y cronograma</h2></div>
+      </div>
+      <div class="two">
+        <div>
+          <ul class="req">
+            <li><i>01</i><div><span class="who u">Cliente</span><strong>Permisos de acceso</strong> a las zonas de llegada y espera del aeropuerto, gestionados con el operador desde la semana 1.</div></li>
+            <li><i>02</i><div><span class="who u">Cliente</span><strong>Aval de los líderes gremiales</strong> y apoyo en la convocatoria de los conductores.</div></li>
+            <li><i>03</i><div><span class="who u">Cliente</span><strong>Salón para los talleres</strong> de co-diseño y la sesión de devolución.</div></li>
+            <li><i>04</i><div><span class="who u">Cliente</span><strong>Acceso a información</strong>: estadísticas de pasajeros, registro de quejas y un enlace para las reuniones de revisión.</div></li>
+            <li><i>05</i><div><span class="who i">Inngenios</span><strong>Equipo de investigación, facilitación y diseño de información</strong>, con instrumentos, kits de co-diseño y materiales impresos.</div></li>
+            <li><i>06</i><div><span class="who i">Inngenios</span><strong>Logística de campo</strong>: transporte del equipo, incentivos a los participantes y refrigerios de los talleres.</div></li>
+          </ul>
+          <div class="platform"><div class="eyebrow c-purple">Valor agregado</div><p><strong>Registro digital de campo.</strong> Las observaciones, entrevistas y encuestas se capturan en herramientas digitales, lo que permite compartir avances con el cliente durante el campo y acelerar la síntesis.</p></div>
+        </div>
+        <div>
+          <table>
+            <thead><tr><th>Concepto</th><th>Detalle</th></tr></thead>
+            <tbody>
+              <tr><td>Duración</td><td>12 semanas, con 5 semanas de campo</td></tr>
+              <tr><td>Modalidad</td><td>Presencial, participativa</td></tr>
+              <tr><td>Lugar</td><td>Aeropuerto Internacional Rafael Núñez, Cartagena</td></tr>
+              <tr><td>Dirección</td><td>Cristian Torres, Director de Inngenios</td></tr>
+              <tr><td>Gerencia</td><td>Daniela Martínez, Gerente de proyecto</td></tr>
+            </tbody>
+          </table>
+          <div class="subhead" style="margin-top:28px;margin-bottom:10px"><h3 style="font-size:17px">Hitos del cronograma</h3></div>
+          <div class="timeline t4" style="grid-template-columns:repeat(4,1fr)" aria-label="Hitos entre diciembre de 2026 y abril de 2027">
+            <div class="day"><div class="dw">Dic 2026</div><div class="dn">18</div><div class="dj prep">Aprobación</div></div>
+            <div class="day"><div class="dw">Ene 2027</div><div class="dn">18</div><div class="dj prep">Inicio</div></div>
+            <div class="day win"><div class="dw">Feb 2027</div><div class="dn">8</div><div class="dj">Campo</div></div>
+            <div class="day"><div class="dw">Abr 2027</div><div class="dn">9</div><div class="dj" style="background:var(--purple)">Cierre</div></div>
+          </div>
+          <p class="tl-note">Fechas tentativas. El campo va del <b>8 de febrero al 12 de marzo de 2027</b>; los entregables se revisan con el cliente en las semanas 3, 6, 9, 11 y 12.</p>
+        </div>
+      </div>
+
+      <div class="subhead"><h3>Ética y gestión de riesgos</h3><span class="note">Participación voluntaria, consentimiento informado y anonimato · Ley 1581 de 2012</span></div>
+      <table>
+        <thead><tr><th>Riesgo</th><th>Cómo lo mitigamos</th></tr></thead>
+        <tbody>
+          <tr><td>Desconfianza de los conductores hacia el estudio</td><td>Aval previo de los líderes gremiales, presentación transparente del propósito y devolución de resultados</td></tr>
+          <tr><td>Acceso restringido a zonas del aeropuerto</td><td>Permisos gestionados con el operador en la semana 1</td></tr>
+          <tr><td>Respuestas sesgadas por temor a sanciones</td><td>Entrevistas anónimas, lejos de supervisores, y triangulación con la observación. Los hallazgos no se usan para sancionar a nadie</td></tr>
+          <tr><td>Temporada alta que reduce la disponibilidad</td><td>Campo en febrero y marzo, entrevistas cortas en los tiempos de espera y calendario flexible</td></tr>
+          <tr><td>Conflictos con plataformas u otros actores</td><td>Moderación neutral y espacios separados por grupo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 06 EQUIPO -->
+  <section id="equipo">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">06</div>
+        <div><div class="eyebrow c-purple">Quiénes lo lideran</div><h2>Equipo del proyecto</h2></div>
+      </div>
+      <div class="fac">
+        <div class="fac-id">
+          <img class="photo" src="daniela.jpg" alt="Daniela Martínez" width="132" height="132">
+          <h3>Daniela Martínez</h3>
+          <div class="roles"><span>Gerente de proyecto</span><span>Abogada · Máster en Gestión de la Innovación</span><span>Consultora en sostenibilidad e impacto social</span><span>Notion Ambassador</span></div>
+          <div class="stats" style="grid-template-columns:1fr">
+            <div><b>+10</b><span>años en proyectos empresariales y sociales</span></div>
+          </div>
+          <div class="social">
+            <a class="sbtn" href="https://www.linkedin.com/in/daniela-martinez-cardenas-2553b5212/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="fac-body">
+          <p class="fac-lead">Abogada con Máster en Gestión de la Innovación y gerente de proyectos. Asesora legal de micro, pequeñas y medianas empresas, y consultora en sostenibilidad e impacto social para organizaciones como Weber Shandwick y la ONG El Sembrador.</p>
+          <p class="fac-lead" style="margin-top:10px">En este proyecto lidera el cronograma y la relación con gremios, operador y autoridades, acompaña los talleres de co-diseño con los conductores y vela por el protocolo ético y el tratamiento de datos.</p>
+          <div class="fac-grid">
+            <div class="fac-col">
+              <div class="eyebrow c-blue">Experiencia</div>
+              <ul>
+                <li>Escenarios de construcción de ciudad y eventos de alto impacto</li>
+                <li>Creación y consolidación de comunidades de emprendimiento y networking</li>
+                <li>Proyectos de impacto social y participación democrática con enfoque joven</li>
+              </ul>
+            </div>
+            <div class="fac-col">
+              <div class="eyebrow c-orange">Equipo completo</div>
+              <ul>
+                <li><b>Director de proyecto</b> · 20% durante las 12 semanas</li>
+                <li><b>Investigador(a) líder en diseño centrado en usuario</b> · tiempo completo, 12 semanas</li>
+                <li><b>Dos investigadores(as) de campo</b>, entre ellas María Fernanda García · tiempo completo, semanas 4 a 8</li>
+                <li><b>Gerente de proyecto y facilitadora de co-diseño</b> · seguimiento continuo y talleres</li>
+                <li><b>Diseñador(a) de información</b> · semanas 9 a 12</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac" style="margin-top:22px">
+        <div class="fac-id">
+          <img class="photo" src="cristian.jpg" alt="Cristian Torres" width="132" height="132">
+          <h3>Cristian Torres</h3>
+          <div class="roles"><span>Director del proyecto</span><span>Director de Inngenios</span><span>Consultor en innovación empresarial</span><span>Speaker internacional</span></div>
+          <div class="stats">
+            <div><b>+9.000</b><span>personas entrenadas</span></div>
+            <div><b>+300</b><span>empresas intervenidas</span></div>
+            <div><b>+10</b><span>años en innovación</span></div>
+          </div>
+          <div class="social">
+            <a class="sbtn" href="https://www.linkedin.com/in/cristianinngenios/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="fac-body">
+          <p class="fac-lead">Ingeniero Industrial y Magíster en Gestión de la Innovación, conferencista internacional, consultor empresarial y Design Thinker, con Máster en Emprendimiento y Desarrollo de Ideas de Negocio del Instituto Europeo de Posgrado. Creador de la Metodología de Creatividad Aplicada e Innovación 6i®.</p>
+          <p class="fac-lead" style="margin-top:10px">En este proyecto dirige el diseño metodológico, la relación con el cliente y la calidad de los entregables. Ha sido mentor y facilitador de los programas de UX Estratégico y Service Design de Repensar Educativo (Perú).</p>
+          <div class="fac-grid">
+            <div class="fac-col">
+              <div class="eyebrow c-blue">Formación</div>
+              <ul>
+                <li>Magíster en Gestión de la Innovación</li>
+                <li>Máster en Emprendimiento y Desarrollo de Ideas de Negocio · Instituto Europeo de Posgrado</li>
+                <li>Ingeniero Industrial</li>
+              </ul>
+              <div class="eyebrow c-purple" style="margin-top:20px">Trayectoria destacada</div>
+              <ul class="tr">
+                <li>Reconocido como Innovador Distinguido por el programa de Magíster en Gestión de la Innovación de la Pontificia Universidad Católica de Chile</li>
+                <li>Reconocido en 2020 como uno de los diez mejores Consultores Máster de la Cámara de Comercio de Cartagena e iNNpulsa Colombia</li>
+                <li>Consultor de enlace para Colombia (2023) de la agencia chilena Transforme en el proyecto READINESS Recuperación Verde del IICA</li>
+              </ul>
+            </div>
+            <div class="fac-col">
+              <div class="eyebrow c-orange">Facilitador certificado</div>
+              <ul>
+                <li>Design Thinking</li>
+                <li>Customer Experience Design Management · CX LATAM</li>
+                <li>Creatividad aplicada a negocios e innovación empresarial</li>
+                <li>Lean Startup Program Developer</li>
+                <li>Management 3.0 · Six Thinking Hats · Pro.Play Method</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fac" style="margin-top:22px">
+        <div class="fac-id">
+          <img class="photo" src="maria-fernanda.jpg" alt="María Fernanda García" width="132" height="132">
+          <h3>María Fernanda García</h3>
+          <div class="roles"><span>Investigadora de campo</span><span>Coordinación logística y administrativa</span><span>Profesional en Gobierno y Relaciones Internacionales</span></div>
+        </div>
+        <div class="fac-body">
+          <p class="fac-lead">Profesional en Gobierno y Relaciones Internacionales de la Universidad de San Buenaventura de Cartagena, con experiencia en la formulación, seguimiento y evaluación de políticas públicas en la Secretaría de Planeación Distrital de Cartagena, donde participó en diagnósticos, documentos técnicos y articulación con actores institucionales y comunitarios en distintos instrumentos de planeación territorial.</p>
+          <p class="fac-lead" style="margin-top:10px">Hace parte del equipo de consultores de Inngenios, donde apoya la gestión financiera y operativa. En este proyecto integra el equipo de campo y coordina la logística del estudio: permisos, transporte, incentivos a participantes y compras de los talleres, además de apoyar las entrevistas con autoridades y entidades distritales.</p>
+          <div class="fac-grid">
+            <div class="fac-col">
+              <div class="eyebrow c-blue">Experiencia</div>
+              <ul>
+                <li>Formulación, seguimiento y evaluación de políticas públicas</li>
+                <li>Diagnósticos y documentos técnicos de planeación territorial</li>
+                <li>Articulación con actores institucionales y comunitarios</li>
+              </ul>
+            </div>
+            <div class="fac-col">
+              <div class="eyebrow c-orange">Rol en este proyecto</div>
+              <ul>
+                <li>Observación, entrevistas y encuestas en campo</li>
+                <li>Entrevistas con autoridades de tránsito, turismo y planeación</li>
+                <li>Logística de campo: permisos, transporte, incentivos y compras de talleres</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 CONOCE INNGENIOS -->
+  <section id="inngenios">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">07</div>
+        <div><div class="eyebrow c-orange">Quiénes somos</div><h2>Conoce un poco más de Inngenios</h2></div>
+      </div>
+      <div class="about">
+        <div class="about-main">
+          <div class="eyebrow c-blue">Nuestro propósito</div>
+          <p class="about-purpose">Ayudamos a personas y organizaciones a desarrollar capacidades sistémicas para innovar, crear valor y liderar el cambio.</p>
+          <p class="about-tag">¡Cree en ti, crea con nosotros!</p>
+          <a class="cta" href="https://drive.google.com/file/d/11CmHTBIUbww7b7Z4lp7yyQ7_syRBeKOM/view?usp=sharing" target="_blank" rel="noopener">Ver nuestro brochure <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="lines">
+          <div class="line-it b"><div class="eyebrow">Mindset</div><h4>Entrenamientos especializados</h4><p>Innovación, liderazgo, creatividad y pensamiento estratégico con experiencias aplicadas y orientadas a la acción.</p></div>
+          <div class="line-it o"><div class="eyebrow">Consultoría</div><h4>Consultoría estratégica</h4><p>Diagnóstico, diseño y fortalecimiento de estrategias, procesos y capacidades para innovar.</p></div>
+          <div class="line-it p"><div class="eyebrow">Soluciones</div><h4>Soluciones técnicas y tecnológicas</h4><p>Metodología, tecnología, inteligencia de negocio y automatización con IA a la medida.</p></div>
+        </div>
+      </div>
+      <div class="unis">
+        <div class="unis-head">
+          <div><div class="eyebrow c-blue">Experiencia en educación superior</div><h3>Universidades con las que hemos trabajado</h3></div>
+          <p>Procesos de entrenamiento, consultoría y cooperación con instituciones de educación superior en Colombia y Latinoamérica.</p>
+        </div>
+        <div class="unis-grid">
+          <div class="uni-col">
+            <div class="uni-k">Colombia</div>
+            <ul>
+              <li>Fundación Universitaria Tecnológico Comfenalco</li>
+              <li>Universidad Tecnológica de Bolívar (UTB)</li>
+              <li>Universidad Sergio Arboleda</li>
+              <li>Universidad de Cartagena</li>
+              <li>Universidad del Norte</li>
+              <li>Universidad del Sinú</li>
+              <li>Universidad Jorge Tadeo Lozano (Utadeo)</li>
+            </ul>
+          </div>
+          <div class="uni-col">
+            <div class="uni-k">Internacional</div>
+            <ul>
+              <li>Pontificia Universidad Católica de Chile</li>
+              <li>Universidad Nacional de Cuyo (Argentina)</li>
+              <li>Universidad Ricardo Palma (Perú)</li>
+              <li>Repensar Educativo (Perú) · escuela de diseño e innovación</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="clients">
+        <div class="unis-head"><div><div class="eyebrow c-orange">Empresas que confían en nosotros</div><h3>Organizaciones con las que hemos trabajado</h3></div><p>Energía, agua y saneamiento, industria, gobierno, gremios, fundaciones y cooperación internacional, con un fuerte anclaje en Cartagena y el Caribe colombiano.</p></div>
+        <div class="cl-grid"><div class="cl"><div class="cl-k">Energía e industria</div><ul><li>Grupo Ecopetrol · Refinería de Cartagena</li><li>Surtigas (Promigas)</li><li>Yara</li><li>Cotecmar</li></ul></div><div class="cl"><div class="cl-k">Agua y saneamiento</div><ul><li>Aguas de Cartagena (Acuacar)</li><li>Triple A</li></ul></div><div class="cl"><div class="cl-k">Gobierno</div><ul><li>Alcaldía Mayor de Cartagena de Indias</li><li>Gobernación de Bolívar</li><li>Gobernación del Atlántico</li></ul></div><div class="cl"><div class="cl-k">Gremios, fondos y cajas</div><ul><li>Comfenalco Cartagena</li><li>Foncomfenalco</li><li>Cámara de Comercio de Cartagena</li><li>Cámara de Comercio de Manizales por Caldas</li><li>Fonrecar</li></ul></div><div class="cl"><div class="cl-k">Fundaciones</div><ul><li>Fundación Santo Domingo</li><li>Fundación Corona</li><li>Unbound</li></ul></div><div class="cl"><div class="cl-k">Social y cooperación</div><ul><li>Global Opportunity Youth Network Barranquilla (Aspen Institute)</li><li>Nuestra Barranquilla</li></ul></div></div>
+      </div>
+
+      <div class="recog">
+        <div class="rc-col">
+          <div class="eyebrow c-orange">Premios de innovación</div>
+          <h3>Reconocimientos obtenidos</h3>
+          <div class="award"><div class="aw-mark" aria-hidden="true"></div><div><b>Cartagena Ciudad Innovadora</b><span>Alcaldía de Cartagena y Universidad Tecnológica de Bolívar</span></div></div>
+          <div class="award"><div class="aw-mark" aria-hidden="true"></div><div><b>Caribe Innova 2023</b><span>Cámara de Comercio de Cartagena, Ecopetrol, Esenttia y Econova Caribe</span></div></div>
+        </div>
+        <div class="rc-col">
+          <div class="eyebrow c-blue">Ecosistema de innovación</div>
+          <h3>Laboratorios de innovación con los que hemos cooperado</h3>
+          <div class="lab"><b>Neurocity</b><span>Cámara de Comercio de Manizales por Caldas</span></div>
+          <div class="lab"><b>Econova Caribe</b><span>Ecopetrol y Cámara de Comercio de Cartagena</span></div>
+        </div>
+      </div>
+
+      <div class="links">
+        <span class="eco-k">Síguenos</span>
+        <a class="lbtn" href="https://www.inngenios.co" target="_blank" rel="noopener">Sitio web <span aria-hidden="true">↗</span></a>
+        <a class="lbtn" href="https://www.instagram.com/inn.genios/" target="_blank" rel="noopener">Instagram @inn.genios <span aria-hidden="true">↗</span></a>
+        <a class="lbtn" href="https://www.youtube.com/@inngenios" target="_blank" rel="noopener">YouTube @inngenios <span aria-hidden="true">↗</span></a>
+        <a class="lbtn gf" href="https://www.geniusfest.co" target="_blank" rel="noopener">Genius Fest <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="eco">
+        <span class="eco-k">Ecosistema</span>
+        <span class="chip">Inngenios Lab · diagnóstico estratégico con IA</span>
+        <a class="chip chip-link" href="https://www.geniusfest.co" target="_blank" rel="noopener">Genius Fest 2026 ↗</a>
+        <span class="chip">Misión Internacional B-SMART</span>
+        <span class="chip">Podcast Mentes Innquietas</span>
+        <span class="chip">Metodología 6i · TBGE · GCX · GEVP · A.C.C.I.O.N.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <div class="close" id="contacto">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow" style="color:#9fd8ff">Siguiente paso</div>
+        <h2>Construyamos juntos un servicio <span>que reciba bien a quien llega a Cartagena</span></h2>
+        <p>Quedamos atentos a sus comentarios para ajustar el alcance, la muestra y las fechas, y avanzar con el inicio del estudio.</p>
+      </div>
+      <div class="contact">
+        <div class="row"><div><div class="k">Director</div><div class="v">Cristian Torres · Director de Inngenios</div></div></div>
+        <div class="row"><div><div class="k">Gerente de proyecto</div><div class="v">Daniela Martínez</div></div></div>
+        <div class="row"><div><div class="k">Correo</div><div class="v" id="mail">cristian@inngenios.co</div></div><button class="copy" type="button" data-copy="mail">Copiar</button></div>
+        <div class="row"><div><div class="k">Teléfono</div><div class="v" id="tel">+57 300 333 6267</div></div><button class="copy" type="button" data-copy="tel">Copiar</button></div>
+        <div class="row"><div><div class="k">Web</div><div class="v"><a href="https://www.inngenios.co" target="_blank" rel="noopener" style="color:#fff">www.inngenios.co</a></div></div></div>
+      </div>
+    </div>
+    <div class="wrap foot">Torres Creativas S.A.S. · NIT 900.886.610-1 · Cartagena de Indias · Mindset · Estrategia · Resultados</div>
+  </div>
+</main>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.moment');
+  var flow = document.getElementById('flow');
+  var steps = flow.querySelectorAll('.step');
+  var active = null;
+  function apply(m){
+    active = m;
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.m === m)); });
+    if(!m){ flow.classList.remove('focus'); steps.forEach(function(s){s.classList.remove('on')}); return; }
+    flow.classList.add('focus');
+    steps.forEach(function(s){ s.classList.toggle('on', s.dataset.m === m); });
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      apply(active === b.dataset.m ? null : b.dataset.m);
+    });
+  });
+  // Scrollspy: resalta en el menú la sección visible
+  var navEl = document.querySelector('.nav');
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  var targets = navLinks.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+  function spy(){
+    var line = window.innerHeight * 0.35;
+    var current = null;
+    targets.forEach(function(t){ if (t.getBoundingClientRect().top <= line) current = t.id; });
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4 && targets.length) current = targets[targets.length-1].id;
+    navLinks.forEach(function(a){ var on = a.getAttribute('href') === '#' + current; var was = a.classList.contains('active'); a.classList.toggle('active', on); if (on) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); if (on && !was && navEl && navEl.scrollWidth > navEl.clientWidth){ navEl.scrollTo({left: Math.max(0, a.offsetLeft - navEl.offsetLeft - 24), behavior: 'smooth'}); } });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(function(){ spy(); ticking = false; }); } }, {passive:true});
+  window.addEventListener('resize', spy);
+  spy();
+
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(btn.dataset.copy);
+      var text = el.textContent.trim();
+      function done(){ btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar'; }, 1600); }
+      function fallback(){ var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
