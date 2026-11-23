@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Propuesta de Inngenios para la Agencia de Empleo de Comfenalco Cartagena: dos programas de desarrollo de capacidades para su equipo en la vigencia 2027.">
+<meta property="og:title" content="Propuesta Programas 2027 · Agencia de Empleo Comfenalco · Inngenios">
+<meta property="og:description" content="Gestión del tiempo, productividad y adaptación al cambio; negociación efectiva y experiencia en servicio empresarial.">
+<meta property="og:type" content="website">
+<title>Propuesta Programas 2027 · Agencia de Empleo Comfenalco · Inngenios</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500&display=swap">
+<style>
+/* Layout: technical blueprint sheet — fine grid, numbered sections, process flow with nodes */
+:root{
+  --paper:#FFFFFF;
+  --ink:#050505;
+  --muted:#4A4A52;
+  --soft:#F6F6F9;
+  --line:rgba(5,5,5,.10);
+  --grid:rgba(5,5,5,.045);
+  --blue:#079AFD;
+  --orange:#FF6600;
+  --purple:#675CC6;
+  --green:#2FBF62;
+  --blue-t:rgba(7,154,253,.08);
+  --orange-t:rgba(255,102,0,.08);
+  --purple-t:rgba(103,92,198,.09);
+  --f-display:'Poppins', 'Avenir Next', 'Segoe UI', sans-serif;
+  --f-body:'Poppins', 'Avenir Next', 'Segoe UI', sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:16px;line-height:1.6;
+  background-image:linear-gradient(to right,var(--grid) 1px,transparent 1px),linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.c-blue{color:var(--blue)} .c-orange{color:var(--orange)} .c-purple{color:var(--purple)}
+
+/* top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1.5px solid var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-weight:900;font-size:20px;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;line-height:0}
+.brand img{height:32px;width:auto;display:block}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:3px}
+.nav a{transition:background .25s,color .25s}
+.nav a:hover,.nav a:focus-visible{color:var(--ink);background:var(--soft);outline:none}
+.nav a.active{color:#fff;background:var(--orange)}
+.nav a.active:hover{color:#fff;background:var(--orange)}
+
+/* hero */
+.hero{padding-block:64px 40px;border-bottom:3px solid var(--ink)}
+.hero .eyebrow{color:var(--blue);margin-bottom:14px}
+.hero h1{font-size:clamp(32px,5.4vw,58px);font-weight:900;line-height:1.06;letter-spacing:-.02em;max-width:20ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .sub{margin-top:18px;font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:62ch}
+.specs{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink);background:var(--paper)}
+.specs > div{padding:16px 18px;border-right:1.5px solid var(--ink);min-width:0}
+.specs > div:last-child{border-right:none}
+.specs .k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.specs .v{font-size:20px;font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}
+
+/* sections */
+section{padding-block:72px 24px}
+.sec-head{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:end;border-bottom:1.5px solid var(--ink);padding-bottom:18px;margin-bottom:36px}
+.sec-num{font-size:64px;font-weight:900;line-height:.9;color:var(--ink);font-variant-numeric:tabular-nums}
+.sec-head h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;letter-spacing:-.015em;line-height:1.1}
+.sec-head .eyebrow{margin-bottom:8px}
+
+/* entendimiento */
+.context{display:grid;grid-template-columns:1.25fr 1fr;gap:32px}
+.context p{color:var(--muted);max-width:62ch}
+.context p + p{margin-top:14px}
+.quote{border-left:4px solid var(--blue);background:var(--blue-t);padding:20px 22px}
+.quote .eyebrow{color:var(--blue);margin-bottom:8px}
+.quote p{color:var(--ink);font-size:17px;font-weight:500;line-height:1.5}
+.shift{margin-top:40px;display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0;border:1.5px solid var(--ink)}
+.shift .box{padding:22px 24px;min-width:0}
+.shift .from{background:var(--soft)}
+.shift .to{background:var(--orange-t)}
+.shift .arrow{display:flex;align-items:center;justify-content:center;padding:0 18px;border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink);font-weight:900;font-size:26px;color:var(--orange)}
+.shift .t{font-size:20px;font-weight:700;margin-top:4px}
+.shift ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+
+.cards4{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{border:1.5px solid var(--ink);border-top-width:5px;padding:18px;background:var(--paper);min-width:0}
+.card.b{border-top-color:var(--blue)} .card.o{border-top-color:var(--orange)} .card.p{border-top-color:var(--purple)} .card.k{border-top-color:var(--ink)}
+.card .eyebrow{margin-bottom:8px}
+.card h3{font-size:18px;font-weight:700;line-height:1.25;margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--muted);line-height:1.5}
+
+.subhead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:56px;margin-bottom:18px;flex-wrap:wrap}
+.subhead h3{font-size:22px;font-weight:700}
+.subhead .note{font-size:13px;color:var(--muted)}
+
+.ejes{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink)}
+.eje{padding:20px;border-right:1.5px solid var(--ink);min-width:0}
+.eje:last-child{border-right:none}
+.eje .n{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--purple)}
+.eje h4{margin:6px 0 0;font-size:17px;font-weight:700;line-height:1.3}
+
+.areas{display:flex;flex-wrap:wrap;gap:8px}
+.area{font-size:14px;font-weight:500;padding:8px 14px;border:1.5px solid var(--ink);background:var(--paper)}
+.area:nth-child(3n+1){border-color:var(--blue)}
+.area:nth-child(3n+2){border-color:var(--orange)}
+.area:nth-child(3n){border-color:var(--purple)}
+
+/* metodología */
+.lead{font-size:18px;color:var(--muted);max-width:68ch}
+.moments{margin-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1.5px solid var(--ink)}
+.moment{appearance:none;font:inherit;text-align:left;background:var(--paper);border:0;border-right:1.5px solid var(--ink);padding:22px 22px 20px;cursor:pointer;position:relative;color:var(--ink);transition:background .2s}
+.moment:last-child{border-right:0}
+.moment:hover{background:var(--soft)}
+.moment:focus-visible{outline:3px solid var(--ink);outline-offset:-6px}
+.moment .code{font-size:12px;font-weight:600;letter-spacing:.18em}
+.moment .t{font-size:26px;font-weight:900;margin-top:4px;letter-spacing:-.01em}
+.moment .d{font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.45}
+.moment .bar{position:absolute;left:0;right:0;bottom:0;height:5px;background:transparent;transition:background .2s}
+.moment[data-m="escuchar"] .code{color:var(--blue)}
+.moment[data-m="articular"] .code{color:var(--orange)}
+.moment[data-m="cocrear"] .code{color:var(--purple)}
+.moment[aria-pressed="true"][data-m="escuchar"]{background:var(--blue-t)} .moment[aria-pressed="true"][data-m="escuchar"] .bar{background:var(--blue)}
+.moment[aria-pressed="true"][data-m="articular"]{background:var(--orange-t)} .moment[aria-pressed="true"][data-m="articular"] .bar{background:var(--orange)}
+.moment[aria-pressed="true"][data-m="cocrear"]{background:var(--purple-t)} .moment[aria-pressed="true"][data-m="cocrear"] .bar{background:var(--purple)}
+.hint{margin-top:10px;font-size:13px;color:var(--muted)}
+
+.flow{margin-top:40px}
+.jornada{margin-bottom:34px}
+.j-head{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.j-tag{width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#fff;border-radius:3px;flex-shrink:0}
+.j-tag.b{background:var(--blue)} .j-tag.o{background:var(--orange)}
+.j-title{border-left:3px solid var(--ink);padding-left:16px;min-width:0}
+.j-title .eyebrow{font-size:11px}
+.j-title h3{font-size:clamp(20px,2.6vw,26px);font-weight:900;letter-spacing:-.01em;line-height:1.15}
+.j-title .dur{font-size:14px;color:var(--purple);font-weight:500}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.steps::before{content:"";position:absolute;top:21px;left:22px;right:22px;border-top:2px dashed var(--ink);opacity:.8}
+.step{position:relative;transition:opacity .25s, transform .25s}
+.dot{width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ink);background:var(--paper);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;margin-bottom:14px;position:relative;z-index:1;font-variant-numeric:tabular-nums;transition:background .25s,color .25s}
+.step[data-m="escuchar"] .dot{border-color:var(--blue);color:var(--blue)}
+.step[data-m="articular"] .dot{border-color:var(--orange);color:var(--orange)}
+.step[data-m="cocrear"] .dot{border-color:var(--purple);color:var(--purple)}
+.s-card{border:1.5px solid var(--ink);border-top-width:5px;padding:16px;background:var(--soft);min-height:170px}
+.step[data-m="escuchar"] .s-card{border-top-color:var(--blue)}
+.step[data-m="articular"] .s-card{border-top-color:var(--orange)}
+.step[data-m="cocrear"] .s-card{border-top-color:var(--purple)}
+.s-card .mtag{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.step[data-m="escuchar"] .mtag{color:var(--blue)}
+.step[data-m="articular"] .mtag{color:var(--orange)}
+.step[data-m="cocrear"] .mtag{color:var(--purple)}
+.s-card h4{margin:6px 0 6px;font-size:17px;font-weight:700;line-height:1.25}
+.s-card p{font-size:14px;color:var(--muted);line-height:1.45}
+.s-card .out{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink)}
+.s-card .out b{font-weight:600}
+
+
+.c-green{color:var(--green)}
+.j-tag.g{background:var(--green)}
+.moment[data-m="consolidar"] .code{color:var(--green)}
+.moment[aria-pressed="true"][data-m="consolidar"]{background:rgba(47,191,98,.09)} .moment[aria-pressed="true"][data-m="consolidar"] .bar{background:var(--green)}
+.step[data-m="consolidar"] .dot{border-color:var(--green);color:var(--green)}
+.step[data-m="consolidar"] .s-card{border-top-color:var(--green)}
+.step[data-m="consolidar"] .mtag{color:var(--green)}
+.flow.focus .step.on[data-m="consolidar"] .dot{background:var(--green)}
+.steps.two-steps{grid-template-columns:repeat(2,1fr);max-width:50%}
+@media (max-width:900px){.steps.two-steps{max-width:none}}
+@media (max-width:620px){.steps.two-steps{grid-template-columns:1fr}}
+.flow.focus .step{opacity:.28}
+.flow.focus .step.on{opacity:1;transform:translateY(-4px)}
+.flow.focus .step.on .dot{color:#fff}
+.flow.focus .step.on[data-m="escuchar"] .dot{background:var(--blue)}
+.flow.focus .step.on[data-m="articular"] .dot{background:var(--orange)}
+.flow.focus .step.on[data-m="cocrear"] .dot{background:var(--purple)}
+
+.checkpoint{display:flex;align-items:center;gap:14px;margin:6px 0 34px}
+.checkpoint .l{flex:1;height:1.5px;background:var(--ink);opacity:.25}
+.checkpoint span{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:center}
+
+.knowhow{margin-top:8px;border:1.5px dashed var(--purple);padding:16px 20px;font-size:14.5px;color:var(--muted);background:var(--paper)}
+.knowhow b{color:var(--purple);font-weight:600}
+
+/* entregable */
+.deliv{display:grid;grid-template-columns:260px 1fr;border:2px solid var(--ink)}
+.deliv .side{background:var(--ink);color:#fff;padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+.deliv .side .eyebrow{color:var(--green);margin-bottom:8px}
+.deliv .side h3{font-size:26px;font-weight:900;line-height:1.15}
+.deliv .items{display:grid;grid-template-columns:repeat(2,1fr)}
+.deliv .it{padding:24px 22px;border-left:1.5px solid var(--line);min-width:0}
+.deliv .it .n{font-weight:900;font-size:13px;color:var(--blue)}
+.deliv .it h4{margin:6px 0;font-size:18px;font-weight:700;line-height:1.25}
+.deliv .it p{font-size:14px;color:var(--muted)}
+.deliv-foot{margin-top:14px;font-size:14px;color:var(--muted)}
+.deliv-main{display:grid;grid-template-columns:260px 1fr;border:2px solid var(--orange);background:var(--orange-t);margin-bottom:22px}
+.dm-tag{background:var(--orange);color:#fff;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:24px;display:flex;align-items:center}
+.dm-body{padding:24px 26px;min-width:0}
+.dm-body h3{font-size:clamp(20px,2.6vw,26px);font-weight:900;line-height:1.2;margin-bottom:8px}
+.dm-body p{color:var(--muted);font-size:15px;max-width:72ch}
+.deliv-sub{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+@media (max-width:900px){.deliv-main{grid-template-columns:1fr}.dm-tag{padding:12px 18px}}
+
+/* logística */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{text-align:left;font-weight:600;color:var(--orange);padding:10px 12px;border-bottom:2px solid var(--orange)}
+td{padding:11px 12px;border-bottom:1px solid var(--orange);vertical-align:top}
+tr:nth-child(even) td{background:#F4F4F6}
+.req{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.req li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:14.5px;color:var(--muted)}
+.req li .who{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.req li i{font-style:normal;font-weight:900;color:var(--blue);font-variant-numeric:tabular-nums}
+.who.u{color:var(--blue)} .who.i{color:var(--orange)}
+.platform{margin-top:18px;border:1.5px solid var(--purple);border-left-width:5px;background:var(--purple-t);padding:16px 18px}
+.platform .eyebrow{font-size:11px;margin-bottom:6px}
+.platform p{font-size:14.5px;color:var(--muted)}
+.platform strong{color:var(--ink);font-weight:600}
+.req li strong{color:var(--ink);font-weight:600}
+
+.timeline{margin-top:8px;display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.day{padding:14px 12px;border-right:1.5px solid var(--ink);min-width:0;text-align:center}
+.day:last-child{border-right:none}
+.day .dw{font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.day .dn{font-size:26px;font-weight:900;font-variant-numeric:tabular-nums}
+.day.win{background:var(--orange-t)}
+.day .dj{display:inline-block;margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;background:var(--orange);padding:2px 8px}
+.tl-note{margin-top:10px;font-size:13px;color:var(--muted)}
+
+/* facilitador */
+.fac{display:grid;grid-template-columns:300px 1fr;border:1.5px solid var(--ink)}
+.fac-id{background:var(--ink);color:#fff;padding:28px 24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.photo{width:132px;height:132px;border-radius:50%;object-fit:cover;border:4px solid var(--orange);display:block}
+.mono{width:84px;height:84px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:30px;letter-spacing:.02em}
+.fac-id h3{font-size:26px;font-weight:900;line-height:1.1}
+.roles{display:flex;flex-direction:column;gap:6px}
+.roles span{font-size:13px;font-weight:600;letter-spacing:.06em;color:#fff;border-left:3px solid var(--orange);padding-left:10px}
+.roles span:nth-child(2){border-left-color:var(--blue)}
+.roles span:nth-child(3){border-left-color:var(--purple)}
+.roles span:nth-child(4){border-left-color:var(--green)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.2)}
+.stats b{display:block;font-size:22px;font-weight:900;color:var(--orange);font-variant-numeric:tabular-nums}
+.stats span{font-size:12px;color:rgba(255,255,255,.75)}
+.fac-body{padding:26px 28px;min-width:0;background:var(--paper)}
+.fac-lead{color:var(--muted);font-size:15.5px;max-width:72ch}
+.fac-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:28px;margin-top:22px}
+.fac-col{min-width:0}
+.fac-col .eyebrow{font-size:11px;margin-bottom:8px}
+.fac-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.fac-col li{font-size:14px;line-height:1.4;padding-left:14px;position:relative}
+.fac-col li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;background:var(--ink)}
+.fac-col:first-child li::before{background:var(--blue)}
+.fac-col .tr li::before{background:var(--purple)}
+.fac-col:last-child li::before{background:var(--orange)}
+@media (max-width:900px){.fac{grid-template-columns:1fr}.fac-grid{grid-template-columns:1fr}}
+
+/* universidades */
+.unis{margin-top:28px;border:1.5px solid var(--ink);background:var(--paper)}
+.unis-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;padding:22px 24px;border-bottom:1.5px solid var(--ink)}
+.unis-head h3{font-size:22px;font-weight:900;line-height:1.2;margin-top:4px}
+.unis-head p{font-size:14.5px;color:var(--muted)}
+.unis-grid{display:grid;grid-template-columns:2fr 1fr}
+.uni-col{padding:20px 24px;min-width:0}
+.uni-col + .uni-col{border-left:1.5px solid var(--ink)}
+.uni-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.uni-col:last-child .uni-k{color:var(--purple)}
+.uni-col ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px 18px}
+.uni-col:last-child ul{grid-template-columns:1fr}
+.uni-col li{font-size:15px;font-weight:600;line-height:1.35;padding-left:14px;position:relative}
+.uni-col li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;background:var(--orange)}
+.uni-col:last-child li::before{background:var(--purple)}
+@media (max-width:900px){.unis-head,.unis-grid{grid-template-columns:1fr}.uni-col + .uni-col{border-left:0;border-top:1.5px solid var(--ink)}}
+
+/* reconocimientos */
+.recog{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--ink)}
+.rc-col{padding:22px 24px;min-width:0;display:grid;gap:10px;align-content:start}
+.rc-col + .rc-col{border-left:1.5px solid var(--ink)}
+.rc-col h3{font-size:20px;font-weight:900;line-height:1.2;margin-bottom:6px}
+.award{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:var(--orange-t);padding:12px 14px}
+.aw-mark{flex-shrink:0;width:14px;height:14px;margin-top:5px;background:var(--orange);transform:rotate(45deg)}
+.award b,.lab b{display:block;font-size:16px;font-weight:700}
+.award span,.lab span{font-size:13.5px;color:var(--muted)}
+.lab{border:1px solid var(--line);border-left:5px solid var(--blue);background:var(--blue-t);padding:12px 14px}
+@media (max-width:900px){.recog{grid-template-columns:1fr}.rc-col + .rc-col{border-left:0;border-top:1.5px solid var(--ink)}}
+
+/* enlaces */
+.social{display:flex;flex-wrap:wrap;gap:8px}
+.sbtn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.45);padding:8px 14px;transition:background .2s,border-color .2s}
+.sbtn:hover{background:var(--blue);border-color:var(--blue)}
+.sbtn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.lbtn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);background:var(--paper);padding:9px 16px;transition:background .2s,color .2s}
+.lbtn:hover{background:var(--ink);color:#fff}
+.lbtn.gf{border-color:var(--blue);color:var(--blue)}
+.lbtn.gf:hover{background:var(--blue);color:#fff}
+.lbtn:focus-visible,.chip-link:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.chip-link{color:var(--blue);text-decoration:none;border-color:var(--blue)}
+.chip-link:hover{background:var(--blue-t)}
+
+/* programa */
+.ptl{margin-top:30px;display:flex;border:1.5px solid var(--ink);min-height:54px}
+.ptl-seg{display:flex;align-items:center;padding:0 16px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.06em;min-width:0}
+.ptl-seg span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ptl-seg.b{background:var(--blue)} .ptl-seg.o{background:var(--orange)} .ptl-seg.p{background:var(--purple)}
+.ptl-dates{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px;font-variant-numeric:tabular-nums}
+.phases{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ph{border:1.5px solid var(--ink);border-top-width:5px;padding:20px;background:var(--paper);min-width:0}
+.ph.b{border-top-color:var(--blue)} .ph.o{border-top-color:var(--orange)} .ph.p{border-top-color:var(--purple)}
+.ph-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.ph.b .ph-k{color:var(--blue)} .ph.o .ph-k{color:var(--orange)} .ph.p .ph-k{color:var(--purple)}
+.ph h3{font-size:21px;font-weight:900;margin:4px 0 2px}
+.ph-when{font-size:13px;color:var(--muted);margin-bottom:12px}
+.ph ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ph li{font-size:14px;line-height:1.4;padding-left:14px;position:relative}
+.ph li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;background:var(--ink)}
+.ph.b li::before{background:var(--blue)} .ph.p li::before{background:var(--purple)}
+.agenda{display:grid;gap:8px}
+.ag{border:1px solid var(--line);background:var(--soft);padding:10px 12px}
+.ag b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+.ag span{font-size:14px;line-height:1.35}
+.ag.in{background:var(--orange-t);border-color:var(--orange)}
+.meets{margin-top:18px;display:grid;grid-template-columns:220px repeat(3,1fr);border:1.5px solid var(--ink)}
+.meets-k{background:var(--ink);color:#fff;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px;display:flex;align-items:center}
+.meet{display:flex;gap:12px;padding:16px;border-left:1.5px solid var(--line);min-width:0}
+.meet i{font-style:normal;flex-shrink:0;width:30px;height:30px;border-radius:50%;border:2px solid var(--purple);color:var(--purple);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.meet b{display:block;font-size:15px}
+.meet span{font-size:13px;color:var(--muted);line-height:1.35}
+.approve{margin-top:18px;border:2px solid var(--orange);background:var(--orange-t);padding:16px 20px;font-size:15px}
+.approve b{font-weight:700}
+@media (max-width:900px){.phases{grid-template-columns:1fr}.meets{grid-template-columns:1fr}.meet{border-left:0;border-top:1.5px solid var(--line)}.ptl-seg{font-size:11px;padding:0 8px}}
+@media (max-width:620px){.ptl{flex-direction:column}.ptl-seg{flex:none!important;min-height:36px}.ptl-dates{display:none}}
+
+/* conoce inngenios */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:stretch}
+.about-main{background:var(--orange);color:#fff;padding:32px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.about-main .eyebrow{color:#fff;opacity:.85}
+.about-purpose{font-size:22px;font-weight:700;line-height:1.3}
+.about-tag{font-style:italic;font-weight:500;font-size:17px}
+.cta{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border:2px solid var(--ink);transition:background .2s,color .2s}
+.cta:hover{background:#fff;color:var(--ink)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.lines{display:grid;gap:12px}
+.line-it{border:1.5px solid var(--ink);border-left-width:5px;padding:16px 18px;background:var(--paper);min-width:0}
+.line-it.b{border-left-color:var(--blue)} .line-it.o{border-left-color:var(--orange)} .line-it.p{border-left-color:var(--purple)}
+.line-it.b .eyebrow{color:var(--blue)} .line-it.o .eyebrow{color:var(--orange)} .line-it.p .eyebrow{color:var(--purple)}
+.line-it h4{margin:4px 0;font-size:17px;font-weight:700}
+.line-it p{font-size:14px;color:var(--muted)}
+.eco{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.eco-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.chip{font-size:13px;font-weight:500;padding:6px 12px;border:1.5px solid var(--line);background:var(--soft)}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* cierre */
+.close{margin-top:72px;background:var(--ink);color:#fff}
+.close .wrap{padding-block:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
+.close h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;line-height:1.1}
+.close h2 span{color:var(--orange)}
+.close p{color:rgba(255,255,255,.75);margin-top:12px;max-width:52ch}
+.contact{border:1.5px solid rgba(255,255,255,.3);padding:20px}
+.contact .row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+.contact .row:last-child{border-bottom:0}
+.contact .k{font-size:11px;font-weight:600;letter-spacing:.16em;color:#9fd8ff;text-transform:uppercase}
+.contact .v{font-weight:500;user-select:all}
+.copy{font:inherit;font-size:12px;font-weight:600;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);padding:4px 10px;cursor:pointer}
+.copy:focus-visible{outline:2px solid var(--orange)}
+.foot{font-size:12px;color:rgba(255,255,255,.5);padding-block:0 28px}
+
+/* responsive */
+@media (max-width:900px){
+  .moments{grid-template-columns:repeat(2,1fr)}
+  .moment:nth-child(2){border-right:0}
+  .moment:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .specs{grid-template-columns:repeat(2,1fr)}
+  .specs > div:nth-child(2){border-right:none}
+  .specs > div:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .context,.two,.close .wrap{grid-template-columns:1fr}
+  .cards4,.ejes{grid-template-columns:repeat(2,1fr)}
+  .ejes .eje:nth-child(2){border-right:none}
+  .ejes .eje:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps::before{display:none}
+  .deliv{grid-template-columns:1fr}
+  .deliv .items{grid-template-columns:1fr}
+  .deliv .it{border-left:0;border-top:1.5px solid var(--line)}
+  .topbar .wrap{flex-wrap:wrap;gap:6px;padding-block:10px}
+  .nav{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-inline:-4px}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{white-space:nowrap;flex-shrink:0;font-size:12.5px;padding:6px 9px}
+}
+@media (max-width:620px){
+  .sec-head{grid-template-columns:1fr;gap:6px}
+  .sec-num{font-size:44px}
+  .moments{grid-template-columns:1fr}
+  .moment{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .moment:last-child{border-bottom:0}
+  .shift{grid-template-columns:1fr}
+  .shift .arrow{border:0;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:6px;font-size:0}
+  .shift .arrow::after{content:"\2193";font-size:24px}
+  .cards4,.ejes,.steps{grid-template-columns:1fr}
+  .ejes .eje{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .ejes .eje:last-child{border-bottom:0}
+  .day .dn{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.pres{margin-top:34px;display:grid;grid-template-columns:1.25fr 1fr;gap:0;border-top:2px solid var(--ink);padding-top:20px}.pres>div{min-width:0}.pres-by{border-left:1.5px solid rgba(5,5,5,.18);padding-left:28px}.pres-to{padding-right:28px}.pres .k{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.pres-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.pres-logo{height:64px;width:auto;max-width:100%;display:block}.pres-inn{height:34px;width:auto;display:block}.pres-name{font-weight:700;font-size:15px;line-height:1.3}.pres-name span{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px}.pres-to .pres-logo+.pres-name{border-left:1.5px solid rgba(5,5,5,.18);padding-left:18px}@media (max-width:700px){.pres{grid-template-columns:1fr;gap:18px}.pres-by{border-left:0;padding-left:0;border-top:1px solid rgba(5,5,5,.15);padding-top:16px}.pres-to{padding-right:0}.pres-logo{height:54px}.pres-to .pres-logo+.pres-name{border-left:0;padding-left:0}}
+.eje.hl{background:var(--orange-t)}
+.eje.hl .n{color:var(--orange)}
+.focus3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:8px}
+.focus3 .f3{border:1.5px solid var(--ink);border-top:5px solid var(--blue);background:var(--paper);padding:16px 18px;min-width:0}
+.focus3 .f3.o{border-top-color:var(--orange)}.focus3 .f3.p{border-top-color:var(--purple)}
+.focus3 h4{margin:6px 0 6px;font-size:16px;line-height:1.3;font-weight:700}
+.focus3 p{font-size:14px;color:var(--muted)}
+.ag-k{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-top:4px}
+@media (max-width:900px){.focus3{grid-template-columns:1fr}}
+.timeline.tl5{grid-template-columns:repeat(5,1fr)}
+.day.off{opacity:.5;background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(5,5,5,.06) 6px 12px)}
+.dj.prep{background:var(--blue)}
+.dj.no{background:var(--muted)}
+.tl5 .day{padding:12px 4px}
+.tl5 .dj{font-size:10px;letter-spacing:.02em;padding:2px 5px;max-width:100%;overflow-wrap:anywhere}
+/* inversión */
+.inv{display:grid;grid-template-columns:1.1fr 1fr;border:2px solid var(--ink)}
+.inv-main{background:var(--ink);color:#fff;padding:30px 30px;display:flex;flex-direction:column;gap:12px}
+.inv-main .eyebrow{color:#9fd8ff;font-size:11px}
+.inv-amount{font-size:46px;font-weight:900;letter-spacing:-.02em;line-height:1.05;font-variant-numeric:tabular-nums}
+.inv-amount .cur{font-size:18px;font-weight:600;color:#9fd8ff;vertical-align:middle;letter-spacing:.08em}
+.inv-amount .iva{font-size:24px;color:#9fd8ff}
+.cot-note{color:rgba(255,255,255,.8);font-size:14.5px}
+.cot-tax{margin-top:8px;border-top:1px solid rgba(255,255,255,.25)}
+.cot-tax div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;font-variant-numeric:tabular-nums}
+.cot-tax span{color:rgba(255,255,255,.75)}
+.cot-tax .tot b{color:#fff;font-size:17px}
+.cot-tax .tot span{color:#fff;font-weight:600}
+.cot-inc{padding:26px 28px;background:var(--paper)}
+.cot-inc ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:9px}
+.cot-inc li{font-size:14px;line-height:1.4;padding-left:16px;position:relative}
+.cot-inc li::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;background:var(--orange)}
+.cot-inc b{font-weight:600}
+.cot-foot{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cot-foot > div{border:1.5px solid var(--ink);border-top:5px solid var(--purple);padding:14px 16px;background:var(--paper)}
+.cot-foot > div:nth-child(1){border-top-color:var(--blue)}
+.cot-foot > div:nth-child(2){border-top-color:var(--orange)}
+.cot-foot .k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.cot-foot p{font-size:13.5px}
+
+.hours{margin-top:22px;border:1.5px solid var(--ink);background:var(--paper)}
+.hours-head{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;padding:20px 22px;border-bottom:1.5px solid var(--ink)}
+.hours-head>div,.hours-head>p{min-width:0}
+.hours-head h3{margin-top:6px;font-size:20px;line-height:1.25}
+.hours-head p{color:var(--muted);font-size:14.5px}
+.hours-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.hcol{padding:16px 20px;border-right:1.5px solid var(--line);border-top:4px solid var(--blue);min-width:0}
+.hcol.o{border-top-color:var(--orange)}.hcol.p{border-top-color:var(--purple);border-right:0}
+.hk{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hn{font-size:30px;font-weight:900;margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.hcol ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.hcol li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;border-bottom:1px dashed var(--line);padding-bottom:5px}
+.hcol li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.hours-note{padding:10px 22px 14px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:900px){.hours-head,.hours-grid,.inv,.cot-foot{grid-template-columns:1fr}.hcol{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* bloque Presentado a */
+.pres-to .pres-name{font-size:17px;font-weight:700}
+.pres-to .pres-name span{font-size:13px;font-weight:500;letter-spacing:0}
+.photo{object-position:50% 20%}
+
+/* empresas */
+.clients{margin-top:28px;border:1.5px solid var(--ink);background:var(--paper)}
+.cl-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.cl{padding:18px 24px;min-width:0;border-right:1.5px solid var(--line);border-bottom:1.5px solid var(--line)}
+.cl:nth-child(3n){border-right:0}
+.cl:nth-last-child(-n+3){border-bottom:0}
+.cl-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--purple);margin-bottom:10px}
+.cl:nth-child(3n+1) .cl-k{color:var(--orange)} .cl:nth-child(3n+2) .cl-k{color:var(--blue)}
+.cl ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.cl li{font-size:14.5px;font-weight:600;line-height:1.35;padding-left:14px;position:relative}
+.cl li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;background:var(--orange)}
+.cl:nth-child(3n+2) li::before{background:var(--blue)} .cl:nth-child(3n) li::before{background:var(--purple)}
+@media (max-width:900px){.cl-grid{grid-template-columns:1fr}.cl{border-right:0;border-bottom:1.5px solid var(--line)!important}.cl:last-child{border-bottom:0!important}}
+.s-card .tools{margin-top:10px;font-size:12px;line-height:1.5;color:var(--muted)}.s-card .tools b{color:var(--ink)}
+.obj{margin:14px 0 0;padding-left:18px;font-size:14px;line-height:1.65}.obj li{margin-bottom:4px}.obj-k{margin-top:20px;font-weight:700;font-size:14px}
+.two p+p{margin-top:12px}
+.gal{margin-top:40px}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:300px 240px;gap:12px}
+.gal-grid figure{margin:0;position:relative;overflow:hidden;border:1.5px solid var(--ink);background:#111}
+.gal-grid figure.wide{grid-column:1 / span 2}
+.gal-grid img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-size:12.5px;line-height:1.4;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.78))}
+.gal-links{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+@media (max-width:900px){.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gal-grid figure{height:230px}.gal-grid figure.wide{grid-column:1 / span 2;height:300px}}
+@media (max-width:560px){.gal-grid{grid-template-columns:1fr}.gal-grid figure,.gal-grid figure.wide{grid-column:auto;height:240px}}
+.hero-tag{margin-top:16px;font-size:clamp(18px,2.4vw,24px);font-weight:600;line-height:1.3;max-width:40ch}
+.cot-note{border:1.5px dashed var(--purple);padding:12px 16px;font-size:13.5px;color:var(--muted);margin-bottom:22px}
+.cot-note b{color:var(--purple)}
+.cot{background:var(--ink);color:#fff;padding:30px}
+.cot-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cot-opt{border:1px solid rgba(255,255,255,.28);padding:22px}
+.cot-opt .k{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9fd8ff}
+.cot-opt h3{margin-top:6px;font-size:20px;color:#fff}
+.cot-opt .d{margin-top:4px;font-size:13.5px;color:rgba(255,255,255,.72)}
+.cot-val{margin-top:16px;font-size:clamp(26px,3.4vw,36px);font-weight:900;letter-spacing:-.01em;color:#fff;line-height:1.1}
+.cot-val small{font-size:15px;font-weight:600;color:#9fd8ff}
+.cot-rows{margin-top:14px;border-top:1px solid rgba(255,255,255,.22)}
+.cot-rows div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:14px;color:rgba(255,255,255,.85)}
+.cot-rows div:last-child{font-weight:700;color:#fff}
+.cot-both{margin-top:18px;border:1px solid rgba(159,216,255,.5);padding:18px 22px;display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px;align-items:center}
+.cot-both .t{font-weight:700;font-size:16px}
+.cot-both .t span{display:block;font-weight:400;font-size:13px;color:rgba(255,255,255,.72);margin-top:3px}
+.cot-both .v{font-size:13px;color:rgba(255,255,255,.72)}
+.cot-both .v b{display:block;font-size:20px;color:#fff;font-weight:800;margin-top:2px}
+.cot-foot{margin-top:14px;font-size:13px;color:rgba(255,255,255,.72)}
+.cot-inc{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cot-inc>div{border:1.5px solid var(--ink);background:var(--paper);padding:16px 18px}
+.cot-inc h4{font-size:15px;margin-top:4px}
+.cot-inc ul{margin:8px 0 0;padding-left:17px;font-size:13.5px;line-height:1.55;color:var(--muted)}
+.cot-inc p{margin-top:8px;font-size:13.5px;line-height:1.55;color:var(--muted)}
+@media (max-width:900px){.cot-grid,.cot-inc{grid-template-columns:1fr}.cot-both{grid-template-columns:1fr}.cot{padding:20px}}
+.gcx-row{display:flex;align-items:center;gap:20px;margin-bottom:16px}.gcx-row img{width:170px;height:170px;flex-shrink:0}@media (max-width:560px){.gcx-row img{width:120px;height:120px}}.gcx-cap b{display:block;font-size:17px}.gcx-cap span{display:block;margin-top:3px;font-size:13.5px;color:var(--muted)}
+.card{position:relative}.gcx-mini{position:absolute;top:14px;right:14px;width:54px;height:54px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand"><img src="logo.png" alt="Inngenios" width="161" height="32"></div>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#entendimiento">Solicitud</a>
+      <a href="#programa">Alcance</a>
+      <a href="#capacitaciones">Programas</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#entregable">Entregables</a>
+      <a href="#logistica">Logística</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#inngenios">Inngenios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Propuesta técnica · Agencia de Empleo · Comfenalco Cartagena</div>
+      <h1 style="max-width:24ch;font-size:clamp(30px,4.6vw,50px)">Programas de desarrollo de capacidades en <em>productividad, negociación y experiencia del cliente</em></h1>
+      <p class="hero-tag">Un equipo más productivo y más cerca de las empresas que atiende</p>
+      <p class="sub">Dos programas para los 43 colaboradores de la Agencia de Empleo en la vigencia 2027: uno para gestionar mejor el tiempo y adaptarse a los nuevos procesos y herramientas, y otro para negociar y atender a los empleadores con un servicio a la medida de sus necesidades.</p>
+      <div class="specs">
+        <div><div class="k">Alcance</div><div class="v">2 programas</div></div>
+        <div><div class="k">Fechas tentativas</div><div class="v">Vigencia 2027 · por definir</div></div>
+        <div><div class="k">Participantes</div><div class="v">43 colaboradores</div></div>
+        <div><div class="k">Modalidad</div><div class="v">Presencial</div></div>
+      </div>
+      <div class="pres">
+        <div class="pres-to"><div class="k">Presentado a</div><div class="pres-row"><img class="pres-logo" src="comfenalco.png" alt="Comfenalco Cartagena" style="height:92px"><div class="pres-name">Comfenalco Cartagena<span>Agencia de Empleo · Gestión y Colocación</span></div></div></div>
+        <div class="pres-by"><div class="k">Presentado por</div><div class="pres-row"><img class="pres-inn" src="logo.png" alt="Inngenios"><div class="pres-name">Torres Creativas S.A.S.<span>Cartagena de Indias · Noviembre de 2026</span></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 ENTENDIMIENTO -->
+  <section id="entendimiento">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">01</div>
+        <div><h2>Entendimiento de la solicitud</h2></div>
+      </div>
+
+      <div class="context">
+        <div>
+          <p>La Agencia de Empleo de Comfenalco Cartagena está planeando su vigencia 2027 y proyecta dos programas de desarrollo de capacidades para su equipo interno de 43 colaboradores, con el fin de incluirlos en su presupuesto del próximo año.</p>
+          <p>El primero responde a un momento de cambio: la Agencia ha incorporado nuevos procesos, dinámicas institucionales y herramientas tecnológicas, y necesita que el equipo administre mejor su tiempo y adopte esos cambios con confianza. El segundo mira hacia afuera: la relación con los empleadores, que exige negociar bien, cultivar el vínculo corporativo y atender a cada empresa según lo que necesita.</p>
+          <p>Los dos apuntan al mismo resultado, que es un mejor servicio para empresas y usuarios. Por eso los presentamos como una propuesta integrada, aunque cada programa puede aprobarse y ejecutarse por separado.</p>
+        </div>
+        <div class="quote">
+          <div class="eyebrow">Propósito declarado por la Agencia de Empleo</div>
+          <p>«Contribuir al mejoramiento continuo de los procesos y la calidad del servicio que ofrecemos a empresas y usuarios.»</p>
+        </div>
+      </div>
+
+      <div class="shift" aria-label="Transición esperada en el equipo">
+        <div class="box from">
+          <div class="eyebrow" style="color:var(--muted)">Punto de partida</div>
+          <div class="t">Un equipo en medio de cambios</div>
+          <ul><li>Nuevos procesos y herramientas tecnológicas por asimilar</li><li>Presión sobre el tiempo y la carga de trabajo</li><li>Empleadores que esperan una atención más estratégica</li></ul>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="box to">
+          <div class="eyebrow c-orange">Hacia dónde va</div>
+          <div class="t">Un equipo que rinde más y sirve mejor</div>
+          <ul><li>Prioridades claras y hábitos de trabajo que liberan tiempo</li><li>Cambios adoptados con criterio y sin desgaste</li><li>Acuerdos sólidos y relaciones duraderas con las empresas</li></ul>
+        </div>
+      </div>
+
+      <div class="cards4">
+        <div class="card b"><div class="eyebrow c-blue">Alcance</div><h3>Dos programas</h3><p>Uno de competencias organizacionales y otro técnico, cotizados por separado y en conjunto.</p></div>
+        <div class="card o"><div class="eyebrow c-orange">Población</div><h3>43 colaboradores</h3><p>El equipo interno de la Agencia de Empleo, idealmente en dos grupos de 22 personas.</p></div>
+        <div class="card p"><div class="eyebrow c-purple">Enfoque</div><h3>Aplicado a la Agencia</h3><p>Se trabaja con sus procesos, sus herramientas y casos reales con empleadores, no con ejemplos genéricos.</p></div>
+        <div class="card k"><div class="eyebrow">Criterio de éxito</div><h3>Uso en el puesto</h3><p>Cada participante termina con un plan de aplicación y herramientas que usa desde la semana siguiente.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PROGRAMA -->
+  <section id="programa">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">02</div>
+        <div><div class="eyebrow c-blue">Alcance del acompañamiento</div><h2>Un acompañamiento con antes, durante y después</h2></div>
+      </div>
+      <p class="lead">Las sesiones con el equipo son la parte visible de un trabajo que empieza antes y termina después. Primero conocemos cómo opera la Agencia para diseñar cada programa a su medida; al final entregamos un informe con resultados y recomendaciones para sostener lo aprendido.</p>
+
+      <div class="ptl" role="img" aria-label="Línea de tiempo: preparación, sesiones e informe final">
+        <div class="ptl-seg b" style="flex:1.4"><span>Antes · Diseño</span></div>
+        <div class="ptl-seg o" style="flex:1.8"><span>Durante · Sesiones</span></div>
+        <div class="ptl-seg p" style="flex:1"><span>Después · Informe</span></div>
+      </div>
+      <div class="ptl-dates"><span>Dos semanas desde la aprobación</span><span>Fechas por definir con la Agencia</span><span>Semana siguiente</span></div>
+
+      <div class="phases">
+        <div class="ph b">
+          <div class="ph-k">Fase 1 · Antes</div>
+          <h3>Alineación y diseño</h3>
+          <div class="ph-when">Dos semanas antes de la primera sesión</div>
+          <ul>
+            <li>Reunión de alineación con la coordinación de la Agencia</li>
+            <li>Levantamiento breve de información: procesos, herramientas tecnológicas en uso y situaciones frecuentes con empleadores</li>
+            <li>Diseño metodológico detallado de cada programa</li>
+            <li>Diseño del repositorio digital con las herramientas, los contenidos y los materiales del participante</li>
+          </ul>
+        </div>
+        <div class="ph o">
+          <div class="ph-k">Fase 2 · Durante</div>
+          <h3>Sesiones presenciales</h3>
+          <div class="ph-when">En las fechas y los horarios que defina la Agencia</div>
+          <div class="agenda">
+            <div class="ag in"><b>Formato</b><span>Cuatro sesiones de cuatro horas o una jornada de día completo, por programa</span></div>
+            <div class="ag"><b>Grupos</b><span>Dos grupos de 22 personas como formato ideal, o el grupo completo</span></div>
+            <div class="ag"><b>Casos</b><span>Ejercicios sobre la operación de la Agencia y sobre situaciones reales con empresas</span></div>
+          </div>
+        </div>
+        <div class="ph p">
+          <div class="ph-k">Fase 3 · Después</div>
+          <h3>Informe y recomendaciones</h3>
+          <div class="ph-when">Semana posterior a la última sesión</div>
+          <ul>
+            <li>Certificado de participación para cada colaborador, en ambos programas</li>
+            <li>Informe final por programa: asistencia, evaluación de los participantes y hallazgos</li>
+            <li>Recomendaciones para sostener los cambios en el trabajo diario</li>
+            <li>Reunión de cierre con la coordinación de la Agencia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="meets">
+        <div class="meets-k">Encuentros con la Agencia</div>
+        <div class="meet"><i>1</i><div><b>Alineación</b><span>Antes · objetivos, perfil del equipo y contexto de los cambios</span></div></div>
+        <div class="meet"><i>2</i><div><b>Validación del diseño</b><span>Antes · revisión de cada programa diseñado y de la logística</span></div></div>
+        <div class="meet"><i>3</i><div><b>Cierre</b><span>Después · entrega del informe y de las recomendaciones</span></div></div>
+      </div>
+
+      <div class="approve"><b>Aprobación de la propuesta: al menos dos semanas antes de la primera sesión</b>, mediante orden de compra o mensaje de aceptación. Ese tiempo garantiza el levantamiento de información y el diseño a la medida. Las fechas son tentativas hasta la aprobación.</div>
+    </div>
+  </section>
+
+  <!-- 03 CAPACITACIONES -->
+  <section id="capacitaciones">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">03</div>
+        <div><div class="eyebrow c-orange">Lo que proponemos</div><h2>Alcance de los dos programas</h2></div>
+      </div>
+      <p class="lead">Cada programa tiene su propio alcance y puede contratarse de forma independiente. Ambos comparten el mismo formato, para que la Agencia elija el que mejor se ajuste a su operación.</p>
+
+      <div class="subhead" style="margin-top:32px"><h3>Programa 1 · Gestión del tiempo, productividad y adaptación al cambio</h3><span class="note">Competencias organizacionales</span></div>
+      <div class="two">
+        <div>
+          <p>El tiempo es el recurso más escaso de un equipo que atiende todos los días a empresas y a personas que buscan empleo. Este programa convierte los cambios recientes de la Agencia, con sus nuevos procesos, dinámicas y herramientas tecnológicas, en una oportunidad para trabajar con más foco y menos desgaste.</p>
+          <p>Cada colaborador aprende a decidir en qué pone su atención, a apoyarse en la tecnología y en la inteligencia artificial para liberar horas, y a adoptar lo nuevo con criterio en lugar de padecerlo.</p>
+          <div class="obj-k">Al terminar el programa, el equipo podrá:</div>
+          <ul class="obj">
+            <li>Reconocer en qué se va hoy su tiempo y dónde están los cuellos de botella.</li>
+            <li>Priorizar y planear la semana con criterios compartidos.</li>
+            <li>Usar las herramientas tecnológicas de la Agencia y la inteligencia artificial para reducir tareas repetitivas.</li>
+            <li>Entender cómo se vive un cambio y acordar, como equipo, la forma de adoptarlo.</li>
+          </ul>
+        </div>
+        <div>
+          <table>
+            <thead><tr><th>Concepto</th><th>Detalle</th></tr></thead>
+            <tbody>
+              <tr><td>Dirigida a</td><td>Los 43 colaboradores de la Agencia</td></tr>
+              <tr><td>Intensidad, opción A</td><td>16 horas · cuatro sesiones de 4 horas</td></tr>
+              <tr><td>Intensidad, opción B</td><td>8 horas · una jornada de día completo</td></tr>
+              <tr><td>Modalidad</td><td>Presencial, práctica</td></tr>
+              <tr><td>Resultado</td><td>Plan personal de productividad y acuerdos de equipo frente al cambio</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subhead" style="margin-top:44px"><h3>Programa 2 · Negociación efectiva y experiencia en servicio empresarial</h3></div>
+      <div class="two">
+        <div>
+          <div class="gcx-row"><img src="gcx.png" alt="Genial Customer Experience (GCX) · Experiencias geniales para el cliente" width="170" height="170"><div class="gcx-cap"><b>Genial Customer Experience</b><span>Metodología propia de Inngenios · Experiencias geniales para el cliente</span></div></div>
+          <p>Para una empresa, la Agencia de Empleo es tan buena como la experiencia que vive cada vez que la busca. Este programa se basa en <b>Genial Customer Experience (GCX)</b>, nuestra metodología de experiencia del cliente y diseño de servicio: lleva al equipo a ponerse en el lugar del cliente, a entender qué necesita de verdad y a diseñar, paso a paso, un servicio que se lo resuelva.</p>
+          <p>Sobre esa comprensión se construyen la negociación y el relacionamiento corporativo, porque quien conoce los intereses de la empresa negocia mejor y sostiene relaciones más duraderas. Es la ruta que en 2026 recorrimos con el Tecnológico Comfenalco en el entrenamiento «El arte del servicio», adaptada ahora al cliente empresarial de la Agencia.</p>
+          <div class="obj-k">Al terminar el programa, el equipo podrá:</div>
+          <ul class="obj">
+            <li>Comprender los fundamentos de la experiencia del cliente y su valor estratégico para la Agencia.</li>
+            <li>Identificar las necesidades más relevantes del empleador con arquetipos y mapas de empatía.</li>
+            <li>Mapear los puntos de contacto de la empresa con la Agencia en un Customer Journey.</li>
+            <li>Diseñar el servicio a empresas de forma sistémica con el Service Blueprint.</li>
+            <li>Negociar con los empleadores a partir de sus intereses y cerrar acuerdos que se cumplen.</li>
+            <li>Definir un protocolo de atención e indicadores de satisfacción y recomendación.</li>
+            <li>Fortalecer una cultura centrada en el cliente en todo el equipo.</li>
+          </ul>
+        </div>
+        <div>
+          <table>
+            <thead><tr><th>Concepto</th><th>Detalle</th></tr></thead>
+            <tbody>
+              <tr><td>Dirigida a</td><td>Los 43 colaboradores de la Agencia</td></tr>
+              <tr><td>Intensidad, opción A</td><td>16 horas · cuatro sesiones de 4 horas</td></tr>
+              <tr><td>Intensidad, opción B</td><td>8 horas · una jornada de día completo</td></tr>
+              <tr><td>Modalidad</td><td>Presencial, práctica</td></tr>
+              <tr><td>Resultado</td><td>Recorrido del empleador rediseñado, protocolo de atención y negociación, e indicadores de servicio</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subhead" style="margin-top:44px"><h3>Formatos posibles</h3><span class="note">La Agencia elige el formato y la conformación de los grupos</span></div>
+      <div class="cards4" style="margin-top:0">
+        <div class="card o"><div class="eyebrow c-orange">Opción A</div><h3>Cuatro sesiones de 4 horas</h3><p>Dieciséis horas por programa. Permite practicar entre una sesión y otra y afecta menos la jornada de trabajo.</p></div>
+        <div class="card b"><div class="eyebrow c-blue">Opción B</div><h3>Jornada de día completo</h3><p>Ocho horas en un solo día. Versión intensiva de los mismos temas, con una sola convocatoria.</p></div>
+        <div class="card p"><div class="eyebrow c-purple">Grupos · ideal</div><h3>Dos grupos de 22</h3><p>Más práctica y retroalimentación por persona, y la atención de la Agencia no se detiene mientras un grupo se capacita.</p></div>
+        <div class="card k"><div class="eyebrow">Grupos · alternativa</div><h3>Grupo completo de 43</h3><p>Todo el equipo en un mismo espacio, con trabajo por mesas y facilitación reforzada.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 METODOLOGÍA -->
+  <section id="metodologia">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">04</div>
+        <div><div class="eyebrow c-orange">Cómo lo vamos a abordar</div><h2>Aprender haciendo, sobre el trabajo real de la Agencia</h2></div>
+      </div>
+      <p class="lead">Nuestra metodología es de aprendizaje experiencial: primero se vive el ejercicio, luego se le pone nombre y por último se lleva a una situación real del participante. Las sesiones son 30 % conceptos y 70 % práctica, con talleres colaborativos, co-diseño y casos reales de la Agencia, y cada equipo desarrolla un proyecto aplicado a lo largo del programa. Nos apoyamos en marcos reconocidos de productividad, negociación y experiencia del cliente.</p>
+
+      <div class="subhead" style="margin-top:32px"><h3>Los marcos con los que trabajaremos</h3><span class="note">Cada uno aporta herramientas concretas</span></div>
+      <div class="cards4" style="margin-top:0">
+        <div class="card b"><div class="eyebrow c-blue">Equipos y cambio</div><h3>Management 3.0</h3><p>Prácticas para organizar el trabajo, construir acuerdos de equipo y acompañar la adopción de cambios.</p></div>
+        <div class="card o"><div class="eyebrow c-orange">Productividad</div><h3>Inteligencia artificial aplicada</h3><p>Uso práctico de asistentes de inteligencia artificial para reducir el tiempo de las tareas repetitivas.</p></div>
+        <div class="card p"><div class="eyebrow c-purple">Negociación</div><h3>Negociación basada en intereses</h3><p>El método desarrollado en el Proyecto de Negociación de Harvard para llegar a acuerdos que benefician a las dos partes.</p></div>
+        <div class="card k"><div class="eyebrow">Servicio</div><h3>Genial Customer Experience (GCX)</h3><p>Metodología propia de Inngenios de experiencia del cliente y diseño de servicio: empatía, Customer Journey, Service Blueprint y experiencias WOW.</p></div>
+      </div>
+      <p class="lead" style="margin-top:36px">Los dos programas recorren los mismos cuatro momentos. En el formato de cuatro sesiones, cada módulo ocupa una sesión; en la jornada de día completo se abordan los cuatro en versión intensiva.</p>
+
+      <div class="moments" role="group" aria-label="Momentos de la metodología">
+        <button class="moment" data-m="escuchar" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 01</div><div class="t">Conectar</div>
+          <div class="d">Partir de la realidad del equipo: cómo trabaja hoy y qué situaciones enfrenta.</div><span class="bar"></span>
+        </button>
+        <button class="moment" data-m="articular" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 02</div><div class="t">Comprender</div>
+          <div class="d">Conocer los conceptos y las herramientas, explicados con ejemplos de la Agencia.</div><span class="bar"></span>
+        </button>
+        <button class="moment" data-m="cocrear" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 03</div><div class="t">Practicar</div>
+          <div class="d">Ensayar con ejercicios y simulaciones, con retroalimentación del facilitador.</div><span class="bar"></span>
+        </button>
+        <button class="moment" data-m="consolidar" aria-pressed="false" type="button">
+          <div class="code">MOMENTO 04</div><div class="t">Transferir</div>
+          <div class="d">Convertir lo aprendido en compromisos de aplicación y en recomendaciones para la Agencia.</div><span class="bar"></span>
+        </button>
+      </div>
+      <p class="hint">Selecciona un momento para ver qué módulos lo componen.</p>
+
+      <div class="flow" id="flow">
+        <div class="jornada">
+          <div class="j-head">
+            <div class="j-tag o">1</div>
+            <div class="j-title"><div class="eyebrow c-orange">Programa 1</div><h3>Gestión del tiempo, productividad y adaptación al cambio</h3><div class="dur">16 horas en cuatro sesiones, u 8 horas en una jornada</div></div>
+          </div>
+          <div class="steps">
+            <div class="step" data-m="escuchar"><div class="dot">01</div><div class="s-card"><div class="mtag">Módulo 1 · Conectar</div><h4>Mi semana real</h4><p>Cada participante revisa en qué se le va el tiempo y qué lo interrumpe, y el grupo identifica los cuellos de botella comunes.</p><div class="tools"><b>Herramientas:</b> registro de uso del tiempo y mapa de interrupciones.</div><div class="out"><b>Para qué:</b> partir de datos propios</div></div></div>
+            <div class="step" data-m="articular"><div class="dot">02</div><div class="s-card"><div class="mtag">Módulo 2 · Comprender</div><h4>Prioridades y foco</h4><p>Criterios para priorizar, planear la semana y proteger el tiempo de las tareas que más valor aportan.</p><div class="tools"><b>Herramientas:</b> matriz de prioridades, planeación semanal y bloques de foco.</div><div class="out"><b>Para qué:</b> decidir en qué sí y en qué no</div></div></div>
+            <div class="step" data-m="cocrear"><div class="dot">03</div><div class="s-card"><div class="mtag">Módulo 3 · Practicar</div><h4>Productividad con tecnología</h4><p>Ejercicios con las herramientas que la Agencia ya implementó y con inteligencia artificial para tareas repetitivas.</p><div class="tools"><b>Herramientas:</b> mapa de tareas automatizables, asistentes de inteligencia artificial y flujo de trabajo del equipo.</div><div class="out"><b>Para qué:</b> ganar tiempo cada semana</div></div></div>
+            <div class="step" data-m="cocrear"><div class="dot">04</div><div class="s-card"><div class="mtag">Módulo 4 · Practicar</div><h4>Adaptación al cambio</h4><p>Lectura de las reacciones frente a los nuevos procesos y construcción de acuerdos de equipo para adoptarlos.</p><div class="tools"><b>Herramientas:</b> curva del cambio, acuerdos de equipo de Management 3.0 y plan de adopción.</div><div class="out"><b>Para qué:</b> pasar de la resistencia a la adopción</div></div></div>
+          </div>
+        </div>
+
+        <div class="jornada">
+          <div class="j-head">
+            <div class="j-tag b">2</div>
+            <div class="j-title"><div class="eyebrow c-blue">Programa 2</div><h3>Negociación efectiva y experiencia en servicio empresarial</h3><div class="dur">16 horas en cuatro sesiones, u 8 horas en una jornada</div></div>
+          </div>
+          <div class="steps">
+            <div class="step" data-m="escuchar"><div class="dot">05</div><div class="s-card"><div class="mtag">Módulo 1 · Conectar</div><h4>Fundamentos de CX y empatía con el empleador</h4><p>Comprender qué es la experiencia del cliente y lograr un entendimiento profundo de las empresas que atiende la Agencia y de las áreas internas que participan en el servicio.</p><div class="tools"><b>Herramientas:</b> arquetipo de cliente interno y externo, y mapa de empatía aplicado al servicio.</div><div class="out"><b>Para qué:</b> ponerse en el lugar de la empresa</div></div></div>
+            <div class="step" data-m="articular"><div class="dot">06</div><div class="s-card"><div class="mtag">Módulo 2 · Comprender</div><h4>Jobs to be Done y Customer Journey</h4><p>Conocer el recorrido y el viaje emocional de la empresa con la Agencia para identificar sus tareas, los beneficios que espera y sus frustraciones.</p><div class="tools"><b>Herramientas:</b> Customer Journey Map y mapa de propuesta de valor para el cliente.</div><div class="out"><b>Para qué:</b> saber qué valora y qué le molesta</div></div></div>
+            <div class="step" data-m="cocrear"><div class="dot">07</div><div class="s-card"><div class="mtag">Módulo 3 · Practicar</div><h4>Diseño de servicio y negociación de alto valor</h4><p>Diseñar de forma sistémica el servicio a empresas y preparar las negociaciones con los empleadores a partir de sus intereses.</p><div class="tools"><b>Herramientas:</b> Service Blueprint, técnicas de innovación en servicio y negociación basada en intereses.</div><div class="out"><b>Para qué:</b> acuerdos y servicios que convienen a ambos</div></div></div>
+            <div class="step" data-m="cocrear"><div class="dot">08</div><div class="s-card"><div class="mtag">Módulo 4 · Practicar</div><h4>Protocolo, experiencias WOW e indicadores</h4><p>Diseñar el protocolo de atención y relacionamiento con empresas, momentos memorables de servicio y la forma de medirlos.</p><div class="tools"><b>Herramientas:</b> protocolo de atención, diseño de experiencias WOW e indicadores de satisfacción y recomendación.</div><div class="out"><b>Para qué:</b> un servicio consistente y medible</div></div></div>
+          </div>
+        </div>
+
+        <div class="checkpoint"><div class="l"></div><span>Cierre de cada programa y continuidad</span><div class="l"></div></div>
+
+        <div class="jornada">
+          <div class="j-head">
+            <div class="j-tag g">C</div>
+            <div class="j-title"><div class="eyebrow c-green">Cierre · participantes e Inngenios</div><h3>Del programa al puesto de trabajo</h3><div class="dur">Al final de cada programa y en la semana siguiente</div></div>
+          </div>
+          <div class="steps two-steps">
+            <div class="step" data-m="consolidar"><div class="dot">09</div><div class="s-card"><div class="mtag">Transferir</div><h4>Proyecto y plan de aplicación</h4><p>Cada equipo presenta su proyecto aplicado y cada participante define qué va a cambiar en su trabajo.</p><div class="out"><b>Para qué:</b> que lo aprendido se use</div></div></div>
+            <div class="step" data-m="consolidar"><div class="dot">10</div><div class="s-card"><div class="mtag">Transferir</div><h4>Informe para la Agencia</h4><p>Entregamos lo observado en los grupos, los resultados de la evaluación y recomendaciones para dar continuidad.</p><div class="out"><b>Para qué:</b> sostener la mejora en el tiempo</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="knowhow"><b>Alcance metodológico de esta propuesta.</b> Aquí presentamos el enfoque, los marcos de referencia, los momentos y los temas de cada programa. Las dinámicas específicas, los instrumentos y el guion minuto a minuto no se entregan antes de la contratación: son el primer producto del acompañamiento, se diseñan a la medida del equipo y se validan con la Agencia antes de la primera sesión.</div>
+      <div class="gal">
+        <div class="subhead"><h3>Así se viven nuestros entrenamientos</h3><span class="note">Equipos reales, en Cartagena y el Caribe</span></div>
+        <div class="gal-grid">
+          <figure class="wide"><img src="f-escuela-liderazgo.jpg" alt="Grupo de la Escuela de Liderazgo 2026 del Tecnológico Comfenalco al cierre de la sesión ADN del líder" style="object-position:50% 62%"><figcaption>Escuela de Liderazgo 2026 «ADN del líder» · Tecnológico Comfenalco</figcaption></figure>
+          <figure><img src="f-futco-servicio.jpg" alt="Equipo de colaboradores al cierre de un entrenamiento con Inngenios" style="object-position:50% 50%"><figcaption>Entrenamiento con colaboradores · Tecnológico Comfenalco</figcaption></figure>
+          <figure><img src="f-ecopetrol.jpg" alt="Equipo del Grupo Ecopetrol al cierre de un entrenamiento con Inngenios" style="object-position:50% 55%"><figcaption>Entrenamiento con el Grupo Ecopetrol</figcaption></figure>
+          <figure><img src="f-surtigas.jpg" alt="Equipo de Surtigas en el programa Innpulso" style="object-position:50% 45%"><figcaption>Programa Innpulso · Surtigas</figcaption></figure>
+          <figure><img src="f-goyn.jpg" alt="Participantes del Fondo de Innovación Juvenil en Barranquilla" style="object-position:50% 55%"><figcaption>Fondo de Innovación Juvenil · GOYN Barranquilla</figcaption></figure>
+        </div>
+        <div class="gal-links">
+          <span class="eco-k">Míralo en video</span>
+          <a class="lbtn" href="https://www.youtube.com/shorts/0emCEQRXSM4" target="_blank" rel="noopener">Testimonio de un participante <span aria-hidden="true">↗</span></a>
+          <a class="lbtn" href="https://youtu.be/i61dJxmwK2M" target="_blank" rel="noopener">Team Building Genial Experience con Yara <span aria-hidden="true">↗</span></a>
+          <a class="lbtn" href="https://youtu.be/BLVGeq7J4-c" target="_blank" rel="noopener">Video de nuestros entrenamientos <span aria-hidden="true">↗</span></a>
+          <a class="lbtn" href="https://www.youtube.com/@inngenios" target="_blank" rel="noopener">Más entrenamientos en nuestro canal de YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 05 ENTREGABLES -->
+  <section id="entregable">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">05</div>
+        <div><div class="eyebrow c-purple">Resultado del ejercicio</div><h2>Entregables</h2></div>
+      </div>
+      <div class="deliv-main">
+        <div class="dm-tag">Entregable principal</div>
+        <div class="dm-body">
+          <h3>Dos programas de desarrollo de capacidades para los 43 colaboradores de la Agencia de Empleo</h3>
+          <p>Presenciales, diseñados a la medida y facilitados por el equipo de Inngenios, con práctica acompañada sobre los procesos de la Agencia y sobre casos reales con empleadores.</p>
+        </div>
+      </div>
+      <div class="deliv-sub">Se complementa con:</div>
+      <div class="deliv">
+        <div class="side"><div class="eyebrow">Salidas del proceso</div><h3>Lo que queda en la Agencia</h3></div>
+        <div class="items">
+          <div class="it"><div class="n">01</div><h4>Diseño metodológico</h4><p>Diseño detallado de cada programa, validado con la Agencia antes de la primera sesión.</p></div>
+          <div class="it"><div class="n">02</div><h4>Repositorio digital</h4><p>Espacio en línea por programa con las herramientas, los contenidos, las plantillas y las guías en PDF, para consulta permanente del equipo.</p></div>
+          <div class="it"><div class="n">03</div><h4>Informe final</h4><p>Asistencia, evaluación de los participantes, hallazgos y recomendaciones de continuidad.</p></div>
+          <div class="it"><div class="n">04</div><h4>Certificado de participación</h4><p>Cada participante recibe su certificado de Inngenios por cada programa que complete.</p></div>
+        </div>
+      </div>
+      <p class="deliv-foot">Los planes de aplicación, la guía de negociación y los estándares de atención a empresas que construya el equipo durante las sesiones quedan como documentos de trabajo de la Agencia.</p>
+    </div>
+  </section>
+
+  <!-- 06 REQUERIMIENTOS -->
+  <section id="logistica">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">06</div>
+        <div><div class="eyebrow c-blue">Lo que se necesita</div><h2>Requerimientos y cronograma</h2></div>
+      </div>
+      <div class="two">
+        <div>
+          <ul class="req">
+            <li><i>01</i><div><span class="who u">Agencia de Empleo</span><strong>Salón con mesas y sillas movibles</strong>, con capacidad para el grupo que se defina y espacio para trabajar por equipos.</div></li>
+            <li><i>02</i><div><span class="who u">Agencia de Empleo</span><strong>Equipo audiovisual e internet</strong>: pantalla o video beam, sonido y conexión para los ejercicios con herramientas digitales.</div></li>
+            <li><i>03</i><div><span class="who u">Agencia de Empleo</span><strong>Información de contexto</strong>: listado de participantes con sus cargos, procesos y herramientas en uso, dos semanas antes.</div></li>
+            <li><i>04</i><div><span class="who u">Agencia de Empleo</span><strong>Refrigerios</strong> para los participantes en cada sesión.</div></li>
+            <li><i>05</i><div><span class="who i">Inngenios</span><strong>Diseño metodológico y facilitación</strong> de todas las sesiones, e <strong>impresión de los materiales</strong> del participante.</div></li>
+            <li><i>06</i><div><span class="who i">Inngenios</span><strong>Repositorio digital del programa</strong>: diseño de un espacio en línea con las herramientas, los contenidos, las plantillas y los materiales del participante en PDF, además del informe final de cada programa.</div></li>
+          </ul>
+        </div>
+        <div>
+          <table>
+            <thead><tr><th>Concepto</th><th>Detalle</th></tr></thead>
+            <tbody>
+              <tr><td>Vigencia</td><td>2027, en las fechas que defina la Agencia</td></tr>
+              <tr><td>Participantes</td><td>43 colaboradores</td></tr>
+              <tr><td>Grupos</td><td>Dos de 22 personas (ideal) o grupo completo</td></tr>
+              <tr><td>Modalidad</td><td>Presencial, práctica</td></tr>
+              <tr><td>Lugar</td><td>Instalaciones de Comfenalco, por confirmar</td></tr>
+            </tbody>
+          </table>
+          <div class="subhead" style="margin-top:28px;margin-bottom:10px"><h3 style="font-size:17px">Ruta de cada programa</h3></div>
+          <div class="timeline" style="grid-template-columns:repeat(4,1fr)" aria-label="Hitos del proceso">
+            <div class="day"><div class="dw">Paso</div><div class="dn">01</div><div class="dj prep">Aprobación</div></div>
+            <div class="day"><div class="dw">Paso</div><div class="dn">02</div><div class="dj prep">Diseño</div></div>
+            <div class="day win"><div class="dw">Paso</div><div class="dn">03</div><div class="dj">Sesiones</div></div>
+            <div class="day"><div class="dw">Paso</div><div class="dn">04</div><div class="dj" style="background:var(--purple)">Informe</div></div>
+          </div>
+          <p class="tl-note">Las fechas las define la Agencia dentro de la vigencia 2027. Entre la aprobación y la primera sesión se necesitan <b>dos semanas</b>, y el informe se entrega en la <b>semana siguiente</b> a la última sesión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 EQUIPO -->
+  <section id="equipo">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">07</div>
+        <div><div class="eyebrow c-purple">Quién facilita</div><h2>Facilitador principal</h2></div>
+      </div>
+
+      <div class="fac">
+        <div class="fac-id">
+          <img class="photo" src="cristian.jpg" alt="Cristian Torres" width="132" height="132">
+          <h3>Cristian Torres</h3>
+          <div class="roles"><span>Facilitador principal</span><span>Director de Inngenios</span><span>Consultor en innovación empresarial</span><span>Speaker internacional</span></div>
+          <div class="stats">
+            <div><b>+9.000</b><span>personas entrenadas</span></div>
+            <div><b>+300</b><span>empresas intervenidas</span></div>
+            <div><b>+10</b><span>años en innovación</span></div>
+          </div>
+          <div class="social">
+            <a class="sbtn" href="https://www.linkedin.com/in/cristianinngenios/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="fac-body">
+          <p class="fac-lead">Ingeniero Industrial y Magíster en Gestión de la Innovación, con Máster en Emprendimiento y Desarrollo de Ideas de Negocio del Instituto Europeo de Posgrado. Conferencista internacional, consultor empresarial y creador de la Metodología de Creatividad Aplicada e Innovación 6i®.</p>
+          <p class="fac-lead" style="margin-top:10px">Dirige Inngenios y es fundador del festival de innovación Genius Fest. En esta propuesta lidera el diseño de los dos programas, facilita las sesiones y conduce el cierre con la Agencia. Cada sesión cuenta además con el apoyo de un cofacilitador del equipo de Inngenios.</p>
+          <div class="fac-grid">
+            <div class="fac-col">
+              <div class="eyebrow c-purple">Trayectoria destacada</div>
+              <ul class="tr">
+                <li>Innovador Distinguido del Magíster en Gestión de la Innovación de la Pontificia Universidad Católica de Chile</li>
+                <li>Entre los diez mejores Consultores Máster de la Cámara de Comercio de Cartagena e iNNpulsa Colombia (2020)</li>
+              </ul>
+            </div>
+            <div class="fac-col">
+              <div class="eyebrow c-orange">Facilitador certificado</div>
+              <ul>
+                <li>Customer Experience Design Management · CX LATAM</li>
+                <li>Management 3.0 · marco que se trabaja en el programa 1</li>
+                <li>ICQ Coaching, Team Building Experience y STEP-PRO · avaladas por Humanagement (Chile) y la ICMF</li>
+                <li>Six Thinking Hats</li>
+                <li>Design Thinking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 CONOCE INNGENIOS -->
+  <section id="inngenios">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-num">08</div>
+        <div><div class="eyebrow c-orange">Quiénes somos</div><h2>Conoce un poco más de Inngenios</h2></div>
+      </div>
+      <div class="about">
+        <div class="about-main">
+          <div class="eyebrow">Nuestro propósito</div>
+          <p class="about-purpose">Ayudamos a personas y organizaciones a desarrollar capacidades sistémicas para innovar, crear valor y liderar el cambio.</p>
+          <p class="about-tag">¡Cree en ti, crea con nosotros!</p>
+          <a class="cta" href="https://drive.google.com/file/d/11CmHTBIUbww7b7Z4lp7yyQ7_syRBeKOM/view?usp=sharing" target="_blank" rel="noopener">Ver nuestro brochure <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="lines">
+          <div class="line-it b"><div class="eyebrow">Mindset</div><h4>Entrenamientos especializados</h4><p>Innovación, liderazgo, creatividad y pensamiento estratégico con experiencias aplicadas y orientadas a la acción.</p></div>
+          <div class="line-it o"><div class="eyebrow">Consultoría</div><h4>Consultoría estratégica</h4><p>Diagnóstico, diseño y fortalecimiento de estrategias, procesos y capacidades para innovar.</p></div>
+          <div class="line-it p"><div class="eyebrow">Soluciones</div><h4>Soluciones técnicas y tecnológicas</h4><p>Metodología, tecnología, inteligencia de negocio y automatización con IA a la medida.</p></div>
+        </div>
+      </div>
+
+      <div class="clients">
+        <div class="unis-head"><div><div class="eyebrow c-orange">Empresas que confían en nosotros</div><h3>Organizaciones con las que hemos trabajado</h3></div><p>Energía, agua y saneamiento, industria, gobierno, gremios, fundaciones, universidades y cooperación internacional, con un fuerte anclaje en Cartagena y el Caribe colombiano.</p></div>
+        <div class="cl-grid">
+          <div class="cl"><div class="cl-k">Energía e industria</div><ul><li>Grupo Ecopetrol · Refinería de Cartagena</li><li>Surtigas (Promigas)</li><li>Yara</li><li>Cotecmar</li></ul></div>
+          <div class="cl"><div class="cl-k">Agua y saneamiento</div><ul><li>Aguas de Cartagena (Acuacar)</li><li>Triple A</li></ul></div>
+          <div class="cl"><div class="cl-k">Gremios, fondos y cajas</div><ul><li>Comfenalco Cartagena</li><li>Foncomfenalco</li><li>Cámara de Comercio de Cartagena</li><li>Cámara de Comercio de Manizales por Caldas</li><li>Fonrecar</li></ul></div>
+          <div class="cl"><div class="cl-k">Fundaciones y cooperación</div><ul><li>Fundación Santo Domingo</li><li>Fundación Corona</li><li>Unbound</li><li>Global Opportunity Youth Network Barranquilla (Aspen Institute)</li><li>Nuestra Barranquilla</li></ul></div>
+          <div class="cl"><div class="cl-k">Universidades</div><ul><li>Fundación Universitaria Tecnológico Comfenalco</li><li>Universidad Tecnológica de Bolívar</li><li>Universidad Sergio Arboleda</li><li>Universidad de Cartagena</li><li>Universidad del Sinú</li><li>Universidad Jorge Tadeo Lozano</li></ul></div>
+          <div class="cl"><div class="cl-k">Gobierno</div><ul><li>Alcaldía Mayor de Cartagena de Indias</li><li>Gobernación de Bolívar</li><li>Gobernación del Atlántico</li></ul></div>
+        </div>
+      </div>
+
+      <div class="recog">
+        <div class="rc-col">
+          <div class="eyebrow c-orange">Resultados con nuestros clientes</div>
+          <h3>Capacidades que se notan en los indicadores</h3>
+          <div class="award"><div class="aw-mark" aria-hidden="true"></div><div><b>Comfenalco Cartagena</b><span>Acompañamiento desde 2021 en cultura y capacidades de innovación. Ranking de Innovación Empresarial de la ANDI: puesto 149 en 2024, 101 en 2025 y 23 en 2026.</span></div></div>
+          <div class="award"><div class="aw-mark" aria-hidden="true"></div><div><b>Aguas de Cartagena</b><span>Cinco años consolidando su modelo de innovación, con más de $10.000 millones COP en valor recuperado.</span></div></div>
+        </div>
+        <div class="rc-col">
+          <div class="eyebrow c-blue">Reconocimientos</div>
+          <h3>Premios de innovación obtenidos</h3>
+          <div class="lab"><b>Cartagena Ciudad Innovadora</b><span>Alcaldía de Cartagena y Universidad Tecnológica de Bolívar</span></div>
+          <div class="lab"><b>Caribe Innova 2023</b><span>Cámara de Comercio de Cartagena, Ecopetrol, Esenttia y Econova Caribe</span></div>
+        </div>
+      </div>
+
+      <div class="links">
+        <span class="eco-k">Síguenos</span>
+        <a class="lbtn" href="https://www.inngenios.co" target="_blank" rel="noopener">Sitio web <span aria-hidden="true">↗</span></a>
+        <a class="lbtn" href="https://www.instagram.com/inn.genios/" target="_blank" rel="noopener">Instagram @inn.genios <span aria-hidden="true">↗</span></a>
+        <a class="lbtn" href="https://www.youtube.com/@inngenios" target="_blank" rel="noopener">YouTube @inngenios <span aria-hidden="true">↗</span></a>
+        <a class="lbtn gf" href="https://www.geniusfest.co" target="_blank" rel="noopener">Genius Fest <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="eco">
+        <span class="eco-k">Programas propios</span>
+        <span class="chip">GCX · experiencia del cliente</span>
+        <span class="chip">Metodología A.C.C.I.O.N. · liderazgo</span>
+        <span class="chip">TBGE · team building</span>
+        <span class="chip">GEVP · propuesta de valor al empleado</span>
+        <span class="chip">Metodología 6i · innovación y creatividad</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <div class="close" id="contacto">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow" style="color:#9fd8ff">Siguiente paso</div>
+        <h2>Llevemos estas capacidades <span>al día a día de la Agencia de Empleo</span></h2>
+        <p>Quedamos atentos a sus comentarios y a las preferencias de formato y de grupos, para ajustar la propuesta a la planeación 2027 de la Agencia.</p>
+      </div>
+      <div class="contact">
+        <div class="row"><div><div class="k">Contacto</div><div class="v">Cristian Torres · Director de Inngenios</div></div></div>
+        <div class="row"><div><div class="k">Correo</div><div class="v" id="mail">cristian@inngenios.co</div></div><button class="copy" type="button" data-copy="mail">Copiar</button></div>
+        <div class="row"><div><div class="k">Teléfono</div><div class="v" id="tel">+57 300 333 6267</div></div><button class="copy" type="button" data-copy="tel">Copiar</button></div>
+        <div class="row"><div><div class="k">Web</div><div class="v"><a href="https://www.inngenios.co" target="_blank" rel="noopener" style="color:#fff">www.inngenios.co</a></div></div></div>
+      </div>
+    </div>
+    <div class="wrap foot">Torres Creativas S.A.S. · NIT 900.886.610-1 · Cartagena de Indias · Mindset · Estrategia · Resultados</div>
+  </div>
+</main>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.moment');
+  var flow = document.getElementById('flow');
+  var steps = flow.querySelectorAll('.step');
+  var active = null;
+  function apply(m){
+    active = m;
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.m === m)); });
+    if(!m){ flow.classList.remove('focus'); steps.forEach(function(s){s.classList.remove('on')}); return; }
+    flow.classList.add('focus');
+    steps.forEach(function(s){ s.classList.toggle('on', s.dataset.m === m); });
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      apply(active === b.dataset.m ? null : b.dataset.m);
+    });
+  });
+  // Scrollspy: resalta en el menú la sección visible
+  var navEl = document.querySelector('.nav');
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  var targets = navLinks.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+  function spy(){
+    var line = window.innerHeight * 0.35;
+    var current = null;
+    targets.forEach(function(t){ if (t.getBoundingClientRect().top <= line) current = t.id; });
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4 && targets.length) current = targets[targets.length-1].id;
+    navLinks.forEach(function(a){ var on = a.getAttribute('href') === '#' + current; var was = a.classList.contains('active'); a.classList.toggle('active', on); if (on) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); if (on && !was && navEl && navEl.scrollWidth > navEl.clientWidth){ navEl.scrollTo({left: Math.max(0, a.offsetLeft - navEl.offsetLeft - 24), behavior: 'smooth'}); } });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(function(){ spy(); ticking = false; }); } }, {passive:true});
+  window.addEventListener('resize', spy);
+  spy();
+
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(btn.dataset.copy);
+      var text = el.textContent.trim();
+      function done(){ btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar'; }, 1600); }
+      function fallback(){ var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
