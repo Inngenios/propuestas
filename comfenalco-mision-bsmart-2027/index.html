@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Propuesta de Inngenios para Comfenalco Cartagena: misión empresarial internacional de innovación aplicada e internacionalización, B·SMART Barcelona 2027.">
+<meta property="og:title" content="Propuesta Misión B·SMART Barcelona 2027 · Inngenios">
+<meta property="og:description" content="Propuesta de Inngenios para Comfenalco Cartagena: misión empresarial internacional de innovación aplicada e internacionalización, B·SMART Barcelona 2027.">
+<meta property="og:type" content="website">
+<title>Propuesta Misión B·SMART Barcelona 2027 · Comfenalco Cartagena · Inngenios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+/* Layout: technical blueprint sheet — fine grid, numbered sections, process flow with nodes */
+:root{
+  --paper:#FFFFFF;
+  --ink:#050505;
+  --muted:#4A4A52;
+  --soft:#F6F6F9;
+  --line:rgba(5,5,5,.10);
+  --grid:rgba(5,5,5,.045);
+  --blue:#079AFD;
+  --orange:#FF6600;
+  --purple:#675CC6;
+  --green:#2FBF62;
+  --blue-t:rgba(7,154,253,.08);
+  --orange-t:rgba(255,102,0,.08);
+  --purple-t:rgba(103,92,198,.09);
+  --f-display:'Poppins', 'Avenir Next', 'Segoe UI', sans-serif;
+  --f-body:'Poppins', 'Avenir Next', 'Segoe UI', sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--f-body);font-size:16px;line-height:1.6;
+  background-image:linear-gradient(to right,var(--grid) 1px,transparent 1px),linear-gradient(to bottom,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.c-blue{color:var(--blue)} .c-orange{color:var(--orange)} .c-purple{color:var(--purple)}
+
+/* top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1.5px solid var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-weight:900;font-size:20px;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;line-height:0}
+.brand img{height:32px;width:auto;display:block}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:3px}
+.nav a{transition:background .25s,color .25s}
+.nav a:hover,.nav a:focus-visible{color:var(--ink);background:var(--soft);outline:none}
+.nav a.active{color:#fff;background:var(--orange)}
+.nav a.active:hover{color:#fff;background:var(--orange)}
+
+/* hero */
+.hero{padding-block:64px 40px;border-bottom:3px solid var(--ink)}
+.hero .eyebrow{color:var(--blue);margin-bottom:14px}
+.hero h1{font-size:clamp(32px,5.4vw,58px);font-weight:900;line-height:1.06;letter-spacing:-.02em;max-width:20ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .sub{margin-top:18px;font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:62ch}
+.specs{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink);background:var(--paper)}
+.specs > div{padding:16px 18px;border-right:1.5px solid var(--ink);min-width:0}
+.specs > div:last-child{border-right:none}
+.specs .k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.specs .v{font-size:20px;font-weight:700;margin-top:2px;font-variant-numeric:tabular-nums}
+
+/* sections */
+section{padding-block:72px 24px}
+.sec-head{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:end;border-bottom:1.5px solid var(--ink);padding-bottom:18px;margin-bottom:36px}
+.sec-num{font-size:64px;font-weight:900;line-height:.9;color:var(--ink);font-variant-numeric:tabular-nums}
+.sec-head h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;letter-spacing:-.015em;line-height:1.1}
+.sec-head .eyebrow{margin-bottom:8px}
+
+/* entendimiento */
+.context{display:grid;grid-template-columns:1.25fr 1fr;gap:32px}
+.context p{color:var(--muted);max-width:62ch}
+.context p + p{margin-top:14px}
+.quote{border-left:4px solid var(--blue);background:var(--blue-t);padding:20px 22px}
+.quote .eyebrow{color:var(--blue);margin-bottom:8px}
+.quote p{color:var(--ink);font-size:17px;font-weight:500;line-height:1.5}
+.shift{margin-top:40px;display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0;border:1.5px solid var(--ink)}
+.shift .box{padding:22px 24px;min-width:0}
+.shift .from{background:var(--soft)}
+.shift .to{background:var(--orange-t)}
+.shift .arrow{display:flex;align-items:center;justify-content:center;padding:0 18px;border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink);font-weight:900;font-size:26px;color:var(--orange)}
+.shift .t{font-size:20px;font-weight:700;margin-top:4px}
+.shift ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+
+.cards4{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{border:1.5px solid var(--ink);border-top-width:5px;padding:18px;background:var(--paper);min-width:0}
+.card.b{border-top-color:var(--blue)} .card.o{border-top-color:var(--orange)} .card.p{border-top-color:var(--purple)} .card.k{border-top-color:var(--ink)}
+.card .eyebrow{margin-bottom:8px}
+.card h3{font-size:18px;font-weight:700;line-height:1.25;margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--muted);line-height:1.5}
+
+.subhead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-top:56px;margin-bottom:18px;flex-wrap:wrap}
+.subhead h3{font-size:22px;font-weight:700}
+.subhead .note{font-size:13px;color:var(--muted)}
+
+.ejes{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--ink)}
+.eje{padding:20px;border-right:1.5px solid var(--ink);min-width:0}
+.eje:last-child{border-right:none}
+.eje .n{font-size:12px;font-weight:600;letter-spacing:.16em;color:var(--purple)}
+.eje h4{margin:6px 0 0;font-size:17px;font-weight:700;line-height:1.3}
+
+.areas{display:flex;flex-wrap:wrap;gap:8px}
+.area{font-size:14px;font-weight:500;padding:8px 14px;border:1.5px solid var(--ink);background:var(--paper)}
+.area:nth-child(3n+1){border-color:var(--blue)}
+.area:nth-child(3n+2){border-color:var(--orange)}
+.area:nth-child(3n){border-color:var(--purple)}
+
+/* metodología */
+.lead{font-size:18px;color:var(--muted);max-width:68ch}
+.moments{margin-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1.5px solid var(--ink)}
+.moment{appearance:none;font:inherit;text-align:left;background:var(--paper);border:0;border-right:1.5px solid var(--ink);padding:22px 22px 20px;cursor:pointer;position:relative;color:var(--ink);transition:background .2s}
+.moment:last-child{border-right:0}
+.moment:hover{background:var(--soft)}
+.moment:focus-visible{outline:3px solid var(--ink);outline-offset:-6px}
+.moment .code{font-size:12px;font-weight:600;letter-spacing:.18em}
+.moment .t{font-size:26px;font-weight:900;margin-top:4px;letter-spacing:-.01em}
+.moment .d{font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.45}
+.moment .bar{position:absolute;left:0;right:0;bottom:0;height:5px;background:transparent;transition:background .2s}
+.moment[data-m="escuchar"] .code{color:var(--blue)}
+.moment[data-m="articular"] .code{color:var(--orange)}
+.moment[data-m="cocrear"] .code{color:var(--purple)}
+.moment[aria-pressed="true"][data-m="escuchar"]{background:var(--blue-t)} .moment[aria-pressed="true"][data-m="escuchar"] .bar{background:var(--blue)}
+.moment[aria-pressed="true"][data-m="articular"]{background:var(--orange-t)} .moment[aria-pressed="true"][data-m="articular"] .bar{background:var(--orange)}
+.moment[aria-pressed="true"][data-m="cocrear"]{background:var(--purple-t)} .moment[aria-pressed="true"][data-m="cocrear"] .bar{background:var(--purple)}
+.hint{margin-top:10px;font-size:13px;color:var(--muted)}
+
+.flow{margin-top:40px}
+.jornada{margin-bottom:34px}
+.j-head{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.j-tag{width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#fff;border-radius:3px;flex-shrink:0}
+.j-tag.b{background:var(--blue)} .j-tag.o{background:var(--orange)}
+.j-title{border-left:3px solid var(--ink);padding-left:16px;min-width:0}
+.j-title .eyebrow{font-size:11px}
+.j-title h3{font-size:clamp(20px,2.6vw,26px);font-weight:900;letter-spacing:-.01em;line-height:1.15}
+.j-title .dur{font-size:14px;color:var(--purple);font-weight:500}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.steps::before{content:"";position:absolute;top:21px;left:22px;right:22px;border-top:2px dashed var(--ink);opacity:.8}
+.step{position:relative;transition:opacity .25s, transform .25s}
+.dot{width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ink);background:var(--paper);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;margin-bottom:14px;position:relative;z-index:1;font-variant-numeric:tabular-nums;transition:background .25s,color .25s}
+.step[data-m="escuchar"] .dot{border-color:var(--blue);color:var(--blue)}
+.step[data-m="articular"] .dot{border-color:var(--orange);color:var(--orange)}
+.step[data-m="cocrear"] .dot{border-color:var(--purple);color:var(--purple)}
+.s-card{border:1.5px solid var(--ink);border-top-width:5px;padding:16px;background:var(--soft);min-height:170px}
+.step[data-m="escuchar"] .s-card{border-top-color:var(--blue)}
+.step[data-m="articular"] .s-card{border-top-color:var(--orange)}
+.step[data-m="cocrear"] .s-card{border-top-color:var(--purple)}
+.s-card .mtag{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.step[data-m="escuchar"] .mtag{color:var(--blue)}
+.step[data-m="articular"] .mtag{color:var(--orange)}
+.step[data-m="cocrear"] .mtag{color:var(--purple)}
+.s-card h4{margin:6px 0 6px;font-size:17px;font-weight:700;line-height:1.25}
+.s-card p{font-size:14px;color:var(--muted);line-height:1.45}
+.s-card .out{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink)}
+.s-card .out b{font-weight:600}
+
+
+.c-green{color:var(--green)}
+.j-tag.g{background:var(--green)}
+.moment[data-m="consolidar"] .code{color:var(--green)}
+.moment[aria-pressed="true"][data-m="consolidar"]{background:rgba(47,191,98,.09)} .moment[aria-pressed="true"][data-m="consolidar"] .bar{background:var(--green)}
+.step[data-m="consolidar"] .dot{border-color:var(--green);color:var(--green)}
+.step[data-m="consolidar"] .s-card{border-top-color:var(--green)}
+.step[data-m="consolidar"] .mtag{color:var(--green)}
+.flow.focus .step.on[data-m="consolidar"] .dot{background:var(--green)}
+.steps.two-steps{grid-template-columns:repeat(2,1fr);max-width:50%}
+@media (max-width:900px){.steps.two-steps{max-width:none}}
+@media (max-width:620px){.steps.two-steps{grid-template-columns:1fr}}
+.flow.focus .step{opacity:.28}
+.flow.focus .step.on{opacity:1;transform:translateY(-4px)}
+.flow.focus .step.on .dot{color:#fff}
+.flow.focus .step.on[data-m="escuchar"] .dot{background:var(--blue)}
+.flow.focus .step.on[data-m="articular"] .dot{background:var(--orange)}
+.flow.focus .step.on[data-m="cocrear"] .dot{background:var(--purple)}
+
+.checkpoint{display:flex;align-items:center;gap:14px;margin:6px 0 34px}
+.checkpoint .l{flex:1;height:1.5px;background:var(--ink);opacity:.25}
+.checkpoint span{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-align:center}
+
+.knowhow{margin-top:8px;border:1.5px dashed var(--purple);padding:16px 20px;font-size:14.5px;color:var(--muted);background:var(--paper)}
+.knowhow b{color:var(--purple);font-weight:600}
+
+/* entregable */
+.deliv{display:grid;grid-template-columns:260px 1fr;border:2px solid var(--ink)}
+.deliv .side{background:var(--ink);color:#fff;padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+.deliv .side .eyebrow{color:var(--green);margin-bottom:8px}
+.deliv .side h3{font-size:26px;font-weight:900;line-height:1.15}
+.deliv .items{display:grid;grid-template-columns:repeat(3,1fr)}
+.deliv .it{padding:24px 22px;border-left:1.5px solid var(--line);min-width:0}
+.deliv .it .n{font-weight:900;font-size:13px;color:var(--blue)}
+.deliv .it h4{margin:6px 0;font-size:18px;font-weight:700;line-height:1.25}
+.deliv .it p{font-size:14px;color:var(--muted)}
+.deliv-foot{margin-top:14px;font-size:14px;color:var(--muted)}
+.deliv-main{display:grid;grid-template-columns:260px 1fr;border:2px solid var(--orange);background:var(--orange-t);margin-bottom:22px}
+.dm-tag{background:var(--orange);color:#fff;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:24px;display:flex;align-items:center}
+.dm-body{padding:24px 26px;min-width:0}
+.dm-body h3{font-size:clamp(20px,2.6vw,26px);font-weight:900;line-height:1.2;margin-bottom:8px}
+.dm-body p{color:var(--muted);font-size:15px;max-width:72ch}
+.deliv-sub{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+@media (max-width:900px){.deliv-main{grid-template-columns:1fr}.dm-tag{padding:12px 18px}}
+
+/* logística */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{text-align:left;font-weight:600;color:var(--orange);padding:10px 12px;border-bottom:2px solid var(--orange)}
+td{padding:11px 12px;border-bottom:1px solid var(--orange);vertical-align:top}
+tr:nth-child(even) td{background:#F4F4F6}
+.req{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.req li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:14.5px;color:var(--muted)}
+.req li .who{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.req li i{font-style:normal;font-weight:900;color:var(--blue);font-variant-numeric:tabular-nums}
+.who.u{color:var(--blue)} .who.i{color:var(--orange)}
+.platform{margin-top:18px;border:1.5px solid var(--purple);border-left-width:5px;background:var(--purple-t);padding:16px 18px}
+.platform .eyebrow{font-size:11px;margin-bottom:6px}
+.platform p{font-size:14.5px;color:var(--muted)}
+.platform strong{color:var(--ink);font-weight:600}
+.req li strong{color:var(--ink);font-weight:600}
+
+.timeline{margin-top:8px;display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.day{padding:14px 12px;border-right:1.5px solid var(--ink);min-width:0;text-align:center}
+.day:last-child{border-right:none}
+.day .dw{font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.day .dn{font-size:26px;font-weight:900;font-variant-numeric:tabular-nums}
+.day.win{background:var(--orange-t)}
+.day .dj{display:inline-block;margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;background:var(--orange);padding:2px 8px}
+.tl-note{margin-top:10px;font-size:13px;color:var(--muted)}
+
+/* facilitador */
+.fac{display:grid;grid-template-columns:300px 1fr;border:1.5px solid var(--ink)}
+.fac-id{background:var(--ink);color:#fff;padding:28px 24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.photo{width:132px;height:132px;border-radius:50%;object-fit:cover;border:4px solid var(--orange);display:block}
+.mono{width:84px;height:84px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:30px;letter-spacing:.02em}
+.fac-id h3{font-size:26px;font-weight:900;line-height:1.1}
+.roles{display:flex;flex-direction:column;gap:6px}
+.roles span{font-size:13px;font-weight:600;letter-spacing:.06em;color:#fff;border-left:3px solid var(--orange);padding-left:10px}
+.roles span:nth-child(2){border-left-color:var(--blue)}
+.roles span:nth-child(3){border-left-color:var(--purple)}
+.roles span:nth-child(4){border-left-color:var(--green)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.2)}
+.stats b{display:block;font-size:22px;font-weight:900;color:var(--orange);font-variant-numeric:tabular-nums}
+.stats span{font-size:12px;color:rgba(255,255,255,.75)}
+.fac-body{padding:26px 28px;min-width:0;background:var(--paper)}
+.fac-lead{color:var(--muted);font-size:15.5px;max-width:72ch}
+.fac-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:28px;margin-top:22px}
+.fac-col{min-width:0}
+.fac-col .eyebrow{font-size:11px;margin-bottom:8px}
+.fac-col ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.fac-col li{font-size:14px;line-height:1.4;padding-left:14px;position:relative}
+.fac-col li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;background:var(--ink)}
+.fac-col:first-child li::before{background:var(--blue)}
+.fac-col .tr li::before{background:var(--purple)}
+.fac-col:last-child li::before{background:var(--orange)}
+@media (max-width:900px){.fac{grid-template-columns:1fr}.fac-grid{grid-template-columns:1fr}}
+
+/* universidades */
+.unis{margin-top:28px;border:1.5px solid var(--ink);background:var(--paper)}
+.unis-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;padding:22px 24px;border-bottom:1.5px solid var(--ink)}
+.unis-head h3{font-size:22px;font-weight:900;line-height:1.2;margin-top:4px}
+.unis-head p{font-size:14.5px;color:var(--muted)}
+.unis-grid{display:grid;grid-template-columns:2fr 1fr}
+.uni-col{padding:20px 24px;min-width:0}
+.uni-col + .uni-col{border-left:1.5px solid var(--ink)}
+.uni-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.uni-col:last-child .uni-k{color:var(--purple)}
+.uni-col ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px 18px}
+.uni-col:last-child ul{grid-template-columns:1fr}
+.uni-col li{font-size:15px;font-weight:600;line-height:1.35;padding-left:14px;position:relative}
+.uni-col li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;background:var(--orange)}
+.uni-col:last-child li::before{background:var(--purple)}
+@media (max-width:900px){.unis-head,.unis-grid{grid-template-columns:1fr}.uni-col + .uni-col{border-left:0;border-top:1.5px solid var(--ink)}}
+
+/* reconocimientos */
+.recog{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--ink)}
+.rc-col{padding:22px 24px;min-width:0;display:grid;gap:10px;align-content:start}
+.rc-col + .rc-col{border-left:1.5px solid var(--ink)}
+.rc-col h3{font-size:20px;font-weight:900;line-height:1.2;margin-bottom:6px}
+.award{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:var(--orange-t);padding:12px 14px}
+.aw-mark{flex-shrink:0;width:14px;height:14px;margin-top:5px;background:var(--orange);transform:rotate(45deg)}
+.award b,.lab b{display:block;font-size:16px;font-weight:700}
+.award span,.lab span{font-size:13.5px;color:var(--muted)}
+.lab{border:1px solid var(--line);border-left:5px solid var(--blue);background:var(--blue-t);padding:12px 14px}
+@media (max-width:900px){.recog{grid-template-columns:1fr}.rc-col + .rc-col{border-left:0;border-top:1.5px solid var(--ink)}}
+
+/* enlaces */
+.social{display:flex;flex-wrap:wrap;gap:8px}
+.sbtn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.45);padding:8px 14px;transition:background .2s,border-color .2s}
+.sbtn:hover{background:var(--blue);border-color:var(--blue)}
+.sbtn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.lbtn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);background:var(--paper);padding:9px 16px;transition:background .2s,color .2s}
+.lbtn:hover{background:var(--ink);color:#fff}
+.lbtn.gf{border-color:var(--blue);color:var(--blue)}
+.lbtn.gf:hover{background:var(--blue);color:#fff}
+.lbtn:focus-visible,.chip-link:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.chip-link{color:var(--blue);text-decoration:none;border-color:var(--blue)}
+.chip-link:hover{background:var(--blue-t)}
+
+/* programa */
+.ptl{margin-top:30px;display:flex;border:1.5px solid var(--ink);min-height:54px}
+.ptl-seg{display:flex;align-items:center;padding:0 16px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.06em;min-width:0}
+.ptl-seg span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ptl-seg.b{background:var(--blue)} .ptl-seg.o{background:var(--orange)} .ptl-seg.p{background:var(--purple)}
+.ptl-dates{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px;font-variant-numeric:tabular-nums}
+.phases{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ph{border:1.5px solid var(--ink);border-top-width:5px;padding:20px;background:var(--paper);min-width:0}
+.ph.b{border-top-color:var(--blue)} .ph.o{border-top-color:var(--orange)} .ph.p{border-top-color:var(--purple)}
+.ph-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.ph.b .ph-k{color:var(--blue)} .ph.o .ph-k{color:var(--orange)} .ph.p .ph-k{color:var(--purple)}
+.ph h3{font-size:21px;font-weight:900;margin:4px 0 2px}
+.ph-when{font-size:13px;color:var(--muted);margin-bottom:12px}
+.ph ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ph li{font-size:14px;line-height:1.4;padding-left:14px;position:relative}
+.ph li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;background:var(--ink)}
+.ph.b li::before{background:var(--blue)} .ph.p li::before{background:var(--purple)}
+.agenda{display:grid;gap:8px}
+.ag{border:1px solid var(--line);background:var(--soft);padding:10px 12px}
+.ag b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+.ag span{font-size:14px;line-height:1.35}
+.ag.in{background:var(--orange-t);border-color:var(--orange)}
+.meets{margin-top:18px;display:grid;grid-template-columns:220px repeat(3,1fr);border:1.5px solid var(--ink)}
+.meets-k{background:var(--ink);color:#fff;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px;display:flex;align-items:center}
+.meet{display:flex;gap:12px;padding:16px;border-left:1.5px solid var(--line);min-width:0}
+.meet i{font-style:normal;flex-shrink:0;width:30px;height:30px;border-radius:50%;border:2px solid var(--purple);color:var(--purple);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.meet b{display:block;font-size:15px}
+.meet span{font-size:13px;color:var(--muted);line-height:1.35}
+.approve{margin-top:18px;border:2px solid var(--orange);background:var(--orange-t);padding:16px 20px;font-size:15px}
+.approve b{font-weight:700}
+@media (max-width:900px){.phases{grid-template-columns:1fr}.meets{grid-template-columns:1fr}.meet{border-left:0;border-top:1.5px solid var(--line)}.ptl-seg{font-size:11px;padding:0 8px}}
+@media (max-width:620px){.ptl{flex-direction:column}.ptl-seg{flex:none!important;min-height:36px}.ptl-dates{display:none}}
+
+/* conoce inngenios */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:stretch}
+.about-main{background:var(--orange);color:#fff;padding:32px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.about-main .eyebrow{color:#fff;opacity:.85}
+.about-purpose{font-size:22px;font-weight:700;line-height:1.3}
+.about-tag{font-style:italic;font-weight:500;font-size:17px}
+.cta{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border:2px solid var(--ink);transition:background .2s,color .2s}
+.cta:hover{background:#fff;color:var(--ink)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.lines{display:grid;gap:12px}
+.line-it{border:1.5px solid var(--ink);border-left-width:5px;padding:16px 18px;background:var(--paper);min-width:0}
+.line-it.b{border-left-color:var(--blue)} .line-it.o{border-left-color:var(--orange)} .line-it.p{border-left-color:var(--purple)}
+.line-it.b .eyebrow{color:var(--blue)} .line-it.o .eyebrow{color:var(--orange)} .line-it.p .eyebrow{color:var(--purple)}
+.line-it h4{margin:4px 0;font-size:17px;font-weight:700}
+.line-it p{font-size:14px;color:var(--muted)}
+.eco{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.eco-k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.chip{font-size:13px;font-weight:500;padding:6px 12px;border:1.5px solid var(--line);background:var(--soft)}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+
+/* cierre */
+.close{margin-top:72px;background:var(--ink);color:#fff}
+.close .wrap{padding-block:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center}
+.close h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;line-height:1.1}
+.close h2 span{color:var(--orange)}
+.close p{color:rgba(255,255,255,.75);margin-top:12px;max-width:52ch}
+.contact{border:1.5px solid rgba(255,255,255,.3);padding:20px}
+.contact .row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+.contact .row:last-child{border-bottom:0}
+.contact .k{font-size:11px;font-weight:600;letter-spacing:.16em;color:#9fd8ff;text-transform:uppercase}
+.contact .v{font-weight:500;user-select:all}
+.copy{font:inherit;font-size:12px;font-weight:600;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);padding:4px 10px;cursor:pointer}
+.copy:focus-visible{outline:2px solid var(--orange)}
+.foot{font-size:12px;color:rgba(255,255,255,.5);padding-block:0 28px}
+
+/* responsive */
+@media (max-width:900px){
+  .moments{grid-template-columns:repeat(2,1fr)}
+  .moment:nth-child(2){border-right:0}
+  .moment:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .specs{grid-template-columns:repeat(2,1fr)}
+  .specs > div:nth-child(2){border-right:none}
+  .specs > div:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .context,.two,.close .wrap{grid-template-columns:1fr}
+  .cards4,.ejes{grid-template-columns:repeat(2,1fr)}
+  .ejes .eje:nth-child(2){border-right:none}
+  .ejes .eje:nth-child(-n+2){border-bottom:1.5px solid var(--ink)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps::before{display:none}
+  .deliv{grid-template-columns:1fr}
+  .deliv .items{grid-template-columns:1fr}
+  .deliv .it{border-left:0;border-top:1.5px solid var(--line)}
+  .topbar .wrap{flex-wrap:wrap;gap:6px;padding-block:10px}
+  .nav{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-inline:-4px}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{white-space:nowrap;flex-shrink:0;font-size:12.5px;padding:6px 9px}
+}
+@media (max-width:620px){
+  .sec-head{grid-template-columns:1fr;gap:6px}
+  .sec-num{font-size:44px}
+  .moments{grid-template-columns:1fr}
+  .moment{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .moment:last-child{border-bottom:0}
+  .shift{grid-template-columns:1fr}
+  .shift .arrow{border:0;border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:6px;font-size:0}
+  .shift .arrow::after{content:"\2193";font-size:24px}
+  .cards4,.ejes,.steps{grid-template-columns:1fr}
+  .ejes .eje{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .ejes .eje:last-child{border-bottom:0}
+  .day .dn{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.pres{margin-top:34px;display:grid;grid-template-columns:1.25fr 1fr;gap:0;border-top:2px solid var(--ink);padding-top:20px}.pres>div{min-width:0}.pres-by{border-left:1.5px solid rgba(5,5,5,.18);padding-left:28px}.pres-to{padding-right:28px}.pres .k{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.pres-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.pres-logo{height:64px;width:auto;max-width:100%;display:block}.pres-inn{height:34px;width:auto;display:block}.pres-name{font-weight:700;font-size:15px;line-height:1.3}.pres-name span{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px}.pres-to .pres-logo+.pres-name{border-left:1.5px solid rgba(5,5,5,.18);padding-left:18px}@media (max-width:700px){.pres{grid-template-columns:1fr;gap:18px}.pres-by{border-left:0;padding-left:0;border-top:1px solid rgba(5,5,5,.15);padding-top:16px}.pres-to{padding-right:0}.pres-logo{height:54px}.pres-to .pres-logo+.pres-name{border-left:0;padding-left:0}}
+.eje.hl{background:var(--orange-t)}
+.eje.hl .n{color:var(--orange)}
+.focus3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:8px}
+.focus3 .f3{border:1.5px solid var(--ink);border-top:5px solid var(--blue);background:var(--paper);padding:16px 18px;min-width:0}
+.focus3 .f3.o{border-top-color:var(--orange)}.focus3 .f3.p{border-top-color:var(--purple)}
+.focus3 h4{margin:6px 0 6px;font-size:16px;line-height:1.3;font-weight:700}
+.focus3 p{font-size:14px;color:var(--muted)}
+.ag-k{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-top:4px}
+@media (max-width:900px){.focus3{grid-template-columns:1fr}}
+.timeline.tl5{grid-template-columns:repeat(5,1fr)}
+.day.off{opacity:.5;background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(5,5,5,.06) 6px 12px)}
+.dj.prep{background:var(--blue)}
+.dj.no{background:var(--muted)}
+.tl5 .day{padding:12px 4px}
+.tl5 .dj{font-size:10px;letter-spacing:.02em;padding:2px 5px;max-width:100%;overflow-wrap:anywhere}
+/* inversión */
+.inv{display:grid;grid-template-columns:1.1fr 1fr;border:2px solid var(--ink)}
+.inv-main{background:var(--ink);color:#fff;padding:30px 30px;display:flex;flex-direction:column;gap:12px}
+.inv-main .eyebrow{color:#9fd8ff;font-size:11px}
+.inv-amount{font-size:46px;font-weight:900;letter-spacing:-.02em;line-height:1.05;font-variant-numeric:tabular-nums}
+.inv-amount .cur{font-size:18px;font-weight:600;color:#9fd8ff;vertical-align:middle;letter-spacing:.08em}
+.inv-amount .iva{font-size:24px;color:#9fd8ff}
+.inv-note{color:rgba(255,255,255,.8);font-size:14.5px}
+.inv-tax{margin-top:8px;border-top:1px solid rgba(255,255,255,.25)}
+.inv-tax div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;font-variant-numeric:tabular-nums}
+.inv-tax span{color:rgba(255,255,255,.75)}
+.inv-tax .tot b{color:#fff;font-size:17px}
+.inv-tax .tot span{color:#fff;font-weight:600}
+.inv-inc{padding:26px 28px;background:var(--paper)}
+.inv-inc ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:9px}
+.inv-inc li{font-size:14px;line-height:1.4;padding-left:16px;position:relative}
+.inv-inc li::before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;background:var(--orange)}
+.inv-inc b{font-weight:600}
+.inv-foot{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.inv-foot > div{border:1.5px solid var(--ink);border-top:5px solid var(--purple);padding:14px 16px;background:var(--paper)}
+.inv-foot > div:nth-child(1){border-top-color:var(--blue)}
+.inv-foot > div:nth-child(2){border-top-color:var(--orange)}
+.inv-foot .k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.inv-foot p{font-size:13.5px}
+
+.hours{margin-top:22px;border:1.5px solid var(--ink);background:var(--paper)}
+.hours-head{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;padding:20px 22px;border-bottom:1.5px solid var(--ink)}
+.hours-head>div,.hours-head>p{min-width:0}
+.hours-head h3{margin-top:6px;font-size:20px;line-height:1.25}
+.hours-head p{color:var(--muted);font-size:14.5px}
+.hours-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.hcol{padding:16px 20px;border-right:1.5px solid var(--line);border-top:4px solid var(--blue);min-width:0}
+.hcol.o{border-top-color:var(--orange)}.hcol.p{border-top-color:var(--purple);border-right:0}
+.hk{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hn{font-size:30px;font-weight:900;margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.hcol ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.hcol li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;border-bottom:1px dashed var(--line);padding-bottom:5px}
+.hcol li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.hours-note{padding:10px 22px 14px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:900px){.hours-head,.hours-grid,.inv,.inv-foot{grid-template-columns:1fr}.hcol{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* fotos · mismo lenguaje del sistema: borde de tinta, esquinas rectas */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.gal figure{margin:0;border:1.5px solid var(--ink);background:var(--paper);min-width:0}
+.gal img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.gal figcaption{padding:10px 14px;font-size:13.5px;font-weight:600;line-height:1.3;border-top:1.5px solid var(--ink)}
+.gal figcaption span{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
+.gal-note{margin-top:10px;font-size:13px;color:var(--muted)}
+.wide{display:grid;grid-template-columns:1.5fr 1fr;align-items:stretch;border:1.5px solid var(--ink);background:var(--paper)}
+.wide img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;display:block;min-height:260px}
+.wide .tx{padding:26px 28px;border-left:1.5px solid var(--ink);min-width:0}
+.wide .tx h3{font-size:22px;font-weight:900;line-height:1.2;margin:6px 0 10px}
+.wide .tx p{color:var(--muted);font-size:15px}
+.wide .tx ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+.cards3{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card .big{font-size:28px;line-height:1.1;font-weight:900;line-height:1;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.clogo{height:66px;margin-bottom:14px;display:flex;align-items:center;gap:18px}
+.clogo img{max-height:66px;max-width:210px;min-width:0;flex:0 1 auto;width:auto;height:auto;object-fit:contain;display:block}
+.moments{align-items:stretch}
+.moment{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+.moment .per{font-size:12.5px;font-weight:500;color:var(--muted);margin:2px 0 8px;white-space:nowrap}
+.ecog{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ecot{display:flex;flex-direction:column;gap:14px;min-height:200px;padding:26px 24px 22px;border:1.5px solid var(--ink);color:#fff;text-decoration:none;min-width:0}
+.ecot.w{background:#fff;color:var(--ink)}
+.ecot img{height:64px;max-width:100%;object-fit:contain;object-position:left center;display:block;align-self:flex-start}
+.ecot span{font-size:14.5px;line-height:1.4;font-weight:500}
+.ecot b{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;letter-spacing:.02em}
+.ecot b i{display:inline-flex}
+a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
+.sellos{margin-top:16px;display:grid;grid-template-columns:300px 1fr;border:1.5px solid var(--ink);background:var(--paper)}
+.sellos-h{padding:26px 24px;border-right:1.5px solid var(--ink);display:flex;flex-direction:column;justify-content:center}
+.sellos-h h4{margin:6px 0 0;font-size:21px;font-weight:900;line-height:1.2}
+.sellos-g{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:22px 18px;align-items:start}
+.sellos figure{margin:0;text-align:center;min-width:0}
+.sellos img{width:104px;height:104px;object-fit:contain;display:block;margin:0 auto 10px}
+.sellos figcaption{font-size:14px;font-weight:700;line-height:1.25}
+.sellos figcaption span{display:block;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:2px}
+.btns{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.xbtn{display:inline-flex;align-items:stretch;height:50px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px;transition:background .15s,color .15s}
+.xbtn span{display:flex;align-items:center;padding:0 18px}
+.xbtn i{display:flex;align-items:center;justify-content:center;width:50px;background:var(--orange);color:#fff;border-left:1.5px solid var(--ink)}
+.xbtn.bl i{background:var(--blue)}
+.xbtn:hover{background:var(--ink);color:#fff}
+@media (max-width:900px){.ecog{grid-template-columns:1fr 1fr}.sellos{grid-template-columns:1fr}.sellos-h{border-right:0;border-bottom:1.5px solid var(--ink)}.sellos-g{grid-template-columns:repeat(3,1fr);row-gap:18px}}
+@media (max-width:620px){.ecog{grid-template-columns:1fr}.sellos-g{grid-template-columns:1fr 1fr}.xbtn{width:100%;justify-content:space-between}}
+
+.dj{white-space:nowrap}
+.sec-head{grid-template-columns:140px 1fr}
+@media (max-width:620px){.sec-head{grid-template-columns:1fr}}
+td .dj,th .dj{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--orange);padding:3px 9px}
+td .dj.prep{background:var(--blue)} td .dj.no{background:var(--muted)} td .dj.pu{background:var(--purple)}
+.tw{overflow-x:auto;min-width:0}
+@media (max-width:700px){.tw table{min-width:600px}}
+.dj.pu{background:var(--purple)}
+td .dj{margin:0 4px 4px 0}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.val{border:1.5px solid var(--ink);background:var(--paper);padding:18px 18px 18px 64px;position:relative;min-width:0}
+.val i{position:absolute;left:16px;top:16px;width:36px;height:36px;border-radius:50%;border:2.5px solid var(--orange);color:var(--orange);font-style:normal;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center}
+.val:nth-child(3n+2) i{border-color:var(--blue);color:var(--blue)} .val:nth-child(3n) i{border-color:var(--purple);color:var(--purple)}
+.val h4{margin:0 0 6px;font-size:17px;font-weight:700;line-height:1.25}
+.val p{font-size:14px;color:var(--muted);line-height:1.45}
+.pay{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink);background:var(--paper)}
+.pay>div{padding:22px 24px;border-right:1.5px solid var(--ink);border-top:5px solid var(--blue);min-width:0}
+.pay>div:nth-child(2){border-top-color:var(--orange)} .pay>div:nth-child(3){border-top-color:var(--purple);border-right:0}
+.pay .pc{font-size:44px;font-weight:900;line-height:1}
+.pay h4{margin:8px 0 6px;font-size:17px;font-weight:700}
+.pay p{font-size:14px;color:var(--muted)}
+@media (max-width:900px){.gal,.cards3,.vals,.pay{grid-template-columns:1fr 1fr}.wide{grid-template-columns:1fr}.wide .tx{border-left:0;border-top:1.5px solid var(--ink)}.pay>div{border-right:0;border-bottom:1.5px solid var(--ink)}}
+@media (max-width:620px){.gal,.cards3,.vals,.pay{grid-template-columns:1fr}}
+</style>
+</head><body>
+<header class="topbar"><div class="wrap"><div class="brand"><img src="logo.png" alt="Inngenios" width="161" height="32"></div><nav class="nav" aria-label="Secciones"><a href="#solicitud">Solicitud</a><a href="#proveedor">3.1 Proveedor</a><a href="#alcance">3.2 Alcance</a><a href="#metodologia">3.3 Metodología</a><a href="#equipo">3.4 Equipo</a><a href="#plan">3.5 Plan</a><a href="#entregables">3.6 Entregables</a><a href="#valor">3.7 Valor agregado</a><a href="#contacto">Contacto</a></nav></div></header>
+<main>
+<div class="hero"><div class="wrap">
+<div class="eyebrow">Propuesta técnica · Coordinación de Fomento Empresarial · Comfenalco Cartagena</div>
+<h1>Misión Internacional <em>B·SMART Barcelona 2027</em></h1>
+<p class="sub">Un programa de seis meses de innovación aplicada e internacionalización para 20 MiPymes afiliadas, con una semana de inmersión en Barcelona durante el Smart City Expo World Congress.</p>
+<div class="specs">
+<div><div class="k">Programa</div><div class="v">6 meses · 88 h por empresa</div></div>
+<div><div class="k">Fechas tentativas</div><div class="v">Jul–dic 2027 · misión 30 oct–7 nov</div></div>
+<div><div class="k">Participantes</div><div class="v">20 MiPymes afiliadas</div></div>
+<div><div class="k">Modalidad</div><div class="v">Híbrida · inmersión en Barcelona</div></div>
+</div>
+<div class="pres">
+<div class="pres-to"><div class="k">Presentado a</div><div class="pres-row"><img class="pres-logo" src="comfenalco.png" alt="Comfenalco Cartagena"><div class="pres-name">Comfenalco Cartagena<span>Coordinación de Fomento Empresarial</span></div></div></div>
+<div class="pres-by"><div class="k">Presentado por</div><div class="pres-row"><img class="pres-inn" src="logo.png" alt="Inngenios"><div class="pres-name">Torres Creativas S.A.S.<span>Cartagena de Indias · Noviembre de 2026</span></div></div></div>
+</div>
+</div></div><section id="solicitud"><div class="wrap">
+<div class="sec-head"><div class="sec-num">00</div><div><div class="eyebrow c-blue">Lo que entendimos</div><h2>Entendimiento de la solicitud</h2></div></div>
+
+<div class="context">
+<div>
+<p>La Coordinación de Fomento Empresarial de Comfenalco Cartagena busca un aliado para diseñar y operar su <strong>misión empresarial internacional de innovación aplicada e internacionalización 2027</strong>, dirigida a MiPymes afiliadas de distintos sectores.</p>
+<p>La Caja ya ha llevado empresas a otros ecosistemas. El reto ahora es que el viaje se traduzca en capacidades instaladas, negocios en curso e innovaciones implementadas, y que ese resultado se pueda medir empresa por empresa.</p>
+<p>Respondemos con la <strong>Misión Internacional B·SMART Barcelona</strong>, un programa propio de Inngenios que ya recorrió esta ruta en noviembre de 2025 con una delegación de Cartagena.</p>
+</div>
+<div class="quote">
+<div class="eyebrow">Lo que pide Comfenalco</div>
+<p>Una misión multisectorial con agenda 50 % comercial y 50 % de innovación aplicada, sustentada en un diagnóstico inicial por empresa y con medición de impacto sobre siete indicadores.</p>
+</div>
+</div>
+<div class="shift" aria-label="Transición del modelo">
+<div class="box from">
+<div class="eyebrow" style="color:var(--muted)">Punto de partida</div>
+<div class="t">Una misión de visitas</div>
+<ul><li>La agenda es igual para todas las empresas</li><li>El resultado depende de cada participante</li><li>El aprendizaje se queda en el viaje</li></ul>
+</div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="box to">
+<div class="eyebrow c-orange">Hacia dónde va</div>
+<div class="t">Un programa de seis meses con resultados medibles</div>
+<ul><li>Cada empresa viaja con diagnóstico, reto y agenda de citas</li><li>Aprende haciendo en laboratorios de innovación</li><li>Regresa con un plan de acción que se acompaña y se mide</li></ul>
+</div>
+</div>
+</div></section><section id="proveedor"><div class="wrap">
+<div class="sec-head"><div class="sec-num">3.1</div><div><div class="eyebrow c-orange">Estructura Comfenalco · 3.1</div><h2>Presentación del proveedor</h2></div></div>
+<p class="lead" style="margin-bottom:26px">Torres Creativas S.A.S. (NIT 900.886.610-1) opera bajo la marca registrada Inngenios<sup>®</sup>. Desde 2015, en Cartagena de Indias, somos una firma de consultoría y entrenamiento en innovación con experiencia en programas para MiPymes, emprendimientos y misiones internacionales.</p>
+<div class="wide" style="margin-bottom:8px">
+<img src="f-delegacion.jpg" alt="Delegación de la Misión B·SMART 2025 en Barcelona">
+<div class="tx"><div class="eyebrow c-orange">Misión probada</div><h3>B·SMART Barcelona, edición 2025</h3>
+<p>La Ruta Smart City Cartagena–Barcelona se realizó del 3 al 7 de noviembre de 2025 con una delegación de Cartagena, organizada junto a Ruta Barcelona y con CLIME, iCluster y Protofy como colaboradores.</p>
+<ul><li>Participación en el Smart City Expo World Congress</li><li>Visitas a DFactory, Barcelona Supercomputing Center, EIT Urban Mobility, Barcelona Activa y Protofy</li><li>Mesa redonda con FEVEM</li><li>Taller de creatividad estratégica e innovación empresarial dictado por Inngenios</li></ul></div>
+</div>
+<div class="subhead"><h3>Desarrollo de capacidades en MiPymes y emprendimientos</h3><span class="note">Programas operados por Inngenios</span></div>
+<div class="cards3" style="margin-top:0">
+<div class="card b"><div class="clogo"><img src="lg-sergioarboleda.png" alt="Universidad Sergio Arboleda"></div><div class="eyebrow c-blue">Futurizza · Universidad Sergio Arboleda</div><div class="big c-blue">100 empresas</div><p>Operamos el proyecto durante cinco meses con empresas del Caribe: más de 500 horas de formación, consultoría y mentoría. Resultado: 100 prototipos de base tecnológica, de TRL 2-3 a TRL 5-9.</p></div>
+<div class="card p"><div class="clogo"><img src="lg-innovasocial4.png" alt="Innova Social 4.0"><img src="lg-triplea.png" alt="Triple A"></div><div class="eyebrow c-purple">Innova Social 4.0 · Triple A</div><div class="big c-purple">Ventas hasta +144 %</div><p>Un embudo de selección: de 82 postulaciones, 20 emprendimientos socioambientales del Atlántico desarrollaron capacidades de innovación y de negocio en un bootcamp, y 10 recibieron capital de escalamiento y acompañamiento especializado de Inngenios durante nueve meses. De esos diez, nueve aumentaron sus ventas entre 15 % y 144 % y el décimo logró sus primeros ingresos. NPS de 90 puntos.</p><p style="margin-top:10px"><strong>Hoy somos el aliado principal para la ejecución de Innova Social 5.0</strong>, entre finales de 2026 y el primer semestre de 2027.</p></div>
+<div class="card k"><div class="clogo"><img src="lg-cotecmar.png" alt="Cotecmar"></div><div class="eyebrow">EnCadena · Cotecmar y Colombia Productiva</div><div class="big">25 pymes</div><p>Operamos la consultoría del programa de desarrollo de proveedores del sector naval y astillero (2024-2025). Analizamos los bienes de 50 pymes proveedoras, seleccionamos 25 beneficiarias y construimos con cada una su hoja de ruta de asistencia técnica para llegar a nuevas industrias y sustituir importaciones.</p></div>
+</div>
+<div class="subhead"><h3>Innovación en grandes organizaciones</h3><span class="note">Empresas que hemos acompañado en sus áreas de innovación</span></div>
+<div class="cards4" style="margin-top:0">
+<div class="card o"><div class="clogo"><img src="lg-comfenalco.png" alt="Comfenalco Cartagena"></div><div class="eyebrow c-orange">Comfenalco Cartagena</div><div class="big c-orange">149 → 23</div><p>Acompañamos desde 2021 su cultura y sus capacidades de innovación. La Caja pasó del puesto 149 (2024) al 101 (2025) y al 23 (2026) en el Ranking de Innovación Empresarial de la ANDI. Es un resultado de muchos actores al que contribuimos.</p></div>
+<div class="card b"><div class="clogo"><img src="lg-acuacar.png" alt="Aguas de Cartagena"></div><div class="eyebrow c-blue">Aguas de Cartagena</div><div class="big c-blue">+$10.000 millones</div><p>Cinco años acompañando un modelo de innovación con tres pilares: estrategia y gobierno, proceso y ecosistema, y cultura. La empresa suma más de $10.000 millones en valor recuperado, con iniciativas como Big Data para recuperación de cartera y medición inteligente.</p></div>
+<div class="card p"><div class="clogo"><img src="lg-surtigas.png" alt="Surtigas"></div><div class="eyebrow c-purple">Surtigas · una empresa Promigas</div><div class="big c-purple">Encuentro Legendario</div><p>Experiencia de aprendizaje diseñada y facilitada por Inngenios para el equipo de Surtigas, uno de los casos documentados en nuestro brochure.</p></div>
+<div class="card k"><div class="clogo"><img src="lg-ecopetrol.png" alt="Grupo Ecopetrol, Refinería de Cartagena"></div><div class="eyebrow">Grupo Ecopetrol</div><div class="big">Refinería de Cartagena</div><p>Cliente de Inngenios en entrenamiento e innovación. También hemos cooperado con Econova Caribe, el laboratorio de innovación de Ecopetrol y la Cámara de Comercio de Cartagena.</p></div>
+</div><div class="subhead"><h3>Quiénes somos y referencias</h3></div><div class="about">
+        <div class="about-main">
+          <div class="eyebrow c-blue">Nuestro propósito</div>
+          <p class="about-purpose">Ayudamos a personas y organizaciones a desarrollar capacidades sistémicas para innovar, crear valor y liderar el cambio.</p>
+          <p class="about-tag">¡Cree en ti, crea con nosotros!</p>
+          <a class="cta" href="https://drive.google.com/file/d/11CmHTBIUbww7b7Z4lp7yyQ7_syRBeKOM/view?usp=sharing" target="_blank" rel="noopener">Ver nuestro brochure <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="lines">
+          <div class="line-it b"><div class="eyebrow">Mindset</div><h4>Entrenamientos especializados</h4><p>Innovación, liderazgo, creatividad y pensamiento estratégico con experiencias aplicadas y orientadas a la acción.</p></div>
+          <div class="line-it o"><div class="eyebrow">Consultoría</div><h4>Consultoría estratégica</h4><p>Diagnóstico, diseño y fortalecimiento de estrategias, procesos y capacidades para innovar.</p></div>
+          <div class="line-it p"><div class="eyebrow">Soluciones</div><h4>Soluciones técnicas y tecnológicas</h4><p>Metodología, tecnología, inteligencia de negocio y automatización con IA a la medida.</p></div>
+        </div>
+      </div>
+      <div class="unis">
+        <div class="unis-head">
+          <div><div class="eyebrow c-blue">Experiencia en educación superior</div><h3>Universidades con las que hemos trabajado</h3></div>
+          <p>Procesos de entrenamiento, consultoría y cooperación con instituciones de educación superior en Colombia y Latinoamérica.</p>
+        </div>
+        <div class="unis-grid">
+          <div class="uni-col">
+            <div class="uni-k">Colombia</div>
+            <ul>
+              <li>Fundación Universitaria Tecnológico Comfenalco</li>
+              <li>Universidad Tecnológica de Bolívar (UTB)</li>
+              <li>Universidad Sergio Arboleda</li>
+              <li>Universidad de Cartagena</li>
+              <li>Universidad del Norte</li>
+              <li>Universidad del Sinú</li>
+            </ul>
+          </div>
+          <div class="uni-col">
+            <div class="uni-k">Internacional</div>
+            <ul>
+              <li>Pontificia Universidad Católica de Chile</li>
+              <li>Universidad Nacional de Cuyo (Argentina)</li>
+              <li>Universidad Ricardo Palma (Perú)</li>
+              <li>Repensar Educativo (Perú) · escuela de diseño e innovación</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="recog">
+        <div class="rc-col">
+          <div class="eyebrow c-orange">Premios de innovación</div>
+          <h3>Reconocimientos obtenidos</h3>
+          <div class="award"><div class="aw-mark" aria-hidden="true"></div><div><b>Cartagena Ciudad Innovadora</b><span>Alcaldía de Cartagena y Universidad Tecnológica de Bolívar</span></div></div>
+          <div class="award"><div class="aw-mark" aria-hidden="true"></div><div><b>Caribe Innova 2023</b><span>Cámara de Comercio de Cartagena, Ecopetrol, Esenttia y Econova Caribe</span></div></div>
+        </div>
+        <div class="rc-col">
+          <div class="eyebrow c-blue">Ecosistema de innovación</div>
+          <h3>Laboratorios de innovación con los que hemos cooperado</h3>
+          <div class="lab"><b>Neurocity</b><span>Cámara de Comercio de Manizales por Caldas</span></div>
+          <div class="lab"><b>Econova Caribe</b><span>Ecopetrol y Cámara de Comercio de Cartagena</span></div>
+        </div>
+      </div>
+
+      
+<div class="subhead"><h3>Ecosistema Inngenios</h3><span class="note">Marcas, plataformas y metodologías propias</span></div>
+<div class="ecog">
+<a class="ecot" style="background:#0899FC" href="https://www.geniusfest.co" target="_blank" rel="noopener"><img src="eco-geniusfest.png" alt="Genius Fest 2026"><span>Festival y comunidad de innovación</span><b>Conocer Genius Fest <i aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M6 18L18 6M9 6h9v9"/></svg></i></b></a>
+<div class="ecot w"><img src="eco-bsmart.png" alt="Misión Internacional B·SMART"><span>Misiones tecnológicas, académicas y de negocios</span></div>
+<div class="ecot" style="background:#665CC7"><img src="eco-lab.png" alt="Inngenios·Lab"><span>Plataforma de diagnóstico estratégico e innovación empresarial con inteligencia artificial</span></div>
+<div class="ecot" style="background:#FF6600"><img src="eco-mentes.png" alt="Mentes Innquietas, podcast"><span>Podcast de conocimiento</span></div>
+</div>
+<div class="sellos">
+<div class="sellos-h"><div class="eyebrow c-purple">Certificaciones y programas especializados</div><h4>Metodologías propias de Inngenios</h4></div>
+<div class="sellos-g">
+<figure><img src="sello-6i.png" alt="Metodología 6i"><figcaption>Metodología 6i<span>Creatividad e innovación</span></figcaption></figure>
+<figure><img src="sello-tbge.png" alt="TBGE"><figcaption>TBGE<span>Team building</span></figcaption></figure>
+<figure><img src="sello-gcx.png" alt="GCX"><figcaption>GCX<span>Experiencia del cliente</span></figcaption></figure>
+<figure><img src="sello-gevp.png" alt="GEVP"><figcaption>GEVP<span>Propuesta de valor al empleado</span></figcaption></figure>
+<figure><img src="sello-accion.png" alt="Metodología A.C.C.I.O.N."><figcaption>A.C.C.I.O.N.<span>Liderazgo</span></figcaption></figure>
+</div>
+</div>
+<div class="btns">
+<span class="eco-k">Síguenos</span>
+<a class="xbtn" href="https://www.inngenios.co" target="_blank" rel="noopener"><span>Sitio web</span><i aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M6 18L18 6M9 6h9v9"/></svg></i></a>
+<a class="xbtn" href="https://www.instagram.com/inn.genios/" target="_blank" rel="noopener"><span>Instagram @inn.genios</span><i aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M6 18L18 6M9 6h9v9"/></svg></i></a>
+<a class="xbtn" href="https://www.youtube.com/@inngenios" target="_blank" rel="noopener"><span>YouTube @inngenios</span><i aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M6 18L18 6M9 6h9v9"/></svg></i></a>
+<a class="xbtn bl" href="https://www.geniusfest.co" target="_blank" rel="noopener"><span>Genius Fest</span><i aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"><path d="M6 18L18 6M9 6h9v9"/></svg></i></a>
+</div>
+</div></section><section id="alcance"><div class="wrap">
+<div class="sec-head"><div class="sec-num">3.2</div><div><div class="eyebrow c-blue">Estructura Comfenalco · 3.2</div><h2>Alcance de la propuesta</h2></div></div>
+<p class="lead" style="margin-bottom:8px">El programa interviene 20 MiPymes afiliadas durante seis meses, de julio a diciembre de 2027, con una persona por empresa en la misión.</p>
+<div class="cards4">
+<div class="card b"><div class="eyebrow c-blue">Participantes</div><h3>20 MiPymes afiliadas</h3><p>Grupo multisectorial, con una persona por empresa en la misión.</p></div>
+<div class="card o"><div class="eyebrow c-orange">Balance</div><h3>50 % comercial · 50 % innovación</h3><p>La agenda se reparte en partes iguales, como lo solicita Comfenalco.</p></div>
+<div class="card p"><div class="eyebrow c-purple">Dedicación</div><h3>88 horas por empresa</h3><p>Sesiones grupales, asesoría individual y agenda en destino.</p></div>
+<div class="card k"><div class="eyebrow">Criterio de éxito</div><h3>Innovación implementada</h3><p>Planes de acción en marcha y siete indicadores con meta.</p></div>
+</div><div style="height:36px"></div>
+<div class="two">
+<div>
+<div class="subhead" style="margin-top:0"><h3>Qué incluye</h3><span class="note">Por empresa participante</span></div>
+<ul class="req">
+<li><i>01</i><span><span class="who i">Programa</span>Diagnóstico inicial, preparación grupal e individual, plan de acción, seguimiento e informes de resultados.</span></li>
+<li><i>02</i><span><span class="who i">Viaje</span>Tiquetes Cartagena–Barcelona–Cartagena y siete noches en hotel de cuatro estrellas, en habitación individual.</span></li>
+<li><i>03</i><span><span class="who i">Congreso</span>Pase de tres días al Smart City Expo World Congress.</span></li>
+<li><i>04</i><span><span class="who i">Formación</span>Dos entrenamientos de 4 horas en laboratorios, con materiales, y un módulo académico con certificado.</span></li>
+<li><i>05</i><span><span class="who i">Negocios</span>Visitas empresariales y técnicas, rueda de negocios y encuentros de relacionamiento.</span></li>
+<li><i>06</i><span><span class="who i">En destino</span>Bus privado, tarjeta de transporte, almuerzos y dos cenas de relacionamiento.</span></li>
+<li><i>07</i><span><span class="who i">Acompañamiento</span>Dos consultores de Inngenios y coordinación local en Barcelona. Certificado de participación y memoria audiovisual.</span></li>
+</ul>
+</div>
+<div>
+<div class="subhead" style="margin-top:0"><h3>A cargo de Comfenalco</h3><span class="note">Para la operación</span></div>
+<ul class="req">
+<li><i>01</i><span><span class="who u">Convocatoria</span>Comunicación con los afiliados y validación de las empresas seleccionadas.</span></li>
+<li><i>02</i><span><span class="who u">Espacios</span>Salón y audiovisuales para las sesiones presenciales en Cartagena.</span></li>
+<li><i>03</i><span><span class="who u">Enlace</span>Una persona de Fomento Empresarial como interlocutora del programa.</span></li>
+</ul>
+<div class="subhead"><h3>No incluye</h3></div>
+<ul class="req">
+<li><i>—</i><span>Seguro médico internacional de viaje, que cubre cada participante.</span></li>
+<li><i>—</i><span>Pasaporte, gastos personales, acompañantes y equipaje adicional.</span></li>
+<li><i>—</i><span>Noches de hotel fuera de las fechas de la misión.</span></li>
+<li><i>—</i><span>Cambios de itinerario o penalidades de aerolíneas atribuibles al participante.</span></li>
+</ul>
+</div>
+</div>
+</div></section><section id="metodologia"><div class="wrap">
+<div class="sec-head"><div class="sec-num">3.3</div><div><div class="eyebrow c-purple">Estructura Comfenalco · 3.3</div><h2>Metodología de trabajo</h2></div></div>
+<p class="lead">La misión funciona como un programa de consultoría y acompañamiento con el viaje en el centro. Son cuatro fases en seis meses, de julio a diciembre de 2027.</p><div class="subhead" style="margin-top:0"><h3>Fases de ejecución</h3><span class="note">Cuatro fases en seis meses</span></div>
+<div class="moments">
+<button class="moment" type="button" data-m="escuchar" aria-pressed="false"><div class="code">FASE 1</div><div class="per">Julio a agosto</div><div class="t">Diagnosticar</div><div class="d">Convocatoria con Comfenalco, selección, diagnóstico inicial por empresa y definición del reto de innovación y del objetivo comercial.</div><div class="bar"></div></button>
+<button class="moment" type="button" data-m="articular" aria-pressed="false"><div class="code">FASE 2</div><div class="per">Septiembre a octubre</div><div class="t">Preparar</div><div class="d">Sesiones grupales y asesoría individual para alistar la oferta exportable, el discurso comercial y la agenda de citas.</div><div class="bar"></div></button>
+<button class="moment" type="button" data-m="cocrear" aria-pressed="false"><div class="code">FASE 3</div><div class="per">30 oct. al 7 nov.</div><div class="t">Vivir la misión</div><div class="d">Una semana de inmersión en Barcelona, con cierre diario para convertir lo visto en decisiones.</div><div class="bar"></div></button>
+<button class="moment" type="button" data-m="consolidar" aria-pressed="false"><div class="code">FASE 4</div><div class="per">Noviembre a diciembre</div><div class="t">Implementar</div><div class="d">Plan de acción por empresa, seguimiento de contactos y alianzas, medición de indicadores e informes.</div><div class="bar"></div></button>
+</div><div class="flow" id="flow" hidden></div>
+<div class="subhead"><h3>Destino de la misión: Barcelona</h3><span class="note">Anclada al Smart City Expo World Congress, 2 al 4 de noviembre de 2027</span></div>
+<p class="lead">Barcelona reúne en una sola semana el congreso de ciudades inteligentes más importante del mundo, laboratorios de innovación y un ecosistema empresarial con el que Inngenios ya trabaja.</p>
+<div class="cards4" style="margin-top:24px">
+<div class="card o"><div class="eyebrow c-orange">Pertinencia</div><h3>Afín a Cartagena y Bolívar</h3><p>Ocho ejes temáticos que cubren un grupo multisectorial, incluida la economía azul, cercana a la vocación portuaria y turística de la ciudad.</p></div>
+<div class="card b"><div class="eyebrow c-blue">Negocios</div><h3>Puerta al mercado europeo</h3><p>El congreso concentra en tres días a ciudades, países y empresas con las que agendar citas.</p></div>
+<div class="card p"><div class="eyebrow c-purple">Innovación aplicada</div><h3>Laboratorios a pocos minutos</h3><p>Protofy, Manual Thinking, DFactory, el Barcelona Supercomputing Center y el distrito 22@ en una misma ciudad.</p></div>
+<div class="card k"><div class="eyebrow">Menor riesgo</div><h3>Ruta ya recorrida</h3><p>Misión probada por Inngenios en 2025, con aliados y operación local.</p></div>
+</div>
+<div class="subhead"><h3>Agenda tipo en Barcelona</h3><span class="note">Tentativa, sujeta a la confirmación de cada entidad</span></div>
+<div class="tw"><table>
+<tr><th>Día</th><th>Actividad</th><th>Componente</th></tr>
+<tr><td><b>Sáb. 30 y dom. 31 de octubre</b></td><td>Salida de Cartagena, llegada, registro y reunión de orientación</td><td><span class="dj no">Logística</span></td></tr>
+<tr><td><b>Lunes 1 de noviembre</b><br>Festivo en España</td><td>Taller de arranque de Inngenios y recorrido por el distrito de innovación 22@</td><td><span class="dj prep">Innovación</span></td></tr>
+<tr><td><b>Martes 2</b></td><td>Smart City Expo: recorrido guiado y agenda de citas en pabellones de ciudades, países y empresas</td><td><span class="dj">Comercial</span></td></tr>
+<tr><td><b>Miércoles 3</b></td><td>Entrenamiento Manual Thinking en el laboratorio de Luki Huber. Visita al Barcelona Supercomputing Center. Espacio de relacionamiento del congreso</td><td><span class="dj prep">Innovación</span><span class="dj">Comercial</span></td></tr>
+<tr><td><b>Jueves 4</b></td><td>DFactory y Zona Franca: encuentro con empresas residentes de industria 4.0. Rueda de negocios y acercamiento con la Cámara de Comercio de Barcelona y el ecosistema empresarial</td><td><span class="dj">Comercial</span></td></tr>
+<tr><td><b>Viernes 5</b></td><td>Entrenamiento en innovación tecnológica, prototipado y testeo en Protofy. Visita empresarial al taller de Tromber</td><td><span class="dj prep">Innovación</span><span class="dj">Comercial</span></td></tr>
+<tr><td><b>Sáb. 6 y dom. 7</b></td><td>Cierre y compromisos por empresa en la mañana del sábado. Regreso el domingo</td><td><span class="dj pu">Cierre</span></td></tr>
+</table></div>
+<p class="tl-note">El módulo académico con certificado se ubica en la semana según la disponibilidad de la institución.</p>
+<div class="subhead"><h3>Cómo se cubre cada mitad de la misión</h3><span class="note">Según los componentes definidos por Comfenalco en la solicitud</span></div>
+<div class="two">
+<div class="card o"><div class="eyebrow c-orange">Componente comercial · 50 %</div><h3>Negocios, contactos y canales</h3>
+<ul class="req" style="margin-top:12px">
+<li><i>01</i><span><strong>Rueda de negocios B2B</strong> en Barcelona.</span></li>
+<li><i>02</i><span><strong>Agenda de citas por empresa</strong> con compradores, distribuidores y aliados potenciales dentro del Smart City Expo.</span></li>
+<li><i>03</i><span><strong>Conexión con cámaras y entidades de apoyo:</strong> acercamientos con la Cámara de Comercio de Barcelona y el distrito de innovación 22@, gestionados durante la preparación.</span></li>
+<li><i>04</i><span><strong>Networking empresarial:</strong> espacios de relacionamiento del congreso y dos cenas de relacionamiento.</span></li>
+<li><i>05</i><span><strong>Visitas a empresas y aliados:</strong> empresas residentes de DFactory y Tromber, pyme catalana que entró al mercado colombiano con un aliado local.</span></li>
+</ul></div>
+<div class="card b"><div class="eyebrow c-blue">Innovación aplicada y transferencia · 50 %</div><h3>Aprender haciendo, en los laboratorios</h3>
+<ul class="req" style="margin-top:12px">
+<li><i>01</i><span><strong>Protofy</strong>, aliado principal: 4 horas de entrenamiento en innovación tecnológica, prototipado, experimentación y testeo.</span></li>
+<li><i>02</i><span><strong>Manual Thinking:</strong> 4 horas de entrenamiento en el método de trabajo visual y cocreación del estudio de Luki Huber.</span></li>
+<li><i>03</i><span><strong>Módulo académico</strong> con certificado en una universidad o escuela de negocios de Barcelona.</span></li>
+<li><i>04</i><span><strong>Visitas técnicas y recorrido por el ecosistema:</strong> Barcelona Supercomputing Center, DFactory como modelo de clúster y encadenamiento, y distrito 22@.</span></li>
+<li><i>05</i><span><strong>Conferencias y casos de éxito</strong> del congreso, con buenas prácticas de innovación aplicables a MiPymes.</span></li>
+</ul></div>
+</div>
+<div class="knowhow" style="margin-top:22px"><b>Diseño detallado.</b> Esta propuesta indica cómo se trabajará y qué temas se abordan. El diseño de cada jornada, las guías y los instrumentos se entregan en el plan operativo, una vez aprobada la propuesta.</div><div class="subhead"><h3>Así se vivió la edición 2025</h3><span class="note">Fotos: archivo Misión B·SMART 2025</span></div><div class="gal"><figure><img src="f-congreso.jpg" alt="Smart City Expo World Congress" loading="lazy"><figcaption>Smart City Expo World Congress<span>El evento ancla de la misión</span></figcaption></figure><figure><img src="f-relacionamiento.jpg" alt="Relacionamiento en el congreso" loading="lazy"><figcaption>Relacionamiento en el congreso<span>Citas con empresas y ciudades</span></figcaption></figure><figure><img src="f-dfactory.jpg" alt="DFactory Barcelona" loading="lazy"><figcaption>DFactory Barcelona<span>Clúster de industria 4.0 de la Zona Franca</span></figcaption></figure><figure><img src="f-distrito40.jpg" alt="Distrito 4.0" loading="lazy"><figcaption>Distrito 4.0<span>Encuentro con el ecosistema industrial</span></figcaption></figure><figure><img src="f-bsc.jpg" alt="Barcelona Supercomputing Center" loading="lazy"><figcaption>Barcelona Supercomputing Center<span>Visita técnica</span></figcaption></figure><figure><img src="f-protofy.jpg" alt="Protofy" loading="lazy"><figcaption>Protofy<span>Laboratorio de innovación y prototipado</span></figcaption></figure></div>
+<div class="subhead"><h3>Medición de impacto</h3><span class="note">Los siete indicadores de Comfenalco, cada uno con meta</span></div>
+<div class="tw"><table>
+<tr><th>Indicador</th><th>Cómo se mide</th><th>Meta propuesta</th></tr>
+<tr><td><b>Transferencia de buenas prácticas aplicables</b></td><td>Buenas prácticas documentadas en la bitácora y adoptadas en el plan de acción</td><td>Al menos 3 por empresa</td></tr>
+<tr><td><b>Planes de acción para la gestión de la innovación</b></td><td>Planes formulados y validados con cada empresa</td><td>20 de 20</td></tr>
+<tr><td><b>Fortalecimiento de capacidades de innovación</b></td><td>Diagnóstico de entrada frente a diagnóstico de salida</td><td>Mejora en el 80 % de las empresas</td></tr>
+<tr><td><b>Incremento de oportunidades comerciales</b></td><td>Oportunidades registradas con contraparte identificada</td><td>Al menos 3 por empresa</td></tr>
+<tr><td><b>Contactos estratégicos generados</b></td><td>Registro de contactos por empresa</td><td>Al menos 10 por empresa</td></tr>
+<tr><td><b>Alianzas estratégicas establecidas</b></td><td>Acuerdos, cartas de intención o pilotos en curso a diciembre</td><td>Al menos 5 en el grupo</td></tr>
+<tr><td><b>Empresas que implementan innovación después de la misión</b></td><td>Iniciativas en ejecución verificadas en el seguimiento</td><td>Al menos 12 de 20</td></tr>
+</table></div>
+<p class="tl-note">Las metas son compromisos de gestión sobre lo que controla el programa y se ajustan con Comfenalco en el plan operativo. Indicadores de ejecución y calidad: asistencia a sesiones (meta 90 %), cumplimiento del cronograma, satisfacción de los participantes (NPS) y entregables recibidos a satisfacción por cada empresa.</p>
+<div class="platform"><div class="eyebrow c-purple">Diagnóstico inicial</div><p>Cada empresa completa un diagnóstico estratégico en <strong>Inngenios·Lab</strong>, nuestra plataforma con inteligencia artificial, complementado con una entrevista. Mide capacidades de innovación y preparación para internacionalizarse, y se repite al cierre para medir el avance.</p></div>
+<div class="platform" style="border-color:var(--blue);background:var(--blue-t)"><div class="eyebrow c-blue">Herramientas e instrumentos</div><p>Ficha de oferta exportable, agenda de citas por empresa, bitácora de misión, registro de contactos y alianzas, lienzo de modelo de negocio y plan de acción de innovación.</p></div>
+</div></section><section id="equipo"><div class="wrap">
+<div class="sec-head"><div class="sec-num">3.4</div><div><div class="eyebrow c-green">Estructura Comfenalco · 3.4</div><h2>Equipo de trabajo</h2></div></div>
+<div class="fac">
+        <div class="fac-id">
+          <img class="photo" src="cristian.jpg" alt="Cristian Torres" width="132" height="132">
+          <h3>Cristian Torres</h3>
+          <div class="roles"><span>Director de Inngenios</span><span>Consultor en innovación empresarial</span><span>Speaker internacional</span><span>Fundador del Genius Fest, evento de innovación y creatividad</span></div>
+          <div class="stats">
+            <div><b>+9.000</b><span>personas entrenadas</span></div>
+            <div><b>+300</b><span>empresas intervenidas</span></div>
+            <div><b>+10</b><span>años en innovación</span></div>
+          </div>
+          <div class="social">
+            <a class="sbtn" href="https://www.linkedin.com/in/cristianinngenios/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="fac-body">
+          <p class="fac-lead">Ingeniero Industrial y Magíster en Gestión de la Innovación, conferencista internacional, consultor empresarial y Design Thinker, con Máster en Emprendimiento y Desarrollo de Ideas de Negocio del Instituto Europeo de Posgrado. Creador de la Metodología de Creatividad Aplicada e Innovación 6i® y experto en metodologías creativas.</p>
+          <p class="fac-lead" style="margin-top:10px">Actualmente es director de la agencia de innovación Inngenios, director de operaciones de Tromber Colombia y fundador del movimiento y festival de innovación Genius Fest. En los últimos años ha entrenado e impactado a más de 9.000 personas en creatividad aplicada, pensamiento en diseño, innovación y emprendimiento con metodologías ágiles.</p>
+          <div class="fac-grid">
+            <div class="fac-col">
+              <div class="eyebrow c-blue">Formación</div>
+              <ul>
+                <li>Magíster en Gestión de la Innovación</li>
+                <li>Máster en Emprendimiento y Desarrollo de Ideas de Negocio · Instituto Europeo de Posgrado</li>
+                <li>Ingeniero Industrial</li>
+                <li>Innovación Empresarial · Tecnológico de Monterrey</li>
+              </ul>
+              <div class="eyebrow c-purple" style="margin-top:20px">Trayectoria destacada</div>
+              <ul class="tr">
+                <li>Reconocido como Innovador Distinguido por el programa de Magíster en Gestión de la Innovación de la Pontificia Universidad Católica de Chile</li>
+                <li>Reconocido en 2020 como uno de los diez mejores Consultores Máster de la Cámara de Comercio de Cartagena e iNNpulsa Colombia</li>
+                <li>Mentor y facilitador de los programas de UX Estratégico y Service Design de Repensar Educativo (Perú)</li>
+                <li>Asesor experto del programa Negocios Verdes del Centro de Transferencia e Innovación de la Universidad de Cartagena</li>
+                <li>Consultor de enlace para Colombia (2023) de la agencia chilena Transforme en el proyecto READINESS Recuperación Verde del IICA</li>
+              </ul>
+            </div>
+            <div class="fac-col">
+              <div class="eyebrow c-orange">Facilitador certificado</div>
+              <ul>
+                <li>Creatividad aplicada a negocios e innovación empresarial</li>
+                <li>Design Thinking</li>
+                <li>Customer Experience Design Management · CX LATAM</li>
+                <li>Six Thinking Hats</li>
+                <li>Lean Startup Program Developer</li>
+                <li>Management 3.0</li>
+                <li>Pro.Play Method</li>
+                <li>ICQ Coaching, Team Building Experience y STEP-PRO · avaladas por Humanagement (Chile) y la ICMF (International Coaching &amp; Mentoring Federation)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+<div class="subhead"><h3>Equipo del programa y aliados en Barcelona</h3><span class="note">Las hojas de vida se anexan con el plan operativo</span></div>
+<div class="two">
+<div class="tw"><table>
+<tr><th>Rol</th><th>Responsabilidad</th></tr>
+<tr><td><b>Dirección del programa</b><br>Cristian Torres</td><td>Dirige la metodología, acompaña la misión y responde ante Comfenalco</td></tr>
+<tr><td><b>Consultor de acompañamiento</b><br>Equipo Inngenios</td><td>Asesoría individual, seguimiento de planes de acción y acompañamiento en destino</td></tr>
+<tr><td><b>Coordinación administrativa y logística</b><br>Equipo Inngenios</td><td>Reservas, documentación de viaje, actas, evidencias e informes</td></tr>
+<tr><td><b>Coordinación local en Barcelona</b><br>Operador local aliado</td><td>Agenda de visitas, relación con entidades y soporte operativo en destino</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th>Aliado o entidad</th><th>Papel en la misión</th></tr>
+<tr><td><b>Protofy</b></td><td>Aliado principal. Entrenamiento de 4 horas y visita a su laboratorio</td></tr>
+<tr><td><b>Manual Thinking</b> · Luki Huber</td><td>Entrenamiento de 4 horas en su laboratorio</td></tr>
+<tr><td><b>Tromber</b></td><td>Empresa aliada. Visita empresarial a su taller</td></tr>
+<tr><td><b>DFactory y Zona Franca</b></td><td>Visita al clúster de industria 4.0 y encuentro con empresas residentes</td></tr>
+<tr><td><b>Barcelona Supercomputing Center</b></td><td>Visita técnica</td></tr>
+<tr><td><b>Cámara de Comercio de Barcelona y 22@</b></td><td>Acercamientos en exploración para el relacionamiento comercial</td></tr>
+</table></div>
+</div>
+</div></section><section id="plan"><div class="wrap">
+<div class="sec-head"><div class="sec-num">3.5</div><div><div class="eyebrow c-orange">Estructura Comfenalco · 3.5</div><h2>Plan de trabajo</h2></div></div>
+
+<div class="subhead" style="margin-top:0"><h3>Línea de tiempo y cronograma 2027</h3><span class="note">Fechas tentativas, a ajustar con Comfenalco en el plan operativo</span></div>
+<div class="tw"><table>
+<tr><th>Fase</th><th>Periodo</th><th>Actividades principales</th><th>Responsable</th></tr>
+<tr><td><b>Alistamiento</b></td><td>Junio</td><td>Plan operativo, cronograma y convocatoria a afiliados</td><td>Inngenios y Comfenalco</td></tr>
+<tr><td><b>1. Diagnóstico y selección</b></td><td>Julio a agosto</td><td>Selección de 20 empresas, diagnóstico inicial, reto y objetivo comercial</td><td>Inngenios</td></tr>
+<tr><td><b>2. Preparación</b></td><td>Septiembre a octubre</td><td>Sesiones grupales, asesoría individual, agenda de citas y alistamiento de viaje</td><td>Inngenios y coordinación local</td></tr>
+<tr><td><b>3. Misión en Barcelona</b></td><td>30 de octubre al 7 de noviembre</td><td>Semana de inmersión</td><td>Inngenios y aliados</td></tr>
+<tr><td><b>4. Implementación y medición</b></td><td>Noviembre a diciembre</td><td>Planes de acción, seguimiento, diagnóstico de salida, socialización e informe final</td><td>Inngenios</td></tr>
+</table></div>
+<div class="platform" style="border-color:var(--orange);background:var(--orange-t)"><div class="eyebrow c-orange">Fecha de aprobación</div><p>Para asegurar tarifas aéreas, hotel y la tarifa anticipada del congreso, la propuesta debería <strong>aprobarse a más tardar en mayo de 2027</strong>.</p></div>
+</div></section><section id="entregables"><div class="wrap">
+<div class="sec-head"><div class="sec-num">3.6</div><div><div class="eyebrow c-blue">Estructura Comfenalco · 3.6</div><h2>Entregables</h2></div></div>
+
+<div class="deliv-main"><div class="dm-tag">Entregable principal</div><div class="dm-body"><h3>Informe general de resultados, con indicadores y recomendaciones de sostenibilidad</h3><p>Reúne el resultado de las 20 empresas, el cumplimiento de las siete metas de impacto y las recomendaciones para que Comfenalco dé continuidad al proceso. Se soporta en un plan de acción de innovación e internacionalización por empresa.</p></div></div>
+<div class="deliv-sub">Los nueve entregables del instructivo, en la fase donde se producen</div>
+<div class="cards3" style="margin-top:0">
+<div class="card o"><div class="eyebrow c-orange">Alistamiento</div><h3>1. Plan operativo y cronograma</h3></div>
+<div class="card o"><div class="eyebrow c-orange">Fase 1</div><h3>2. Diagnóstico inicial por empresa</h3></div>
+<div class="card o"><div class="eyebrow c-orange">Fase 1 · se actualiza en la 4</div><h3>3. Hoja de ruta o plan de trabajo por empresa</h3></div>
+<div class="card b"><div class="eyebrow c-blue">Una por fase</div><h3>4. Actas de actividades firmadas por cada empresa</h3></div>
+<div class="card b"><div class="eyebrow c-blue">Uno por fase</div><h3>5. Informes parciales de ejecución</h3></div>
+<div class="card b"><div class="eyebrow c-blue">Con cada informe</div><h3>6. Anexos con evidencias: asistencias, fotos y grabaciones</h3></div>
+<div class="card p"><div class="eyebrow c-purple">Fase 4</div><h3>7. Informe de resultado por empresa</h3></div>
+<div class="card p"><div class="eyebrow c-purple">Fase 4</div><h3>8. Acta de cumplimiento firmada por cada empresa</h3></div>
+<div class="card p"><div class="eyebrow c-purple">Fase 4</div><h3>9. Informe general de resultados</h3></div>
+</div>
+</div></section><section id="valor"><div class="wrap">
+<div class="sec-head"><div class="sec-num">3.7</div><div><div class="eyebrow c-purple">Estructura Comfenalco · 3.7</div><h2>Valor agregado y propuesta de valor</h2></div></div>
+
+<p class="lead" style="margin-bottom:26px">Por qué elegir esta propuesta: seis diferencias frente a una misión de visitas.</p>
+<div class="vals">
+<div class="val"><i>1</i><h4>Formación práctica en laboratorios</h4><p>Ocho horas de entrenamiento con Protofy y Manual Thinking en sus propios espacios, más un módulo académico con certificado.</p></div>
+<div class="val"><i>2</i><h4>Misión probada</h4><p>B·SMART ya se realizó en Barcelona en 2025 con una delegación de Cartagena, con aliados y operación local.</p></div>
+<div class="val"><i>3</i><h4>La silla del empresario</h4><p>Fuimos beneficiarios de una misión de Comfenalco. Por eso hay más preparación comercial antes del viaje y más seguimiento después.</p></div>
+<div class="val"><i>4</i><h4>Diagnóstico con inteligencia artificial</h4><p>Inngenios·Lab entrega a cada empresa un análisis estratégico y una hoja de ruta, y permite comparar entrada y salida.</p></div>
+<div class="val"><i>5</i><h4>Metas comprometidas por indicador</h4><p>Cada uno de los siete indicadores de Comfenalco tiene meta, línea base y forma de verificación.</p></div>
+<div class="val"><i>6</i><h4>Conocimiento de la Caja y su tejido empresarial</h4><p>Acompañamos a Comfenalco desde 2021 y trabajamos en Cartagena con empresas, universidades y gremios.</p></div>
+</div>
+</div></section><div class="close" id="contacto">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow" style="color:#9fd8ff">Siguiente paso</div>
+        <h2>Llevemos a 20 MiPymes de Cartagena <span>al ecosistema de innovación de Barcelona</span></h2>
+        <p>Quedamos atentos a sus comentarios para ajustar la propuesta con el equipo de Fomento Empresarial y avanzar hacia el plan operativo.</p>
+      </div>
+      <div class="contact">
+        <div class="row"><div><div class="k">Director del programa</div><div class="v">Cristian Torres · Director de Inngenios</div></div></div>
+        <div class="row"><div><div class="k">Correo</div><div class="v" id="mail">cristian@inngenios.co</div></div><button class="copy" type="button" data-copy="mail">Copiar</button></div>
+        <div class="row"><div><div class="k">Teléfono</div><div class="v" id="tel">+57 300 333 6267</div></div><button class="copy" type="button" data-copy="tel">Copiar</button></div>
+        <div class="row"><div><div class="k">Web</div><div class="v"><a href="https://www.inngenios.co" target="_blank" rel="noopener" style="color:#fff">www.inngenios.co</a></div></div></div>
+      </div>
+    </div>
+    <div class="wrap foot">Torres Creativas S.A.S. · NIT 900.886.610-1 · Cartagena de Indias · Mindset · Estrategia · Resultados</div>
+  </div>
+</main>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.moment');
+  var flow = document.getElementById('flow');
+  var steps = flow.querySelectorAll('.step');
+  var active = null;
+  function apply(m){
+    active = m;
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.m === m)); });
+    if(!m){ flow.classList.remove('focus'); steps.forEach(function(s){s.classList.remove('on')}); return; }
+    flow.classList.add('focus');
+    steps.forEach(function(s){ s.classList.toggle('on', s.dataset.m === m); });
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      apply(active === b.dataset.m ? null : b.dataset.m);
+    });
+  });
+  // Scrollspy: resalta en el menú la sección visible
+  var navEl = document.querySelector('.nav');
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  var targets = navLinks.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+  function spy(){
+    var line = window.innerHeight * 0.35;
+    var current = null;
+    targets.forEach(function(t){ if (t.getBoundingClientRect().top <= line) current = t.id; });
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4 && targets.length) current = targets[targets.length-1].id;
+    navLinks.forEach(function(a){ var on = a.getAttribute('href') === '#' + current; var was = a.classList.contains('active'); a.classList.toggle('active', on); if (on) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); if (on && !was && navEl && navEl.scrollWidth > navEl.clientWidth){ navEl.scrollTo({left: Math.max(0, a.offsetLeft - navEl.offsetLeft - 24), behavior: 'smooth'}); } });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(function(){ spy(); ticking = false; }); } }, {passive:true});
+  window.addEventListener('resize', spy);
+  spy();
+
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(btn.dataset.copy);
+      var text = el.textContent.trim();
+      function done(){ btn.textContent = 'Copiado'; setTimeout(function(){ btn.textContent = 'Copiar'; }, 1600); }
+      function fallback(){ var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+    });
+  });
+})();
+</script>
+</body></html>
