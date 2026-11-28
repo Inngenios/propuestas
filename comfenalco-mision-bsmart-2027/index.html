@@ -557,6 +557,28 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .al-t td:nth-child(2){width:30%}
 .al-chips{display:flex;flex-wrap:wrap;gap:6px}
 .al-chip{display:inline-block;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;border:1.5px solid #111;white-space:nowrap}
+.ilab{margin-top:34px;border:1.5px solid var(--ink);background:linear-gradient(135deg,#FFF6F1 0%,#fff 55%,#FFF1E8 100%);position:relative;overflow:hidden}
+.ilab-top{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:center;padding:34px 34px 10px}
+.ilab-logo{height:38px;width:auto;display:block;margin:0 0 18px}
+.ilab-k{display:inline-block;background:#E8561D;color:#fff;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;margin-bottom:12px}
+.ilab h3.ilab-t{font-size:30px;line-height:1.15;margin:0 0 12px}
+.ilab p.ilab-p{font-size:15px;line-height:1.6;margin:0 0 16px}
+.ilab-f{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ilab-f li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;font-size:14px;line-height:1.45}
+.ilab-f li i{width:30px;height:30px;border-radius:8px;background:#E8561D;color:#fff;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:12px}
+.ilab-f b{display:block;font-size:14.5px}
+.ilab-hero img{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 30px rgba(0,0,0,.14))}
+.ilab-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:18px 34px 10px}
+.ilab-shots figure{margin:0}
+.ilab-shots img{width:100%;height:auto;display:block;filter:drop-shadow(0 14px 18px rgba(0,0,0,.13))}
+.ilab-shots figcaption{font-size:13px;margin-top:8px;line-height:1.4}
+.ilab-shots figcaption b{display:block;font-size:14px}
+.ilab-io{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1.5px solid var(--ink);margin-top:20px}
+.ilab-io div{padding:18px 22px;border-right:1.5px solid var(--ink)}
+.ilab-io div:last-child{border-right:0}
+.ilab-io b{display:block;font-size:22px;color:#E8561D;font-weight:800}
+.ilab-io span{font-size:13.5px;line-height:1.45}
+@media (max-width:900px){.ilab-top{grid-template-columns:1fr;padding:26px 22px 6px}.ilab-shots{grid-template-columns:1fr;padding:14px 22px 6px}.ilab-io{grid-template-columns:1fr}.ilab-io div{border-right:0;border-bottom:1.5px solid var(--ink)}.ilab-io div:last-child{border-bottom:0}.ilab h3.ilab-t{font-size:24px}}
 .ally{display:grid;grid-template-columns:220px 1fr;border:1.5px solid var(--ink);background:var(--paper)}
 .ally-ph{width:100%;height:100%;min-height:220px;object-fit:cover;object-position:50% 30%;display:block;border-right:1.5px solid var(--ink)}
 .ally-tx{padding:26px 28px;min-width:0}
@@ -891,6 +913,33 @@ td .dj{margin:0 4px 4px 0}
 <button class="moment" type="button" data-m="cocrear" aria-pressed="false"><div class="code">FASE 3</div><div class="per">30 oct. al 7 nov.</div><div class="t">Vivir la misión</div><div class="d">Una semana de inmersión en Barcelona, con cierre diario para convertir lo visto en decisiones.</div><div class="bar"></div></button>
 <button class="moment" type="button" data-m="consolidar" aria-pressed="false"><div class="code">FASE 4</div><div class="per">Noviembre a diciembre</div><div class="t">Implementar</div><div class="d">Plan de acción por empresa, seguimiento de contactos y alianzas, medición de indicadores e informes.</div><div class="bar"></div></button>
 </div><div class="flow" id="flow" hidden></div>
+<div class="ilab">
+<div class="ilab-top">
+<div>
+<img class="ilab-logo" src="lab-logo.png" alt="Inngenios·Lab">
+<span class="ilab-k">Diagnóstico especializado</span>
+<h3 class="ilab-t">Cada empresa llega a Barcelona con un diagnóstico hecho con inteligencia artificial</h3>
+<p class="ilab-p">El diagnóstico inicial de la misión se hace en <b>Inngenios·Lab</b>, nuestra plataforma de diagnóstico estratégico e innovación empresarial. Combina metodologías de innovación probadas con inteligencia artificial, y se complementa con una entrevista del equipo consultor.</p>
+<ul class="ilab-f">
+<li><i>01</i><span><b>Diagnóstico multidimensional</b>Propuesta de valor, relación con los clientes, infraestructura, costos e ingresos, y preparación para internacionalizarse.</span></li>
+<li><i>02</i><span><b>Modelo de negocio en semáforo</b>El Business Model Canvas de la empresa con fortalezas, puntos a reforzar y debilidades.</span></li>
+<li><i>03</i><span><b>Recomendaciones de innovación</b>Oportunidades priorizadas según los diez tipos de innovación, con tácticas y casos de referencia.</span></li>
+<li><i>04</i><span><b>Análisis con IA y hoja de ruta</b>Un informe estratégico personalizado que se convierte en el plan de acción de la empresa.</span></li>
+</ul>
+</div>
+<div class="ilab-hero"><img src="lab-home.webp" alt="Inngenios·Lab, plataforma de diagnóstico estratégico e innovación empresarial con inteligencia artificial"></div>
+</div>
+<div class="ilab-shots">
+<figure><img src="lab-radar.webp" alt="Visualización por dimensiones en Inngenios·Lab"><figcaption><b>Lectura por dimensiones</b>Dónde está fuerte la empresa y dónde debe enfocar la misión.</figcaption></figure>
+<figure><img src="lab-bmc.webp" alt="Business Model Canvas con semáforo en Inngenios·Lab"><figcaption><b>Modelo de negocio</b>Cada módulo del lienzo calificado y con sus ítems prioritarios.</figcaption></figure>
+<figure><img src="lab-doblin.webp" alt="Recomendaciones de innovación en Inngenios·Lab"><figcaption><b>Recomendaciones de innovación</b>Oportunidades por prioridad, conectadas con el modelo de negocio.</figcaption></figure>
+</div>
+<div class="ilab-io">
+<div><b>Entrada</b><span>Diagnóstico antes del viaje: define el reto, el objetivo comercial y la agenda de cada empresa.</span></div>
+<div><b>Hoja de ruta</b><span>El análisis se convierte en el plan de acción que la empresa lleva a Barcelona y aplica al volver.</span></div>
+<div><b>Salida</b><span>El mismo diagnóstico al cierre mide el avance y alimenta los indicadores de impacto.</span></div>
+</div>
+</div>
 <div class="subhead"><h3>Destino de la misión: Barcelona</h3><span class="note">Anclada al Smart City Expo World Congress, 2 al 4 de noviembre de 2027</span></div>
 <p class="lead">Barcelona reúne en una sola semana el congreso de ciudades inteligentes más importante del mundo, laboratorios de innovación y un ecosistema empresarial con el que Inngenios ya trabaja.</p>
 <div class="cards4" style="margin-top:24px">
@@ -992,7 +1041,6 @@ td .dj{margin:0 4px 4px 0}
 <tr><td><b>Empresas que implementan innovación después de la misión</b></td><td>Iniciativas en ejecución verificadas en el seguimiento</td><td>Al menos 12 de 20</td></tr>
 </table></div>
 <p class="tl-note">Las metas son compromisos de gestión sobre lo que controla el programa y se ajustan con Comfenalco en el plan operativo. Indicadores de ejecución y calidad: asistencia a sesiones (meta 90 %), cumplimiento del cronograma, satisfacción de los participantes (NPS) y entregables recibidos a satisfacción por cada empresa.</p>
-<div class="platform"><div class="eyebrow c-purple">Diagnóstico inicial</div><p>Cada empresa completa un diagnóstico estratégico en <strong>Inngenios·Lab</strong>, nuestra plataforma con inteligencia artificial, complementado con una entrevista. Mide capacidades de innovación y preparación para internacionalizarse, y se repite al cierre para medir el avance.</p></div>
 <div class="platform" style="border-color:var(--blue);background:var(--blue-t)"><div class="eyebrow c-blue">Herramientas e instrumentos</div><p>Ficha de oferta exportable, agenda de citas por empresa, bitácora de misión, registro de contactos y alianzas, lienzo de modelo de negocio y plan de acción de innovación.</p></div>
 </div></section><section id="equipo"><div class="wrap">
 <div class="sec-head"><div class="sec-num">3.4</div><div><div class="eyebrow c-green">Estructura Comfenalco · 3.4</div><h2>Equipo de trabajo</h2></div></div>
