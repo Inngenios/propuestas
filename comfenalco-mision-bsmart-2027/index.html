@@ -515,6 +515,36 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .fac2 .photo{border-color:var(--purple)}
 .fac2.h .photo{border-color:var(--green)}
 .stats.two{grid-template-columns:repeat(2,1fr)}
+.mt{margin-top:34px;border:1.5px solid var(--ink);background:#fff}
+.mt-top{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);border-bottom:1.5px solid var(--ink)}
+.mt-who{padding:30px;display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:start;border-right:1.5px solid var(--ink)}
+.mt-who img{width:150px;height:150px;object-fit:cover;border-radius:50%;border:4px solid #E5322D}
+.mt-who h3{margin:4px 0 4px;font-size:26px}
+.mt-who .mt-role{font-weight:600;color:#E5322D;font-size:14px;margin:0 0 12px}
+.mt-who p{font-size:14.5px;line-height:1.6;margin:0 0 10px}
+.mt-book{padding:30px;display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;background:#f6f6f4}
+.mt-book img{width:150px;height:auto;display:block}
+.mt-book p{font-size:14.5px;line-height:1.6;margin:0 0 10px}
+.mt-q{font-size:17px;font-weight:700;line-height:1.4;border-left:4px solid #E5322D;padding-left:14px;margin:0 0 12px}
+.mt-body{padding:30px}
+.mt-facts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.mt-facts span{border:1.5px solid var(--ink);padding:7px 14px;font-size:13px;font-weight:600;border-radius:999px}
+.mt-facts span b{color:#E5322D}
+.mt-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1.5px solid var(--ink)}
+.mt-steps div{padding:18px 16px;border-right:1.5px solid var(--ink)}
+.mt-steps div:last-child{border-right:0}
+.mt-steps i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:2.5px solid #111;font-style:normal;font-weight:800;font-size:13px;margin-bottom:10px}
+.mt-steps h4{margin:0 0 6px;font-size:15px}
+.mt-steps p{margin:0;font-size:13.5px;line-height:1.5}
+.mt-gal{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;grid-template-rows:210px 210px;gap:6px;padding:0 30px 30px}
+.mt-gal figure{margin:0;position:relative;overflow:hidden}
+.mt-gal img{width:100%;height:100%;object-fit:cover;display:block}
+.mt-gal figure:first-child{grid-row:span 2}
+.mt-wide{grid-column:span 3}
+.mt-gal figcaption{position:absolute;left:0;bottom:0;background:rgba(0,0,0,.72);color:#fff;font-size:12px;padding:6px 10px}
+.mt-foot{padding:0 30px 26px;font-size:12.5px;color:#666}
+@media (max-width:980px){.mt-top{grid-template-columns:1fr}.mt-who{border-right:0;border-bottom:1.5px solid var(--ink)}.mt-steps{grid-template-columns:1fr 1fr}.mt-steps div{border-bottom:1.5px solid var(--ink)}.mt-gal{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:180px}.mt-gal figure:first-child{grid-row:span 2}.mt-wide{grid-column:span 2}}
+@media (max-width:560px){.mt-who,.mt-book{grid-template-columns:1fr;padding:22px}.mt-who img,.mt-book img{width:120px;height:auto}.mt-who img{height:120px}.mt-body{padding:22px}.mt-steps{grid-template-columns:1fr}.mt-steps div{border-right:0}.mt-gal{padding:0 22px 22px;grid-template-columns:1fr;grid-auto-rows:220px}.mt-gal figure:first-child{grid-row:span 2}.mt-wide{grid-column:auto}}
 .ally{display:grid;grid-template-columns:220px 1fr;border:1.5px solid var(--ink);background:var(--paper)}
 .ally-ph{width:100%;height:100%;min-height:220px;object-fit:cover;object-position:50% 30%;display:block;border-right:1.5px solid var(--ink)}
 .ally-tx{padding:26px 28px;min-width:0}
@@ -758,7 +788,7 @@ td .dj{margin:0 4px 4px 0}
 <li><i>01</i><span><span class="who i">Programa</span>Diagnóstico inicial, preparación grupal e individual, plan de acción, seguimiento e informes de resultados.</span></li>
 <li><i>02</i><span><span class="who i">Viaje</span>Tiquetes Cartagena–Barcelona–Cartagena y siete noches en hotel de cuatro estrellas, en habitación individual.</span></li>
 <li><i>03</i><span><span class="who i">Congreso</span>Pase de tres días al Smart City Expo World Congress.</span></li>
-<li><i>04</i><span><span class="who i">Formación</span>Dos entrenamientos de 4 horas en laboratorios, con materiales, y un módulo académico con certificado.</span></li>
+<li><i>04</i><span><span class="who i">Formación</span>Dos entrenamientos en laboratorios (Protofy, 4 horas; Manual Thinking, 3 horas), con materiales, y un módulo académico con certificado.</span></li>
 <li><i>05</i><span><span class="who i">Negocios</span>Visitas empresariales y técnicas, rueda de negocios y encuentros de relacionamiento.</span></li>
 <li><i>06</i><span><span class="who i">En destino</span>Bus privado, tarjeta de transporte, almuerzos y dos cenas de relacionamiento.</span></li>
 <li><i>07</i><span><span class="who i">Acompañamiento</span>Dos consultores de Inngenios y coordinación local en Barcelona. Certificado de participación y memoria audiovisual.</span></li>
@@ -869,6 +899,49 @@ td .dj{margin:0 4px 4px 0}
 <tr><td><b>Sáb. 6 y dom. 7</b></td><td>Cierre y compromisos por empresa en la mañana del sábado. En la tarde, recorrido de <b>turismo smart</b>: cómo Barcelona, referente mundial en ciudades inteligentes, gestiona el turismo con datos, movilidad y tecnología en el espacio público. Regreso el domingo</td><td><span class="dj pu">Cierre</span><span class="dj prep">Innovación</span></td></tr>
 </table></div>
 <p class="tl-note">El módulo académico con certificado se ubica en la semana según la disponibilidad de la institución.</p>
+<div class="mt">
+<div class="subhead" style="padding:26px 30px 0;margin:0"><h3>Entrenamiento Manual Thinking con Luki Huber</h3><span class="note">Taller de 3 horas en el estudio Manual Thinking · Barcelona</span></div>
+<div class="mt-top" style="margin-top:20px;border-top:1.5px solid var(--ink)">
+<div class="mt-who">
+<img src="mt-luki.jpg" alt="Luki Huber en el estudio Manual Thinking">
+<div>
+<div class="eyebrow">Creador de Manual Thinking</div>
+<h3>Luki Huber</h3>
+<p class="mt-role">Diseñador de producto · Barcelona</p>
+<p>Diseñador de producto suizo radicado en Barcelona. Lleva décadas trabajando con empresas y proyectos de referencia, y ha explorado la relación entre el diseño y la gastronomía en contextos como elBulli, junto a Ferran Adrià.</p>
+<p>Creó Manual Thinking en su estudio de diseño al buscar cómo optimizar el proceso creativo con los equipos de sus clientes. Hoy compagina el diseño con la docencia, la divulgación y la creación de herramientas para pensar y diseñar en contextos complejos.</p>
+</div>
+</div>
+<div class="mt-book">
+<img src="mt-libro.jpg" alt="Libro Manual Thinking, de Luki Huber y Gerrit Jan Veldman">
+<div>
+<div class="eyebrow">El método</div>
+<p class="mt-q">Pensar con las manos para crear en equipo.</p>
+<p>Manual Thinking nace en 2009 como un sistema de mapas, etiquetas, métodos y mobiliario para gestionar el trabajo creativo en equipo. Prioriza la palabra escrita y el dibujo sobre la conversación, para que todo el equipo explore los proyectos de forma amplia, ordenada y democrática.</p>
+<p>Su libro, <i>Manual Thinking. The tool for managing creative teamwork</i>, escrito con Gerrit Jan Veldman, lleva prólogo de Ferran Adrià.</p>
+</div>
+</div>
+</div>
+<div class="mt-body">
+<div class="mt-facts"><span><b>3 horas</b> de taller práctico</span><span>En la sede de Manual Thinking, Barcelona</span><span>Grupos ideales de <b>15</b> personas</span><span>Materiales y dossier resumen incluidos</span></div>
+<p style="margin:0 0 18px;font-size:15px;line-height:1.6">Las empresas viven el método en el lugar donde nació, con su creador. Trabajan sobre retos reales de sus negocios y se llevan una forma de idear, priorizar y poner en marcha proyectos en equipo que pueden replicar en Cartagena.</p>
+<div class="mt-steps">
+<div><i>01</i><h4>Entrar en el método</h4><p>Ejercicios de arranque con mapas y etiquetas: escribir y dibujar antes que hablar.</p></div>
+<div><i>02</i><h4>Entender el reto</h4><p>Cada equipo despliega su reto y lo comparte con el grupo.</p></div>
+<div><i>03</i><h4>Idear en equipo</h4><p>Secuencias de métodos creativos para encontrar oportunidades donde no se buscaban.</p></div>
+<div><i>04</i><h4>Seleccionar</h4><p>Evaluación democrática para quedarse con las mejores ideas de cada reto.</p></div>
+<div><i>05</i><h4>Poner en marcha</h4><p>Cada idea elegida sale con un método y un mapa para llevarla a la empresa.</p></div>
+</div>
+</div>
+<div class="mt-gal">
+<figure><img src="mt-cristian-luki.jpg" alt="Cristian Torres y Luki Huber frente al estudio Manual Thinking"><figcaption>Cristian Torres y Luki Huber, estudio Manual Thinking</figcaption></figure>
+<figure><img src="mt-taller.jpg" alt="Luki Huber facilitando el taller"></figure>
+<figure><img src="mt-mesa.jpg" alt="Mapa de ideación con etiquetas Manual Thinking"></figure>
+<figure><img src="mt-equipo.jpg" alt="Equipo trabajando sobre un mapa en la pared"></figure>
+<figure class="mt-wide"><img src="mt-muro.jpg" alt="Muro de materiales del estudio Manual Thinking" style="object-position:center 40%"></figure>
+</div>
+<p class="mt-foot">Fotos: estudio Manual Thinking, Barcelona. El contenido del taller se ajusta con Luki Huber a los retos de las empresas participantes.</p>
+</div>
 <div class="subhead"><h3>Cómo se cubre cada mitad de la misión</h3><span class="note">Según los componentes definidos por Comfenalco en la solicitud</span></div>
 <div class="two">
 <div class="card o"><div class="eyebrow c-orange">Componente comercial · 50 %</div><h3>Negocios, contactos y canales</h3>
@@ -882,7 +955,7 @@ td .dj{margin:0 4px 4px 0}
 <div class="card b"><div class="eyebrow c-blue">Innovación aplicada y transferencia · 50 %</div><h3>Aprender haciendo, en los laboratorios</h3>
 <ul class="req" style="margin-top:12px">
 <li><i>01</i><span><strong>Protofy</strong>, aliado principal: 4 horas de entrenamiento en innovación tecnológica, prototipado, experimentación y testeo.</span></li>
-<li><i>02</i><span><strong>Manual Thinking:</strong> 4 horas de entrenamiento en el método de trabajo visual y cocreación del estudio de Luki Huber.</span></li>
+<li><i>02</i><span><strong>Manual Thinking:</strong> 3 horas de entrenamiento en el método de trabajo visual y cocreación del estudio de Luki Huber.</span></li>
 <li><i>03</i><span><strong>Módulo académico</strong> con certificado en una universidad o escuela de negocios de Barcelona.</span></li>
 <li><i>04</i><span><strong>Visitas técnicas y recorrido por el ecosistema:</strong> Barcelona Supercomputing Center, DFactory como modelo de clúster y encadenamiento, y distrito 22@.</span></li>
 <li><i>05</i><span><strong>Conferencias y casos de éxito</strong> del congreso, con buenas prácticas de innovación aplicables a MiPymes.</span></li>
@@ -1049,7 +1122,7 @@ td .dj{margin:0 4px 4px 0}
 <div class="tw"><table>
 <tr><th>Aliado o entidad</th><th>Papel en la misión</th></tr>
 <tr><td><b>Protofy</b></td><td>Aliado principal. Entrenamiento de 4 horas y visita a su laboratorio</td></tr>
-<tr><td><b>Manual Thinking</b> · Luki Huber</td><td>Entrenamiento de 4 horas en su laboratorio</td></tr>
+<tr><td><b>Manual Thinking</b> · Luki Huber</td><td>Entrenamiento de 3 horas en su estudio, con Luki Huber</td></tr>
 <tr><td><b>Tromber</b></td><td>Empresa aliada. Visita empresarial a su taller</td></tr>
 <tr><td><b>DFactory y Zona Franca</b></td><td>Visita al clúster de industria 4.0 y encuentro con empresas residentes</td></tr>
 <tr><td><b>Barcelona Supercomputing Center</b></td><td>Visita técnica</td></tr>
