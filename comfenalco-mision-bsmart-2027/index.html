@@ -626,10 +626,11 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .pf-fab span{font-size:12px;border:1px solid #bbb;padding:5px 11px;border-radius:999px;color:#333;background:#f5f5f5}
 @media (max-width:980px){.pf-cases{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.pf-cases{grid-template-columns:1fr}}
-.pf-top{grid-template-columns:300px minmax(0,1fr) 210px}
-.pf-bot{display:flex;align-items:flex-end;justify-content:center;padding:20px 20px 0;background:linear-gradient(180deg,#fff 0%,#FFF7C2 100%);border-left:1.5px solid var(--ink)}
-.pf-bot img{width:100%;max-width:190px;height:auto;display:block}
-@media (max-width:1100px){.pf-top{grid-template-columns:260px minmax(0,1fr)}.pf-bot{display:none}}
+.pf-about{position:relative;padding-right:230px!important}
+.pf-bot{position:absolute;right:18px;bottom:0;width:200px;pointer-events:none}
+.pf-bot img{width:100%;height:auto;display:block}
+@media (max-width:1100px){.pf-about{padding-right:170px!important}.pf-bot{width:150px}}
+@media (max-width:700px){.pf-about{padding-right:22px!important;padding-bottom:230px!important}.pf-bot{width:140px;right:50%;transform:translateX(50%)}}
 @media (max-width:980px){.pf-top{grid-template-columns:1fr}}
 .pf-team{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;align-items:center;margin:0 0 26px;padding-bottom:26px;border-bottom:1.5px solid var(--ink)}
 .pf-team img{width:100%;height:auto;display:block}
@@ -1082,8 +1083,8 @@ td .dj{margin:0 4px 4px 0}
 <p>Hoy lleva la inteligencia artificial a la operación de las empresas: describe una tarea, pone el hardware desde su Protofactory de Barcelona y agentes de IA la ejecutan. Su experiencia viene de más de 600 proyectos.</p>
 <div class="pf-fab"><span>Software</span><span>Inteligencia artificial</span><span>Hardware a medida</span><span>CNC</span><span>Corte láser</span><span>Impresión 3D</span><span>Bancos de electrónica</span></div>
 <div class="pf-nums"><div><b>600+</b><span>proyectos desarrollados</span></div><div><b>50+</b><span>países con OxyGEN</span></div><div><b>IA + hardware</b><span>en un mismo equipo</span></div></div>
-</div>
 <div class="pf-bot"><img src="pf-robot.png" alt="Mascota de Protofy"></div>
+</div>
 </div>
 <div class="pf-body">
 <p class="pf-h4">Proyectos insignia</p>
