@@ -586,14 +586,14 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .pf-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
 .pf-ph span{position:absolute;left:0;bottom:0;background:rgba(0,0,0,.75);color:#fff;font-size:12px;padding:6px 10px}
 .pf-about{padding:30px}
-.pf-k{display:inline-block;border:1.5px solid #079AFD;color:#079AFD;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:5px 11px;margin-bottom:12px}
+.pf-k{display:inline-block;border:0;background:#FFD400;color:#111;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:5px 11px;margin-bottom:12px}
 .pf-about h3{color:#111;font-size:26px;line-height:1.2;margin:0 0 12px}
 .pf-about p{font-size:14.5px;line-height:1.6;margin:0 0 12px;color:#333}
 .pf-nums{display:flex;flex-wrap:wrap;gap:22px;margin-top:16px}
-.pf-nums b{display:block;font-size:26px;color:#079AFD;font-weight:800;line-height:1}
+.pf-nums b{display:block;font-size:26px;color:#111;box-shadow:inset 0 -10px 0 #FFD400;width:max-content;font-weight:800;line-height:1}
 .pf-nums span{font-size:12.5px;color:#666;text-transform:uppercase;letter-spacing:.05em}
 .pf-body{padding:30px}
-.pf-h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#079AFD;font-weight:700;margin:0 0 14px}
+.pf-h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#111;border-left:6px solid #FFD400;padding-left:10px;font-weight:700;margin:0 0 14px}
 .pf-proj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:28px}
 .pf-proj div{border:1.5px solid var(--ink);padding:20px;background:#fff}
 .pf-proj small{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:6px}
@@ -601,14 +601,14 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .pf-proj p{font-size:13.5px;line-height:1.55;margin:0;color:#333}
 .pf-proj ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
 .pf-proj li{font-size:13.5px;line-height:1.45;color:#333}
-.pf-proj li b{color:#079AFD}
+.pf-proj li b{color:#111;background:#FFF2A8;padding:0 3px}
 .pf-facts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
 .pf-facts span{border:1.5px solid var(--ink);padding:7px 14px;font-size:13px;font-weight:600;border-radius:999px;color:#111}
-.pf-facts span b{color:#079AFD}
+.pf-facts span b{color:#111;background:#FFD400;padding:0 4px}
 .pf-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1.5px solid var(--ink)}
 .pf-steps div{padding:18px 16px;border-right:1.5px solid var(--ink)}
 .pf-steps div:last-child{border-right:0}
-.pf-steps i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#079AFD;color:#fff;font-style:normal;font-weight:800;font-size:13px;margin-bottom:10px}
+.pf-steps i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#FFD400;color:#111;font-style:normal;font-weight:800;font-size:13px;margin-bottom:10px}
 .pf-steps h4{margin:0 0 6px;font-size:15px;color:#111}
 .pf-steps p{margin:0;font-size:13.5px;line-height:1.5;color:#333}
 .pf-foot{padding:0 30px 24px;font-size:12px;color:#777}
@@ -616,7 +616,7 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 @media (max-width:560px){.pf-about,.pf-body{padding:22px}.pf-steps{grid-template-columns:1fr}.pf-steps div{border-right:0}.pf .subhead{padding:22px 22px 0!important}}
 .pf-cases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:18px}
 .pf-cases div{border:1.5px solid var(--ink);padding:16px;background:#fff}
-.pf-cases small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#079AFD;margin-bottom:6px;font-weight:700}
+.pf-cases small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A6D00;margin-bottom:6px;font-weight:700}
 .pf-cases h5{color:#111;font-size:14.5px;margin:0 0 6px;line-height:1.3}
 .pf-cases p{font-size:12.8px;line-height:1.5;margin:0;color:#333}
 .pf-trust{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;padding:16px 0 26px;border-bottom:1.5px solid var(--ink);margin-bottom:26px}
@@ -626,6 +626,11 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .pf-fab span{font-size:12px;border:1px solid #bbb;padding:5px 11px;border-radius:999px;color:#333;background:#f5f5f5}
 @media (max-width:980px){.pf-cases{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.pf-cases{grid-template-columns:1fr}}
+.pf-top{grid-template-columns:300px minmax(0,1fr) 210px}
+.pf-bot{display:flex;align-items:flex-end;justify-content:center;padding:20px 20px 0;background:linear-gradient(180deg,#fff 0%,#FFF7C2 100%);border-left:1.5px solid var(--ink)}
+.pf-bot img{width:100%;max-width:190px;height:auto;display:block}
+@media (max-width:1100px){.pf-top{grid-template-columns:260px minmax(0,1fr)}.pf-bot{display:none}}
+@media (max-width:980px){.pf-top{grid-template-columns:1fr}}
 .ally{display:grid;grid-template-columns:220px 1fr;border:1.5px solid var(--ink);background:var(--paper)}
 .ally-ph{width:100%;height:100%;min-height:220px;object-fit:cover;object-position:50% 30%;display:block;border-right:1.5px solid var(--ink)}
 .ally-tx{padding:26px 28px;min-width:0}
@@ -1068,6 +1073,7 @@ td .dj{margin:0 4px 4px 0}
 <div class="pf-fab"><span>Software</span><span>Inteligencia artificial</span><span>Hardware a medida</span><span>CNC</span><span>Corte láser</span><span>Impresión 3D</span><span>Bancos de electrónica</span></div>
 <div class="pf-nums"><div><b>600+</b><span>proyectos desarrollados</span></div><div><b>50+</b><span>países con OxyGEN</span></div><div><b>IA + hardware</b><span>en un mismo equipo</span></div></div>
 </div>
+<div class="pf-bot"><img src="pf-robot.png" alt="Mascota de Protofy"></div>
 </div>
 <div class="pf-body">
 <p class="pf-h4">Proyectos insignia</p>
