@@ -682,6 +682,35 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .vs25 img{width:100%;height:100%;object-fit:cover;display:block}
 .vs25 figcaption{position:absolute;left:0;bottom:0;background:var(--orange);color:#fff;font-size:12.5px;font-weight:600;padding:7px 12px}
 @media (max-width:760px){.vs25{grid-template-columns:1fr}.vs25 figure{height:260px}}
+.bcn{margin:6px 0 34px;border:1.5px solid var(--ink);background:#fff}
+.bcn-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);border-bottom:1.5px solid var(--ink)}
+.bcn-hero-l{padding:32px 32px 28px}
+.bcn-hero-l h3{font-size:30px;line-height:1.15;margin:8px 0 12px}
+.bcn-hero-l p{font-size:15px;line-height:1.65;margin:0;color:#333}
+.bcn-hero-r{background:linear-gradient(135deg,#0B2E5B 0%,#0A6FB5 55%,#1EC1D0 100%);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:30px;position:relative;overflow:hidden}
+.bcn-hero-r:after{content:"";position:absolute;right:-60px;bottom:-60px;width:240px;height:240px;border-radius:50%;border:28px solid rgba(255,255,255,.12)}
+.bcn-hero-r .c1{font-size:44px;font-weight:900;letter-spacing:.02em;line-height:1}
+.bcn-hero-r .c2{font-size:14px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;margin:10px 0 18px}
+.bcn-hero-r .c3{font-size:44px;font-weight:900;line-height:1;color:#FFD27A}
+.bcn-hero-r small{display:block;margin-top:16px;font-size:13px;opacity:.9;max-width:360px;line-height:1.5}
+.bcn-p{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1.5px solid var(--ink)}
+.bcn-p div{padding:22px;border-right:1.5px solid var(--ink)}
+.bcn-p div:last-child{border-right:0}
+.bcn-p i{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;font-style:normal;font-weight:800;color:#fff;margin-bottom:10px}
+.bcn-p h4{margin:0 0 6px;font-size:16px}
+.bcn-p p{margin:0;font-size:13.5px;line-height:1.55;color:#333}
+.bcn-m{padding:26px 32px 30px}
+.bcn-m h4{font-size:19px;margin:0 0 4px}
+.bcn-m .sub{font-size:14px;color:#555;margin:0 0 16px}
+.bcn-t{display:grid;grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr);border:1.5px solid var(--ink)}
+.bcn-t>div{padding:12px 16px;border-bottom:1px solid #ddd;font-size:14px;line-height:1.45}
+.bcn-t>.k{background:#f6f6f4;text-align:center;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink)}
+.bcn-t>.h{background:var(--ink);color:#fff;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.bcn-t>.h.k{background:var(--ink);color:#fff}
+.bcn-t>div:nth-last-child(-n+3){border-bottom:0}
+.bcn-note{font-size:12.5px;color:#666;margin:12px 0 0}
+@media (max-width:980px){.bcn-hero{grid-template-columns:1fr}.bcn-p{grid-template-columns:1fr 1fr}.bcn-p div:nth-child(2){border-right:0}.bcn-p div{border-bottom:1.5px solid var(--ink)}}
+@media (max-width:620px){.bcn-hero-l,.bcn-m{padding:22px}.bcn-p{grid-template-columns:1fr}.bcn-p div{border-right:0}.bcn-t{grid-template-columns:1fr 1fr}.bcn-t>.k{grid-column:1/-1;border-left:0;border-right:0;border-top:1.5px solid var(--ink)}.bcn-hero-l h3{font-size:24px}}
 .ally{display:grid;grid-template-columns:220px 1fr;border:1.5px solid var(--ink);background:var(--paper)}
 .ally-ph{width:100%;height:100%;min-height:220px;object-fit:cover;object-position:50% 30%;display:block;border-right:1.5px solid var(--ink)}
 .ally-tx{padding:26px 28px;min-width:0}
@@ -1041,6 +1070,28 @@ td .dj{margin:0 4px 4px 0}
 <div><b>Entrada</b><span>Diagnóstico antes del viaje: define el reto, el objetivo comercial y la agenda de cada empresa.</span></div>
 <div><b>Hoja de ruta</b><span>El análisis se convierte en el plan de acción que la empresa lleva a Barcelona y aplica al volver.</span></div>
 <div><b>Salida</b><span>El mismo diagnóstico al cierre mide el avance y alimenta los indicadores de impacto.</span></div>
+</div>
+</div>
+<div class="bcn">
+<div class="bcn-hero">
+<div class="bcn-hero-l">
+<div class="eyebrow c-blue">¿Por qué Barcelona?</div>
+<h3>Una ciudad puerto que se volvió referente mundial de ciudad inteligente</h3>
+<p>Barcelona es la sede del Smart City Expo World Congress desde 2011 y una de las ciudades que más ha experimentado con tecnología, datos y urbanismo para mejorar la vida de sus habitantes. Lo interesante para Cartagena es que lo hizo siendo, como ella, una ciudad puerto, turística, industrial y con un centro histórico: sus aprendizajes son aplicables aquí.</p>
+</div>
+<div class="bcn-hero-r"><div class="c1">BARCELONA</div><div class="c2">Mediterráneo · Caribe</div><div class="c3">CARTAGENA</div><small>Dos ciudades puerto, con zona franca, turismo, industria y playa. Barcelona muestra hacia dónde puede ir Cartagena.</small></div>
+</div>
+<div class="bcn-p">
+<div><i style="background:#0A6FB5">01</i><h4>Ciudad inteligente</h4><p>Sede del congreso mundial de ciudades inteligentes, con plataformas de sensores y datos urbanos, y modelos como las supermanzanas que devuelven la calle a las personas.</p></div>
+<div><i style="background:#F2B705;color:#111">02</i><h4>Movilidad</h4><p>Metro, red ortogonal de buses, bicicleta pública y zonas de bajas emisiones: un laboratorio de movilidad urbana sostenible y de logística de última milla.</p></div>
+<div><i style="background:#675CC6">03</i><h4>Desarrollo tecnológico</h4><p>El distrito de innovación 22@, el Barcelona Supercomputing Center, DFactory y el Mobile World Congress hacen de la ciudad un polo europeo de tecnología y startups.</p></div>
+<div><i style="background:#1EC1D0;color:#111">04</i><h4>Puerto</h4><p>El Port de Barcelona cerró 2025 con récords históricos en contenedores de importación y líquidos a granel, y avanza en electrificación de muelles y relación puerto-ciudad.</p></div>
+</div>
+<div class="bcn-m">
+<h4>Un espejo para Cartagena</h4>
+<p class="sub">Lo que las empresas verán en Barcelona tiene un equivalente directo en su propia ciudad.</p>
+<div class="bcn-t"><div class="h">Barcelona</div><div class="h k">Igual que</div><div class="h">Cartagena</div><div>Port de Barcelona: contenedores, graneles, vehículos, ferris y cruceros en el Mediterráneo</div><div class="k">Ciudad puerto</div><div>Puerto de Cartagena y la bahía: contenedores, granel y cruceros en el Caribe</div><div>Zona Franca de Barcelona, hoy Distrito 4.0 con DFactory como centro de innovación</div><div class="k">Zona franca</div><div>Zonas francas de Cartagena y el corredor industrial de Mamonal</div><div>Terminales de líquidos a granel y gas natural en el puerto; industria química en el entorno</div><div class="k">Energía e industria</div><div>Refinería, petroquímica y plásticos en Mamonal</div><div>Uno de los grandes destinos de cruceros del Mediterráneo y del turismo urbano europeo</div><div class="k">Turismo y cruceros</div><div>El principal destino de cruceros y de turismo internacional de Colombia</div><div>Barceloneta y un frente marítimo recuperado para la ciudad</div><div class="k">Playa y frente marítimo</div><div>Bocagrande, Castillogrande y la bahía</div><div>Barrio Gótico y patrimonio que convive con la innovación</div><div class="k">Centro histórico</div><div>Ciudad amurallada, Patrimonio de la Humanidad</div></div>
+<p class="bcn-note">Por eso Barcelona funciona como referente: no es una ciudad lejana a la realidad de Cartagena, sino una versión más avanzada de los mismos retos y vocaciones.</p>
 </div>
 </div>
 <div class="subhead"><h3>Destino de la misión: Barcelona</h3><span class="note">Anclada al Smart City Expo World Congress, 2 al 4 de noviembre de 2027</span></div>
