@@ -579,6 +579,41 @@ a.ecot{transition:transform .15s} a.ecot:hover{transform:translateY(-3px)}
 .ilab-io b{display:block;font-size:22px;color:#E8561D;font-weight:800}
 .ilab-io span{font-size:13.5px;line-height:1.45}
 @media (max-width:900px){.ilab-top{grid-template-columns:1fr;padding:26px 22px 6px}.ilab-shots{grid-template-columns:1fr;padding:14px 22px 6px}.ilab-io{grid-template-columns:1fr}.ilab-io div{border-right:0;border-bottom:1.5px solid var(--ink)}.ilab-io div:last-child{border-bottom:0}.ilab h3.ilab-t{font-size:24px}}
+.pf{margin-top:34px;background:#0E0E10;color:#F4F4F2;border:1.5px solid #0E0E10}
+.pf .subhead h3{color:#fff}.pf .subhead .note{color:#bdbdbd}
+.pf-top{display:grid;grid-template-columns:300px minmax(0,1fr);border-top:1px solid #2a2a2e;border-bottom:1px solid #2a2a2e;margin-top:20px}
+.pf-ph{position:relative;min-height:380px;background:#222}
+.pf-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.pf-ph span{position:absolute;left:0;bottom:0;background:rgba(0,0,0,.75);color:#fff;font-size:12px;padding:6px 10px}
+.pf-about{padding:30px}
+.pf-k{display:inline-block;border:1.5px solid #079AFD;color:#079AFD;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:5px 11px;margin-bottom:12px}
+.pf-about h3{color:#fff;font-size:26px;line-height:1.2;margin:0 0 12px}
+.pf-about p{font-size:14.5px;line-height:1.6;margin:0 0 12px;color:#dcdcdc}
+.pf-nums{display:flex;flex-wrap:wrap;gap:22px;margin-top:16px}
+.pf-nums b{display:block;font-size:26px;color:#079AFD;font-weight:800;line-height:1}
+.pf-nums span{font-size:12.5px;color:#bdbdbd;text-transform:uppercase;letter-spacing:.05em}
+.pf-body{padding:30px}
+.pf-h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#079AFD;font-weight:700;margin:0 0 14px}
+.pf-proj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:28px}
+.pf-proj div{border:1px solid #2f2f34;padding:20px;background:#16161a}
+.pf-proj small{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#9a9aa0;margin-bottom:6px}
+.pf-proj h4{color:#fff;font-size:18px;margin:0 0 8px}
+.pf-proj p{font-size:13.5px;line-height:1.55;margin:0;color:#d4d4d4}
+.pf-proj ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.pf-proj li{font-size:13.5px;line-height:1.45;color:#d4d4d4}
+.pf-proj li b{color:#079AFD}
+.pf-facts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.pf-facts span{border:1px solid #3a3a40;padding:7px 14px;font-size:13px;font-weight:600;border-radius:999px;color:#fff}
+.pf-facts span b{color:#079AFD}
+.pf-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid #2f2f34}
+.pf-steps div{padding:18px 16px;border-right:1px solid #2f2f34}
+.pf-steps div:last-child{border-right:0}
+.pf-steps i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#079AFD;color:#fff;font-style:normal;font-weight:800;font-size:13px;margin-bottom:10px}
+.pf-steps h4{margin:0 0 6px;font-size:15px;color:#fff}
+.pf-steps p{margin:0;font-size:13.5px;line-height:1.5;color:#d4d4d4}
+.pf-foot{padding:0 30px 24px;font-size:12px;color:#9a9aa0}
+@media (max-width:980px){.pf-top{grid-template-columns:1fr}.pf-ph{min-height:420px}.pf-proj{grid-template-columns:1fr}.pf-steps{grid-template-columns:1fr 1fr}.pf-steps div{border-bottom:1px solid #2f2f34}}
+@media (max-width:560px){.pf-about,.pf-body{padding:22px}.pf-steps{grid-template-columns:1fr}.pf-steps div{border-right:0}.pf .subhead{padding:22px 22px 0!important}}
 .ally{display:grid;grid-template-columns:220px 1fr;border:1.5px solid var(--ink);background:var(--paper)}
 .ally-ph{width:100%;height:100%;min-height:220px;object-fit:cover;object-position:50% 30%;display:block;border-right:1.5px solid var(--ink)}
 .ally-tx{padding:26px 28px;min-width:0}
@@ -1008,6 +1043,38 @@ td .dj{margin:0 4px 4px 0}
 <figure class="mt-wide"><img src="mt-muro.jpg" alt="Muro de materiales del estudio Manual Thinking" style="object-position:center 40%"></figure>
 </div>
 <p class="mt-foot">Fotos: estudio Manual Thinking, Barcelona. El contenido del taller se ajusta con Luki Huber a los retos de las empresas participantes.</p>
+</div>
+<div class="pf">
+<div class="subhead" style="padding:26px 30px 0;margin:0"><h3>Entrenamiento Protofy: innovación y prototipado con inteligencia artificial</h3><span class="note">Taller de 4 horas en el laboratorio de Protofy · Barcelona</span></div>
+<div class="pf-top">
+<div class="pf-ph"><img src="pf-evento.jpg" alt="Protofy en un evento de innovación"><span>Protofy en un evento del ecosistema de innovación</span></div>
+<div class="pf-about">
+<span class="pf-k">Laboratorio de innovación · Aliado principal</span>
+<h3>Protofy: ingeniería que lleva las ideas al mundo físico</h3>
+<p>Protofy.xyz es una empresa de Barcelona que ayuda a empresas y departamentos de investigación a desarrollar soluciones tecnológicas rápidas y de alta calidad, integrando hardware (mecánica, electrónica) y software. La cofundaron Ignasi Plaza, Lluís Rovira y Joan Guasch.</p>
+<p>Hoy lleva la inteligencia artificial a la operación de las empresas: describe una tarea, pone el hardware desde su Protofactory de Barcelona y agentes de IA la ejecutan. Su experiencia viene de más de 600 proyectos.</p>
+<div class="pf-nums"><div><b>600+</b><span>proyectos desarrollados</span></div><div><b>50+</b><span>países con OxyGEN</span></div><div><b>IA + hardware</b><span>en un mismo equipo</span></div></div>
+</div>
+</div>
+<div class="pf-body">
+<p class="pf-h4">Proyectos insignia</p>
+<div class="pf-proj">
+<div><small>2020 · Salud</small><h4>OxyGEN</h4><p>Respirador de emergencia de hardware abierto creado en plena pandemia, con el apoyo científico del Hospital Clínic, el Hospital Germans Trias i Pujol y la Universidad de Barcelona. Recibió la autorización de la agencia española del medicamento (AEMPS) para ensayos clínicos y sus planos se compartieron con más de 50 países.</p></div>
+<div><small>Plataforma · Beta</small><h4>Vento</h4><p>Plataforma para delegar en agentes de IA las tareas del mundo físico. Se describe el trabajo en lenguaje natural y Vento diseña el software, la electrónica y el plan de montaje; luego los agentes supervisan el sistema y actúan. Conecta sensores, visión y voz, y paneles de control.</p></div>
+<div><small>Industria · Resultados</small><h4>Casos en planta</h4><ul><li>Equipos de protección: incumplimientos de <b>23&nbsp;% a 3&nbsp;%</b> en cuatro semanas.</li><li>Calidad de conectores por sonido en una planta automotriz: fallos de <b>0,8&nbsp;% a 0,05&nbsp;%</b>.</li><li>Reportes de turno a SAP: de <b>dos o tres días a menos de 10 minutos</b>.</li></ul></div>
+</div>
+<p class="pf-h4">El entrenamiento</p>
+<div class="pf-facts"><span><b>4 horas</b> de taller práctico</span><span>En el laboratorio de Protofy</span><span>Inteligencia artificial aplicada al mundo físico</span><span>Para todos los sectores</span></div>
+<p style="margin:0 0 18px;font-size:15px;line-height:1.6;color:#e6e6e6">Las empresas pasan de la idea al prototipo en una sola sesión. Con el equipo de Protofy aprenden a usar la inteligencia artificial para diseñar, probar y validar soluciones a un reto real de su negocio, y conocen cómo un laboratorio de Barcelona convierte ideas en productos.</p>
+<div class="pf-steps">
+<div><i>01</i><h4>Del reto a la idea</h4><p>Cada equipo trae un problema real de su operación o de sus clientes.</p></div>
+<div><i>02</i><h4>Prototipar con IA</h4><p>Se describe la solución en lenguaje natural y la IA propone el diseño.</p></div>
+<div><i>03</i><h4>Sensores, visión y datos</h4><p>Cómo la tecnología capta lo que pasa en el mundo físico y lo convierte en decisiones.</p></div>
+<div><i>04</i><h4>Experimentar y testear</h4><p>Probar rápido, medir y ajustar antes de invertir.</p></div>
+<div><i>05</i><h4>Llevarlo a la empresa</h4><p>Cada prototipo sale con próximos pasos para aplicarlo en Cartagena.</p></div>
+</div>
+</div>
+<p class="pf-foot">Fuentes: protofy.xyz, vento.build y oxygen.protofy.xyz. El contenido del taller se ajusta con Protofy a los retos de las empresas participantes.</p>
 </div>
 <div class="subhead"><h3>Cómo se cubre cada mitad de la misión</h3><span class="note">Según los componentes definidos por Comfenalco en la solicitud</span></div>
 <div class="two">
